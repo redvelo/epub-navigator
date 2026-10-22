@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+    <title>Cross-document target</title>
+  </head>
+  <body>
+    <main>
+      <div style="height: 900px"></div>
+      <p id="cross-target">The deferred fragment target.</p>
+      <a id="duplicate-resource" href="milestone-1.xhtml"
+        >Return to the first authored occurrence</a
+      >
+      <div style="height: 900px"></div>
+      <script>
+        addEventListener("message", (event) => {
+          if (event.data?.fixtureMeasureCross === true) {
+            parent.postMessage(
+              {
+                type: "cross-target-position",
+                top: document.getElementById("cross-target").getBoundingClientRect().top,
+              },
+              "*",
+            );
+            return;
+          }
+          const id = event.data?.fixtureClick;
+          if (typeof id === "string") document.getElementById(id)?.click();
+        });
+      </script>
+    </main>
+  </body>
+</html>

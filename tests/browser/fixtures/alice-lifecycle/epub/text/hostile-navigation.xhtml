@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+    <title>Hostile navigation probe</title>
+  </head>
+  <body>
+    <main><p id="probe">Publisher navigation probe.</p></main>
+    <script>
+      addEventListener("message", (event) => {
+        const command = event.data;
+        if (command?.type !== "hostile-navigation-trigger") return;
+        const external = command.external;
+        const attachment = command.attachment;
+        let result = null;
+        try {
+          switch (command.kind) {
+            case "assign":
+              location.assign(external);
+              break;
+            case "replace":
+              location.replace(external);
+              break;
+            case "meta-refresh": {
+              const meta = document.createElement("meta");
+              meta.httpEquiv = "refresh";
+              meta.content = "0; url=" + external;
+              document.head.append(meta);
+              break;
+            }
+            case "redirect":
+              location.assign(command.redirect);
+              break;
+            case "top":
+              top.location.href = external;
+              break;
+            case "parent":
+              parent.location.href = external;
+              break;
+            case "blank":
+              clickLink(external, "_blank");
+              break;
+            case "named":
+              clickLink(external, "publisher-window");
+              break;
+            case "window-open":
+              open(external, "publisher-popup");
+              break;
+            case "download": {
+              const link = document.createElement("a");
+              link.href = attachment;
+              link.download = "publisher.txt";
+              document.body.append(link);
+              link.click();
+              break;
+            }
+            case "attachment":
+              location.assign(attachment);
+              break;
+            case "child-external":
+              appendFrame(external);
+              break;
+            case "child-publication":
+              appendFrame(command.publicationChild);
+              break;
+          }
+        } catch (error) {
+          result = error?.name ?? String(error);
+        }
+        parent.postMessage({ type: "hostile-navigation-result", id: command.id, result }, "*");
+      });
+      function clickLink(href, target) {
+        const link = document.createElement("a");
+        link.href = href;
+        link.target = target;
+        document.body.append(link);
+        link.click();
+      }
+      function appendFrame(src) {
+        const frame = document.createElement("iframe");
+        frame.src = src;
+        document.body.append(frame);
+      }
+    </script>
+  </body>
+</html>

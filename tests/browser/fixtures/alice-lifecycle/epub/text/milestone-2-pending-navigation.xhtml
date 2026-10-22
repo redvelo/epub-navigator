@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+    <title>Pending navigation</title>
+  </head>
+  <body>
+    <p>The publisher navigates before agent readiness.</p>
+    <script>
+      parent.postMessage(
+        {
+          namespace: "epub-navigator",
+          type: "observation",
+          writingMode: "horizontal-tb",
+          direction: "ltr",
+          language: "en",
+          viewport: { width: 1, height: 1 },
+          visibleStart: { state: "unavailable" },
+          visibleEnd: { state: "unavailable" },
+          renderedTextProgression: null,
+        },
+        "*",
+      );
+      setTimeout(() => location.replace("milestone-1-cross.xhtml"), 25);
+    </script>
+  </body>
+</html>

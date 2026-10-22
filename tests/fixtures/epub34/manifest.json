@@ -1,0 +1,111 @@
+{
+  "sourceRepository": "https://github.com/w3c/epub-tests",
+  "sourceRevision": "2d3b96756423189c0008eff95f0e98beda7cc5fe",
+  "retrievedAtUtc": "2026-09-14",
+  "binaryUrlTemplate": "https://w3c.github.io/epub-tests/tests/{id}.epub",
+  "sourcePathTemplate": "tests/{id}/",
+  "pathBase": "relative to this manifest",
+  "verification": "Every non-directory ZIP member and the complete member set match the pinned Git source tree byte-for-byte.",
+  "fixtures": [
+    {
+      "id": "lay-roll-embedded-images",
+      "path": "lay-roll-embedded-images.epub",
+      "sha256": "c8fc1b4fa17f55d99f9b7088e91024e42b0a4b0577b4536a968c89ba2da1aa64",
+      "bytes": 27435070,
+      "packagePath": "EPUB/package.opf",
+      "globalRenditionLayout": "roll",
+      "manifestItemCount": 22,
+      "spineCount": 9,
+      "spineIdrefs": [
+        "Title_html",
+        "A_html",
+        "B_html",
+        "C_html",
+        "D_html",
+        "E_html",
+        "F_html",
+        "G_html",
+        "H_html"
+      ],
+      "icbSize": { "width": 1674, "height": 1378, "source": "XHTML viewport on every spine item" }
+    },
+    {
+      "id": "lay-roll-embedded-images-svg",
+      "path": "lay-roll-embedded-images-svg.epub",
+      "sha256": "06ca29058d85a2c7ca5c4ba039511e7074eff3b21e81ef00e0bde31faaf6b071",
+      "bytes": 27434348,
+      "packagePath": "EPUB/package.opf",
+      "globalRenditionLayout": "roll",
+      "manifestItemCount": 21,
+      "spineCount": 9,
+      "spineIdrefs": [
+        "Title_html",
+        "A_svg",
+        "B_svg",
+        "C_svg",
+        "D_svg",
+        "E_svg",
+        "F_svg",
+        "G_svg",
+        "H_svg"
+      ],
+      "icbSize": {
+        "width": 1674,
+        "height": 1378,
+        "source": "Title XHTML viewport; A-H SVG viewBox"
+      }
+    },
+    {
+      "id": "lay-roll-images-in-spine",
+      "path": "lay-roll-images-in-spine.epub",
+      "sha256": "663d25000d47300171f5e0ecc8feeeb8e2ebe04910a35bdb45016f8208f267ab",
+      "bytes": 27745316,
+      "packagePath": "EPUB/package.opf",
+      "globalRenditionLayout": "roll",
+      "manifestItemCount": 21,
+      "spineCount": 9,
+      "spineIdrefs": [
+        "Title_image",
+        "A_image",
+        "B_image",
+        "C_image",
+        "D_image",
+        "E_image",
+        "F_image",
+        "G_image",
+        "H_image"
+      ],
+      "icbSize": {
+        "width": 1674,
+        "height": 1378,
+        "source": "PNG IHDR intrinsic dimensions on every spine item"
+      }
+    },
+    {
+      "id": "lay-roll-images-mixed",
+      "path": "lay-roll-images-mixed.epub",
+      "sha256": "aa033777c8cdf9cd2f2673ccda1aa96ba801f6809800fb17215a68e7c34881b3",
+      "bytes": 30449737,
+      "packagePath": "EPUB/package.opf",
+      "globalRenditionLayout": "roll",
+      "manifestItemCount": 22,
+      "spineCount": 9,
+      "spineIdrefs": [
+        "Title_html",
+        "A_html",
+        "B_html",
+        "C_image",
+        "D_image",
+        "E_html",
+        "F_html",
+        "G_html",
+        "H_html"
+      ],
+      "icbSize": {
+        "width": 1674,
+        "height": 1378,
+        "source": "XHTML viewports; C/D PNG IHDR intrinsic dimensions"
+      }
+    }
+  ]
+}

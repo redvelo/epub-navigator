@@ -1,0 +1,37 @@
+[
+  {
+    "name": "epub-navigator",
+    "path": "dist/index.js",
+    "limit": "5 kB",
+    "ignore": ["react", "react-dom", "jotai", "jotai-effect"]
+  },
+  {
+    "name": "epub-navigator/runtime",
+    "path": "dist/runtime.js",
+    "limit": "72 kB",
+    "ignore": ["react", "react-dom", "jotai", "jotai-effect"]
+  },
+  {
+    "name": "epub-navigator/react",
+    "path": "dist/react.js",
+    "limit": "164 kB",
+    "ignore": ["react", "react-dom", "jotai", "jotai-effect", "@base-ui/react", "lucide-react"]
+  },
+  {
+    "name": "epub-navigator/ui",
+    "path": "dist/ui.js",
+    "limit": "22 kB",
+    "ignore": ["react", "react-dom", "jotai", "jotai-effect", "@base-ui/react", "lucide-react"]
+  },
+  {
+    "name": "epub-navigator/local",
+    "path": "dist/local.js",
+    "limit": "12 kB",
+    "ignore": ["react", "react-dom", "jotai", "jotai-effect"]
+  },
+  {
+    "name": "epub-navigator/content-agent.js",
+    "path": "dist/content-agent.js",
+    "limit": "48 kB"
+  }
+]

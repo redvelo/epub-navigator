@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+    <title>Host conformance</title>
+    <link rel="stylesheet" href="../styles/conformance.css" />
+    <script src="../js/classic.js"></script>
+    <script src="../js/module.js"></script>
+  </head>
+  <body>
+    <main>
+      <h1>Host conformance</h1>
+      <p id="styled-probe">Publisher resources retain authored paths.</p>
+      <img src="../images/probe.svg" alt="A blue conformance square" />
+      <audio src="../media/silence.wav" preload="metadata"></audio>
+      <form action="https://example.invalid/form" method="post">
+        <button type="submit">Blocked form</button>
+      </form>
+      <a href="https://example.invalid/download" download="blocked.txt">Blocked download</a>
+    </main>
+  </body>
+</html>

@@ -1,0 +1,114 @@
+name: CI
+
+on:
+  push:
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  quality:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v5
+      - uses: pnpm/action-setup@v6
+      - uses: actions/setup-node@v7
+        with:
+          node-version-file: .node-version
+          cache: pnpm
+          cache-dependency-path: pnpm-lock.yaml
+      - run: rustup toolchain install
+      - uses: taiki-e/install-action@v2
+        with:
+          tool: wasm-pack@0.15.0
+      - run: pnpm install --frozen-lockfile
+      - run: pnpm format:check
+      - run: pnpm check:rust
+      - run: cargo clippy --locked --workspace --all-targets -- -D warnings
+      - run: pnpm types:check
+      # The type-aware lint resolves src/wasm.ts against the wasm-bindgen declarations, which
+      # `pnpm build` further down would otherwise be the first step to generate.
+      - run: pnpm build:wasm
+      - run: pnpm lint
+      - run: pnpm check:compiler
+      - run: pnpm test:rust
+      - run: pnpm test
+      - run: pnpm build
+      - run: pnpm exec vitest run --config vitest.corpus.config.ts
+      - run: pnpm build:reader
+      - run: pnpm typecheck:reader
+      - run: pnpm exec playwright install --with-deps chromium
+      - run: pnpm check:dev-server
+      - run: pnpm test:browser:chromium
+      - run: pnpm test:corpus:browser
+      - run: pnpm test:local
+
+  cross-engine:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v5
+      - uses: pnpm/action-setup@v6
+      - uses: actions/setup-node@v7
+        with:
+          node-version-file: .node-version
+          cache: pnpm
+          cache-dependency-path: pnpm-lock.yaml
+      - run: rustup toolchain install
+      - uses: taiki-e/install-action@v2
+        with:
+          tool: wasm-pack@0.15.0
+      - run: pnpm install --frozen-lockfile
+      - run: pnpm build:wasm
+      - run: pnpm exec playwright install --with-deps webkit
+      - run: pnpm exec playwright test --project=pagination-webkit --project=corpus-webkit
+      - if: always()
+        uses: actions/upload-artifact@v7
+        with:
+          name: cross-engine-results
+          path: |
+            playwright-report
+            test-results
+          if-no-files-found: ignore
+
+  pagination-performance:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v5
+      - uses: pnpm/action-setup@v6
+      - uses: actions/setup-node@v7
+        with:
+          node-version-file: .node-version
+          cache: pnpm
+          cache-dependency-path: pnpm-lock.yaml
+      - run: rustup toolchain install
+      - uses: taiki-e/install-action@v2
+        with:
+          tool: wasm-pack@0.15.0
+      - run: pnpm install --frozen-lockfile
+      - run: pnpm build:wasm
+      - run: pnpm exec playwright install --with-deps chromium
+      # Budgets are measured on developer hardware, so a shared runner gets a stated allowance
+      # over them. Counted work and the overhead ratio carry no allowance.
+      - run: pnpm test:pagination:perf
+        env:
+          EPUB_PAGINATION_PERF_BUDGETS: "1"
+          EPUB_PAGINATION_PERF_ALLOWANCE: "4"
+      - if: always()
+        uses: actions/upload-artifact@v7
+        with:
+          name: pagination-performance-results
+          path: |
+            playwright-report
+            test-results
+          if-no-files-found: ignore
+
+  msrv:
+    runs-on: ubuntu-24.04
+    env:
+      RUSTUP_TOOLCHAIN: "1.93.0"
+    steps:
+      - uses: actions/checkout@v5
+      - run: rustup toolchain install 1.93.0 --profile minimal --target wasm32-unknown-unknown
+      - run: cargo check --locked --workspace --all-targets
+      - run: cargo check --locked --workspace --target wasm32-unknown-unknown

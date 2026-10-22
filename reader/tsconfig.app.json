@@ -1,0 +1,33 @@
+{
+  "compilerOptions": {
+    "tsBuildInfoFile": "./node_modules/.tmp/tsconfig.app.tsbuildinfo",
+    "target": "es2025",
+    "lib": ["ES2025", "DOM"],
+    "module": "esnext",
+    "types": ["vite/client"],
+    "paths": {
+      "epub-navigator": ["../src/index.ts"],
+      "epub-navigator/local": ["../src/local/index.ts"],
+      "epub-navigator/runtime": ["../src/runtime/index.ts"],
+      "epub-navigator/react": ["../src/react/index.ts"],
+      "@/*": ["./src/*"]
+    },
+    "allowArbitraryExtensions": true,
+    "skipLibCheck": true,
+
+    /* Bundler mode */
+    "moduleResolution": "bundler",
+    "allowImportingTsExtensions": true,
+    "verbatimModuleSyntax": true,
+    "moduleDetection": "force",
+    "noEmit": true,
+    "jsx": "react-jsx",
+
+    /* Linting */
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "erasableSyntaxOnly": true,
+    "noFallthroughCasesInSwitch": true
+  },
+  "include": ["src"]
+}

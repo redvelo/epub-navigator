@@ -1,0 +1,12 @@
+# Fixtures are built from these sources and compared byte for byte against a committed archive
+# and its SHA-256, so the working tree must not depend on the platform Git checked out on.
+# Without this, Git for Windows rewrites line endings and every digest check fails.
+* text=auto eol=lf
+
+# An EPUB mimetype entry is stored uncompressed and compared exactly; it must never gain a
+# trailing newline or any conversion.
+mimetype binary
+
+*.epub binary
+*.woff2 binary
+*.wasm binary

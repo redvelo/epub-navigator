@@ -1,0 +1,187 @@
+@custom-variant dark (&:is(.dark *));
+
+.epub-navigator-theme {
+  --background: Canvas;
+  --foreground: CanvasText;
+  --card: Canvas;
+  --card-foreground: CanvasText;
+  --popover: Canvas;
+  --popover-foreground: CanvasText;
+  --primary: CanvasText;
+  --primary-foreground: Canvas;
+  --secondary: Canvas;
+  --secondary-foreground: CanvasText;
+  --muted: Canvas;
+  --muted-foreground: CanvasText;
+  --accent: Canvas;
+  --accent-foreground: CanvasText;
+  --destructive: oklch(0.577 0.245 27.325);
+  --border: CanvasText;
+  --input: CanvasText;
+  --ring: CanvasText;
+  --radius: 0.625rem;
+  --reader-rail-top-size: 1.75rem;
+  --reader-rail-bottom-size: 1.75rem;
+  --reader-edge-inline-inset: 0.75rem;
+  --reader-edge-block-end-inset: env(safe-area-inset-bottom);
+  --reader-status-inline-size: 8rem;
+  --reader-panel-size: 17.5rem;
+  --reader-panel-min-size: 14rem;
+  --reader-panel-max-size: 30rem;
+  --reader-book-min-size: 36rem;
+  --reader-icon-size: 1.125rem;
+  --reader-icon-stroke: 1.5;
+  --reader-progress-track-size: 1px;
+  --reader-progress-cursor-size: 2px;
+  --reader-progress-marker-1: 0.5rem;
+  --reader-progress-marker-2: 0.375rem;
+  --reader-progress-marker-3: 0.25rem;
+  --reader-progress-marker-4: 0.125rem;
+  --reader-progress-marker-gap: 0.1875rem;
+  --reader-transition-duration: 0ms;
+  --reader-selected: CanvasText;
+  --reader-selected-foreground: Canvas;
+  --reader-selected-border: CanvasText;
+  --reader-separator: CanvasText;
+  --reader-chrome-muted: CanvasText;
+  --reader-control-border: CanvasText;
+  --reader-control-focus: CanvasText;
+  --reader-control-border-width: 2px;
+  --reader-structural-rule-width: 2px;
+}
+
+.epub-navigator-reader[data-display-profile="compact"] {
+  --reader-edge-block-end-inset: 0px;
+}
+
+.dark .epub-navigator-theme:not(.light):not([data-navigator-color-scheme]),
+.epub-navigator-theme.dark,
+.epub-navigator-theme[data-navigator-color-scheme="dark"] {
+  --background: oklch(0.145 0 0);
+  --foreground: oklch(0.985 0 0);
+  --card: oklch(0.145 0 0);
+  --card-foreground: oklch(0.985 0 0);
+  --popover: oklch(0.145 0 0);
+  --popover-foreground: oklch(0.985 0 0);
+  --primary: oklch(0.985 0 0);
+  --primary-foreground: oklch(0.145 0 0);
+  --secondary: oklch(0.205 0 0);
+  --secondary-foreground: oklch(0.985 0 0);
+  --muted: oklch(0.205 0 0);
+  --muted-foreground: oklch(0.82 0 0);
+  --accent: oklch(0.205 0 0);
+  --accent-foreground: oklch(0.985 0 0);
+  --destructive: oklch(0.704 0.191 22.216);
+  --border: oklch(0.985 0 0);
+  --input: oklch(0.985 0 0);
+  --ring: oklch(0.985 0 0);
+  --reader-selected: oklch(0.985 0 0);
+  --reader-selected-foreground: oklch(0.145 0 0);
+  --reader-selected-border: oklch(0.985 0 0);
+  --reader-separator: oklch(0.985 0 0);
+  --reader-chrome-muted: oklch(0.985 0 0);
+  --reader-control-border: oklch(0.985 0 0);
+  --reader-control-focus: oklch(0.985 0 0);
+  color-scheme: dark;
+}
+
+.epub-navigator-theme[data-navigator-color-scheme="light"] {
+  color-scheme: light;
+}
+
+.epub-navigator-theme[data-navigator-color-scheme="dark"] {
+  color-scheme: dark;
+}
+
+.epub-navigator-theme[data-navigator-color-scheme="system"] {
+  color-scheme: light dark;
+}
+
+@media (prefers-color-scheme: dark) {
+  .epub-navigator-theme[data-navigator-color-scheme="system"] {
+    --background: oklch(0.145 0 0);
+    --foreground: oklch(0.985 0 0);
+    --card: oklch(0.145 0 0);
+    --card-foreground: oklch(0.985 0 0);
+    --popover: oklch(0.145 0 0);
+    --popover-foreground: oklch(0.985 0 0);
+    --primary: oklch(0.985 0 0);
+    --primary-foreground: oklch(0.145 0 0);
+    --secondary: oklch(0.205 0 0);
+    --secondary-foreground: oklch(0.985 0 0);
+    --muted: oklch(0.205 0 0);
+    --muted-foreground: oklch(0.82 0 0);
+    --accent: oklch(0.205 0 0);
+    --accent-foreground: oklch(0.985 0 0);
+    --destructive: oklch(0.704 0.191 22.216);
+    --border: oklch(0.985 0 0);
+    --input: oklch(0.985 0 0);
+    --ring: oklch(0.985 0 0);
+    --reader-selected: oklch(0.985 0 0);
+    --reader-selected-foreground: oklch(0.145 0 0);
+    --reader-selected-border: oklch(0.985 0 0);
+    --reader-separator: oklch(0.985 0 0);
+    --reader-chrome-muted: oklch(0.985 0 0);
+    --reader-control-border: oklch(0.985 0 0);
+    --reader-control-focus: oklch(0.985 0 0);
+    color-scheme: dark;
+  }
+}
+
+@media (forced-colors: active) {
+  .epub-navigator-theme {
+    --background: Canvas;
+    --foreground: CanvasText;
+    --card: Canvas;
+    --card-foreground: CanvasText;
+    --popover: Canvas;
+    --popover-foreground: CanvasText;
+    --primary: CanvasText;
+    --primary-foreground: Canvas;
+    --secondary: ButtonFace;
+    --secondary-foreground: ButtonText;
+    --muted: Canvas;
+    --muted-foreground: CanvasText;
+    --accent: Highlight;
+    --accent-foreground: HighlightText;
+    --border: CanvasText;
+    --input: CanvasText;
+    --ring: Highlight;
+    --reader-separator: CanvasText;
+    --reader-chrome-muted: CanvasText;
+    --reader-control-border: CanvasText;
+    --reader-control-focus: Highlight;
+    --reader-selected: CanvasText;
+    --reader-selected-foreground: Canvas;
+    --reader-selected-border: CanvasText;
+  }
+}
+
+@theme inline {
+  --font-sans: "Inter Variable", ui-sans-serif, system-ui, sans-serif;
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --radius-sm: calc(var(--radius) * 0.6);
+  --radius-md: calc(var(--radius) * 0.8);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) * 1.4);
+  --radius-2xl: calc(var(--radius) * 1.8);
+  --radius-3xl: calc(var(--radius) * 2.2);
+  --radius-4xl: calc(var(--radius) * 2.6);
+}

@@ -1,0 +1,160 @@
+{
+  "name": "epub-navigator",
+  "version": "0.1.0",
+  "description": "Browser-based EPUB reading runtime built on epub-stack",
+  "keywords": [
+    "ebook",
+    "epub",
+    "react",
+    "reader",
+    "wasm"
+  ],
+  "license": "Apache-2.0 OR MIT",
+  "author": "",
+  "files": [
+    "dist"
+  ],
+  "type": "module",
+  "sideEffects": [
+    "**/*.css"
+  ],
+  "main": "./dist/index.js",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    },
+    "./local": {
+      "types": "./dist/local/index.d.ts",
+      "import": "./dist/local.js"
+    },
+    "./local/import-worker.js": "./dist/local/import-worker.js",
+    "./local/service-worker.js": "./dist/local/service-worker.js",
+    "./runtime": {
+      "types": "./dist/runtime/index.d.ts",
+      "import": "./dist/runtime.js"
+    },
+    "./react": {
+      "types": "./dist/react/index.d.ts",
+      "import": "./dist/react.js"
+    },
+    "./react/debug": {
+      "types": "./dist/react/debug.d.ts",
+      "import": "./dist/react-debug.js"
+    },
+    "./ui": {
+      "types": "./dist/ui/index.d.ts",
+      "import": "./dist/ui.js"
+    },
+    "./react.css": "./dist/react.css",
+    "./theme.css": "./dist/theme.css",
+    "./ui.css": "./dist/react.css",
+    "./content-agent.js": "./dist/content-agent.js",
+    "./reader-fonts/reader-serif.css": "./dist/reader-fonts/reader-serif.css",
+    "./reader-fonts/files/*": "./dist/reader-fonts/files/*"
+  },
+  "scripts": {
+    "build": "pnpm run fixtures:host-conformance:check && pnpm run types:check && pnpm run build:wasm && pnpm run fixtures:corpus-media-types:check && pnpm run build:package",
+    "build:dev": "pnpm run build:navigator-wasm --no-opt && pnpm run build:package",
+    "build:package": "pnpm run typecheck && vite build && pnpm run check:package-api && pnpm run build:content-agent && pnpm run build:local-workers && pnpm run build:reader-fonts && node scripts/check-package-output.mjs && node scripts/check-content-agent-output.mjs && pnpm run check:package-health",
+    "build:content-agent": "vite build --config vite.content-agent.config.ts",
+    "build:local-workers": "vite build --config vite.local-workers.config.ts",
+    "build:reader-fonts": "node scripts/build-reader-fonts.mjs",
+    "build:navigator-wasm": "node scripts/build-navigator-wasm.mjs",
+    "build:wasm": "pnpm run build:navigator-wasm",
+    "check:rust": "cargo check --locked --workspace --all-targets && cargo check --locked --workspace --target wasm32-unknown-unknown",
+    "check:package-api": "tsc -p tests/package-api/tsconfig.declarations.json",
+    "check:package-health": "publint --strict && size-limit",
+    "check:compiler": "node scripts/check-compiler.mjs",
+    "check:dev-server": "node scripts/check-dev-server.mjs",
+    "build:reader": "pnpm --dir reader build",
+    "dev": "pnpm --dir reader dev",
+    "format": "cargo fmt --all && oxfmt --write .",
+    "format:check": "cargo fmt --all --check && oxfmt --check .",
+    "fixtures:host-conformance": "node scripts/build-host-conformance-fixture.mjs",
+    "fixtures:host-conformance:check": "node scripts/build-host-conformance-fixture.mjs --check",
+    "fixtures:corpus-media-types": "node scripts/build-corpus-media-types.mjs",
+    "fixtures:corpus-media-types:check": "node scripts/build-corpus-media-types.mjs --check",
+    "lint": "oxlint --type-aware src scripts tests vite.config.ts vite.content-agent.config.ts vite.local-workers.config.ts vitest.config.ts vitest.corpus.config.ts playwright.config.ts playwright.local.config.ts playwright.vite.config.ts reader/src",
+    "measure:pagination": "node scripts/measure-pagination.mjs",
+    "prepack": "pnpm run build",
+    "test": "vitest run --passWithNoTests",
+    "test:browser": "pnpm run test:browser:chromium",
+    "test:browser:chromium": "pnpm run build:wasm && playwright test --project=chromium",
+    "test:browser:engines": "pnpm run build:wasm && playwright test --project=pagination-webkit --project=corpus-webkit",
+    "test:pagination": "playwright test --project=chromium synthetic/pagination-engines.spec.ts synthetic/resource-settlement.spec.ts",
+    "test:pagination:engines": "playwright test --project=pagination-webkit",
+    "test:pagination:perf": "playwright test --project=pagination-performance",
+    "test:corpus:projection": "pnpm run build:wasm && vitest run --config vitest.corpus.config.ts",
+    "test:corpus:browser": "playwright test --project=corpus-chromium --project=corpus-mobile-chromium",
+    "test:corpus": "pnpm run build:wasm && vitest run --config vitest.corpus.config.ts && pnpm run test:corpus:browser",
+    "test:local": "playwright test --config=playwright.local.config.ts",
+    "test:rust": "cargo test --locked --workspace",
+    "types:check": "cargo run --locked -p epub-navigator --example export_typescript && node scripts/sync-publication-types.mjs --check",
+    "types:generate": "cargo run --locked -p epub-navigator --example export_typescript && node scripts/sync-publication-types.mjs --write",
+    "typecheck": "tsc --noEmit",
+    "typecheck:reader": "pnpm --dir reader exec tsc -b"
+  },
+  "dependencies": {
+    "@base-ui/react": "^1.8.0",
+    "class-variance-authority": "^0.7.1",
+    "clsx": "^2.1.1",
+    "jotai": "^3.0.0",
+    "jotai-effect": "^2.4.1",
+    "lucide-react": "^0.468.0",
+    "tailwind-merge": "^3.6.0"
+  },
+  "devDependencies": {
+    "@axe-core/playwright": "^4.12.1",
+    "@fontsource-variable/atkinson-hyperlegible-next": "^5.3.0",
+    "@fontsource-variable/inter": "^5.2.8",
+    "@fontsource-variable/literata": "^5.3.0",
+    "@fontsource-variable/noto-naskh-arabic": "^5.3.0",
+    "@fontsource-variable/noto-serif-bengali": "^5.3.0",
+    "@fontsource-variable/noto-serif-devanagari": "^5.3.0",
+    "@fontsource-variable/noto-serif-hebrew": "^5.3.0",
+    "@fontsource-variable/noto-serif-jp": "^5.3.0",
+    "@fontsource-variable/noto-serif-tamil": "^5.3.0",
+    "@fontsource-variable/noto-serif-telugu": "^5.3.0",
+    "@playwright/test": "^1.62.0",
+    "@size-limit/preset-small-lib": "^14.0.0",
+    "@tailwindcss/vite": "^4.3.3",
+    "@testing-library/jest-dom": "6.9.1",
+    "@testing-library/react": "^16.3.0",
+    "@testing-library/user-event": "^14.6.1",
+    "@types/node": "^24.13.3",
+    "@types/react": "^19.3.0",
+    "@types/react-dom": "^19.3.0",
+    "@typescript/typescript6": "^6.0.2",
+    "@vitejs/plugin-react": "^6.1.1",
+    "@vitest/coverage-v8": "^4.1.10",
+    "fake-indexeddb": "^6.2.5",
+    "fflate": "^0.8.3",
+    "jsdom": "^26.1.0",
+    "oxc-transform-react": "^0.150.0",
+    "oxfmt": "^0.60.0",
+    "oxlint": "^1.75.0",
+    "oxlint-tsgolint": "^7.0.2002",
+    "publint": "^0.3.24",
+    "react": "^19.3.0",
+    "react-dom": "^19.3.0",
+    "shadcn": "^4.15.0",
+    "size-limit": "^14.0.0",
+    "tailwindcss": "^4.3.3",
+    "tw-animate-css": "^1.4.0",
+    "typescript": "~7.0.2",
+    "vite": "^8.1.5",
+    "vite-plugin-dts": "^5.0.3",
+    "vitest": "^4.1.10"
+  },
+  "peerDependencies": {
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0"
+  },
+  "engines": {
+    "node": ">=22.13.0"
+  },
+  "packageManager": "pnpm@11.3.0"
+}

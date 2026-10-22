@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+    <title>Runtime lifecycle Alice probe</title>
+    <link rel="stylesheet" href="../css/milestone-1.css" />
+  </head>
+  <body>
+    <main>
+      <h1 id="chapter-title">A path-preserving trip to Wonderland</h1>
+      <img id="alice-image" src="../images/titlepage.svg" alt="Alice title page" />
+      <audio id="alice-audio" src="../media/milestone-2.mp3" preload="metadata"></audio>
+      <p id="locator-target">Before Alice opened the tiny door after.</p>
+      <a id="current-fragment" href="#locator-target">Jump within the document</a>
+      <a id="cross-document-fragment" href="milestone-1-cross.xhtml#cross-target"
+        >Jump to another document</a
+      >
+      <a id="external-link" href="https://example.invalid/outside">External target</a>
+      <form id="invalid-get" action="http://localhost:4174/form-target/get" method="get">
+        <input name="secret" required="required" />
+        <button type="submit">GET</button>
+      </form>
+      <form id="post" action="http://localhost:4174/form-target/post" method="post">
+        <input name="secret" value="post-secret" />
+        <button type="submit">POST</button>
+      </form>
+      <form
+        id="request-submit"
+        action="http://localhost:4174/form-target/request-submit"
+        method="get"
+      >
+        <input name="secret" value="request-secret" />
+      </form>
+      <form
+        id="direct-submit"
+        action="http://localhost:4174/form-target/direct-submit"
+        method="post"
+      >
+        <input name="secret" value="direct-secret" />
+      </form>
+      <form id="cancelled" action="http://localhost:4174/form-target/cancelled" method="post">
+        <input name="secret" value="cancelled-secret" />
+      </form>
+      <svg xmlns="http://www.w3.org/2000/svg" width="220" height="32">
+        <a id="svg-fragment" href="#locator-target"><text x="0" y="20">SVG fragment link</text></a>
+      </svg>
+      <script src="../js/milestone-1.js"></script>
+      <script>
+        window.addEventListener("message", (event) => {
+          if (event.data?.fixtureAgentNoise === true) {
+            parent.postMessage({ namespace: "epub-navigator", type: "ready", supportedOperations: [] }, "*");
+            parent.postMessage({ namespace: "epub-navigator", type: "result", operation: "wrong", status: {} }, "*");
+            return;
+          }
+          if (event.data?.fixtureBodyFlow === true) {
+            document.documentElement.style.writingMode = "horizontal-tb";
+            document.documentElement.style.direction = "ltr";
+            document.body.style.writingMode = "horizontal-tb";
+            document.body.style.direction = "rtl";
+            parent.postMessage({ type: "body-flow-applied" }, "*");
+            return;
+          }
+          if (event.data?.fixtureVertical === true) {
+            document.documentElement.style.writingMode = "vertical-rl";
+            document.body.style.writingMode = "vertical-rl";
+            return;
+          }
+          const id = event.data?.fixtureClick;
+          if (typeof id === "string") document.getElementById(id)?.dispatchEvent(new MouseEvent("click", { bubbles: true, cancelable: true }));
+        });
+        window.formProbe = { invalid: [], submit: [], formdata: [], cancelledHandlerRan: false };
+        document.addEventListener("invalid", (event) => window.formProbe.invalid.push(event.target.form?.id ?? null), true);
+        document.addEventListener("submit", (event) => {
+          window.formProbe.submit.push(event.target.id);
+          if (event.target.id === "cancelled") {
+            window.formProbe.cancelledHandlerRan = true;
+            event.preventDefault();
+          }
+        });
+        document.addEventListener("formdata", (event) => window.formProbe.formdata.push(event.target.id));
+        window.addEventListener("load", async () => {
+          await document.fonts.ready;
+          const image = document.getElementById("alice-image");
+          const audio = document.getElementById("alice-audio");
+          const target = document.getElementById("locator-target");
+          let durableStorageAvailable = true;
+          try { localStorage.setItem("navigator-probe", "value"); } catch { durableStorageAvailable = false; }
+          let remoteConnectionBlocked = false;
+          try { await fetch("https://example.invalid/blocked"); } catch { remoteConnectionBlocked = true; }
+          parent.postMessage({
+            type: "publisher-script-ran",
+            externalScriptRan: document.documentElement.dataset.externalScript === "executed",
+            readingSystem: navigator.epubReadingSystem?.hasFeature("spine-scripting") === true,
+            authoredStylesheet: document.querySelector('link[rel="stylesheet"]')?.getAttribute("href"),
+            authoredImage: image?.getAttribute("src"),
+            authoredMedia: audio?.getAttribute("src"),
+            resolvedMedia: audio?.currentSrc,
+            imageLoaded: image instanceof HTMLImageElement &amp;&amp; image.complete &amp;&amp; image.naturalWidth > 0,
+            fontLoaded: document.fonts.check('16px "Milestone One"'),
+            computedColor: target === null ? null : getComputedStyle(target).color,
+            durableStorageAvailable,
+            remoteConnectionBlocked
+          }, "*");
+        });
+      </script>
+    </main>
+  </body>
+</html>

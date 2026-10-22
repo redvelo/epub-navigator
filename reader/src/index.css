@@ -1,0 +1,23 @@
+@import "tailwindcss";
+@import "@fontsource-variable/inter";
+@import "../../src/react/theme.css";
+
+@source "./**/*.{ts,tsx}";
+
+@layer base {
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+  }
+
+  html,
+  body,
+  #root {
+    height: 100%;
+  }
+
+  body {
+    margin: 0;
+  }
+}

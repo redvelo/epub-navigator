@@ -1,0 +1,5318 @@
+{
+  "package": {
+    "state": "available",
+    "declared": true,
+    "declarations": [
+      {
+        "declarationIndex": 0,
+        "authoredId": {
+          "state": "valid",
+          "value": "font.stix.regular"
+        },
+        "authoredHref": "fonts/STIXGeneral.otf",
+        "canonicalPath": "OPS/fonts/STIXGeneral.otf",
+        "mediaType": "application/vnd.ms-opentype"
+      },
+      {
+        "declarationIndex": 1,
+        "authoredId": {
+          "state": "valid",
+          "value": "font.stix.italic"
+        },
+        "authoredHref": "fonts/STIXGeneralItalic.otf",
+        "canonicalPath": "OPS/fonts/STIXGeneralItalic.otf",
+        "mediaType": "application/vnd.ms-opentype"
+      },
+      {
+        "declarationIndex": 2,
+        "authoredId": {
+          "state": "valid",
+          "value": "font.stix.bold"
+        },
+        "authoredHref": "fonts/STIXGeneralBol.otf",
+        "canonicalPath": "OPS/fonts/STIXGeneralBol.otf",
+        "mediaType": "application/vnd.ms-opentype"
+      },
+      {
+        "declarationIndex": 3,
+        "authoredId": {
+          "state": "valid",
+          "value": "font.stix.bold.italic"
+        },
+        "authoredHref": "fonts/STIXGeneralBolIta.otf",
+        "canonicalPath": "OPS/fonts/STIXGeneralBolIta.otf",
+        "mediaType": "application/vnd.ms-opentype"
+      },
+      {
+        "declarationIndex": 4,
+        "authoredId": {
+          "state": "valid",
+          "value": "toc"
+        },
+        "authoredHref": "toc.xhtml",
+        "canonicalPath": "OPS/toc.xhtml",
+        "mediaType": "application/xhtml+xml"
+      },
+      {
+        "declarationIndex": 5,
+        "authoredId": {
+          "state": "valid",
+          "value": "copyright"
+        },
+        "authoredHref": "copyright.xhtml",
+        "canonicalPath": "OPS/copyright.xhtml",
+        "mediaType": "application/xhtml+xml"
+      },
+      {
+        "declarationIndex": 6,
+        "authoredId": {
+          "state": "valid",
+          "value": "titlepage"
+        },
+        "authoredHref": "titlepage.xhtml",
+        "canonicalPath": "OPS/titlepage.xhtml",
+        "mediaType": "application/xhtml+xml"
+      },
+      {
+        "declarationIndex": 7,
+        "authoredId": {
+          "state": "valid",
+          "value": "cover"
+        },
+        "authoredHref": "cover.xhtml",
+        "canonicalPath": "OPS/cover.xhtml",
+        "mediaType": "application/xhtml+xml"
+      },
+      {
+        "declarationIndex": 8,
+        "authoredId": {
+          "state": "valid",
+          "value": "cover-image"
+        },
+        "authoredHref": "images/9780316000000.jpg",
+        "canonicalPath": "OPS/images/9780316000000.jpg",
+        "mediaType": "image/jpeg"
+      },
+      {
+        "declarationIndex": 9,
+        "authoredId": {
+          "state": "valid",
+          "value": "style"
+        },
+        "authoredHref": "css/stylesheet.css",
+        "canonicalPath": "OPS/css/stylesheet.css",
+        "mediaType": "text/css"
+      },
+      {
+        "declarationIndex": 10,
+        "authoredId": {
+          "state": "valid",
+          "value": "aMoby-Dick_FE_title_page"
+        },
+        "authoredHref": "images/Moby-Dick_FE_title_page.jpg",
+        "canonicalPath": "OPS/images/Moby-Dick_FE_title_page.jpg",
+        "mediaType": "image/jpeg"
+      },
+      {
+        "declarationIndex": 11,
+        "authoredId": {
+          "state": "valid",
+          "value": "xpreface_001"
+        },
+        "authoredHref": "preface_001.xhtml",
+        "canonicalPath": "OPS/preface_001.xhtml",
+        "mediaType": "application/xhtml+xml"
+      },
+      {
+        "declarationIndex": 12,
+        "authoredId": {
+          "state": "valid",
+          "value": "xintroduction_001"
+        },
+        "authoredHref": "introduction_001.xhtml",
+        "canonicalPath": "OPS/introduction_001.xhtml",
+        "mediaType": "application/xhtml+xml"
+      },
+      {
+        "declarationIndex": 13,
+        "authoredId": {
+          "state": "valid",
+          "value": "xepigraph_001"
+        },
+        "authoredHref": "epigraph_001.xhtml",
+        "canonicalPath": "OPS/epigraph_001.xhtml",
+        "mediaType": "application/xhtml+xml"
+      },
+      {
+        "declarationIndex": 14,
+        "authoredId": {
+          "state": "valid",
+          "value": "xchapter_001"
+        },
+        "authoredHref": "chapter_001.xhtml",
+        "canonicalPath": "OPS/chapter_001.xhtml",
+        "mediaType": "application/xhtml+xml"
+      },
+      {
+        "declarationIndex": 15,
+        "authoredId": {
+          "state": "valid",
+          "value": "chapter_001_overlay"
+        },
+        "authoredHref": "chapter_001_overlay.smil",
+        "canonicalPath": "OPS/chapter_001_overlay.smil",
+        "mediaType": "application/smil+xml"
+      },
+      {
+        "declarationIndex": 16,
+        "authoredId": {
+          "state": "valid",
+          "value": "xchapter_002"
+        },
+        "authoredHref": "chapter_002.xhtml",
+        "canonicalPath": "OPS/chapter_002.xhtml",
+        "mediaType": "application/xhtml+xml"
+      },
+      {
+        "declarationIndex": 17,
+        "authoredId": {
+          "state": "valid",
+          "value": "chapter_002_overlay"
+        },
+        "authoredHref": "chapter_002_overlay.smil",
+        "canonicalPath": "OPS/chapter_002_overlay.smil",
+        "mediaType": "application/smil+xml"
+      },
+      {
+        "declarationIndex": 18,
+        "authoredId": {
+          "state": "valid",
+          "value": "xchapter_003"
+        },
+        "authoredHref": "chapter_003.xhtml",
+        "canonicalPath": "OPS/chapter_003.xhtml",
+        "mediaType": "application/xhtml+xml"
+      },
+      {
+        "declarationIndex": 19,
+        "authoredId": {
+          "state": "valid",
+          "value": "chapter_001_audio"
+        },
+        "authoredHref": "audio/mobydick_001_002_melville.mp4",
+        "canonicalPath": "OPS/audio/mobydick_001_002_melville.mp4",
+        "mediaType": "audio/mp4"
+      },
+      {
+        "declarationIndex": 20,
+        "authoredId": {
+          "state": "valid",
+          "value": "xchapter_004"
+        },
+        "authoredHref": "chapter_004.xhtml",
+        "canonicalPath": "OPS/chapter_004.xhtml",
+        "mediaType": "application/xhtml+xml"
+      },
+      {
+        "declarationIndex": 21,
+        "authoredId": {
+          "state": "valid",
+          "value": "xchapter_005"
+        },
+        "authoredHref": "chapter_005.xhtml",
+        "canonicalPath": "OPS/chapter_005.xhtml",
+        "mediaType": "application/xhtml+xml"
+      },
+      {
+        "declarationIndex": 22,
+        "authoredId": {
+          "state": "valid",
+          "value": "xchapter_006"
+        },
+        "authoredHref": "chapter_006.xhtml",
+        "canonicalPath": "OPS/chapter_006.xhtml",
+        "mediaType": "application/xhtml+xml"
+      },
+      {
+        "declarationIndex": 23,
+        "authoredId": {
+          "state": "valid",
+          "value": "xchapter_007"
+        },
+        "authoredHref": "chapter_007.xhtml",
+        "canonicalPath": "OPS/chapter_007.xhtml",
+        "mediaType": "application/xhtml+xml"
+      },
+      {
+        "declarationIndex": 24,
+        "authoredId": {
+          "state": "valid",
+          "value": "xchapter_008"
+        },
+        "authoredHref": "chapter_008.xhtml",
+        "canonicalPath": "OPS/chapter_008.xhtml",
+        "mediaType": "application/xhtml+xml"
+      },
+      {
+        "declarationIndex": 25,
+        "authoredId": {
+          "state": "valid",
+          "value": "xchapter_009"
+        },
+        "authoredHref": "chapter_009.xhtml",
+        "canonicalPath": "OPS/chapter_009.xhtml",
+        "mediaType": "application/xhtml+xml"
+      },
+      {
+        "declarationIndex": 26,
+        "authoredId": {
+          "state": "valid",
+          "value": "xchapter_010"
+        },
+        "authoredHref": "chapter_010.xhtml",
+        "canonicalPath": "OPS/chapter_010.xhtml",
+        "mediaType": "application/xhtml+xml"
+      },
+      {
+        "declarationIndex": 27,
+        "authoredId": {
+          "state": "valid",
+          "value": "xchapter_011"
+        },
+        "authoredHref": "chapter_011.xhtml",
+        "canonicalPath": "OPS/chapter_011.xhtml",
+        "mediaType": "application/xhtml+xml"
+      },
+      {
+        "declarationIndex": 28,
+        "authoredId": {
+          "state": "valid",
+          "value": "xchapter_012"
+        },
+        "authoredHref": "chapter_012.xhtml",
+        "canonicalPath": "OPS/chapter_012.xhtml",
+        "mediaType": "application/xhtml+xml"
+      },
+      {
+        "declarationIndex": 29,
+        "authoredId": {
+          "state": "valid",
+          "value": "xchapter_013"
+        },
+        "authoredHref": "chapter_013.xhtml",
+        "canonicalPath": "OPS/chapter_013.xhtml",
+        "mediaType": "application/xhtml+xml"
+      },
+      {
+        "declarationIndex": 30,
+        "authoredId": {
+          "state": "valid",
+          "value": "xchapter_014"
+        },
+        "authoredHref": "chapter_014.xhtml",
+        "canonicalPath": "OPS/chapter_014.xhtml",
+        "mediaType": "application/xhtml+xml"
+      },
+      {
+        "declarationIndex": 31,
+        "authoredId": {
+          "state": "valid",
+          "value": "xchapter_015"
+        },
+        "authoredHref": "chapter_015.xhtml",
+        "canonicalPath": "OPS/chapter_015.xhtml",
+        "mediaType": "application/xhtml+xml"
+      },
+      {
+        "declarationIndex": 32,
+        "authoredId": {
+          "state": "valid",
+          "value": "xchapter_016"
+        },
+        "authoredHref": "chapter_016.xhtml",
+        "canonicalPath": "OPS/chapter_016.xhtml",
+        "mediaType": "application/xhtml+xml"
+      },
+      {
+        "declarationIndex": 33,
+        "authoredId": {
+          "state": "valid",
+          "value": "xchapter_017"
+        },
+        "authoredHref": "chapter_017.xhtml",
+        "canonicalPath": "OPS/chapter_017.xhtml",
+        "mediaType": "application/xhtml+xml"
+      },
+      {
+        "declarationIndex": 34,
+        "authoredId": {
+          "state": "valid",
+          "value": "xchapter_018"
+        },
+        "authoredHref": "chapter_018.xhtml",
+        "canonicalPath": "OPS/chapter_018.xhtml",
+        "mediaType": "application/xhtml+xml"
+      },
+      {
+        "declarationIndex": 35,
+        "authoredId": {
+          "state": "valid",
+          "value": "xchapter_019"
+        },
+        "authoredHref": "chapter_019.xhtml",
+        "canonicalPath": "OPS/chapter_019.xhtml",
+        "mediaType": "application/xhtml+xml"
+      },
+      {
+        "declarationIndex": 36,
+        "authoredId": {
+          "state": "valid",
+          "value": "xchapter_020"
+        },
+        "authoredHref": "chapter_020.xhtml",
+        "canonicalPath": "OPS/chapter_020.xhtml",
+        "mediaType": "application/xhtml+xml"
+      },
+      {
+        "declarationIndex": 37,
+        "authoredId": {
+          "state": "valid",
+          "value": "xchapter_021"
+        },
+        "authoredHref": "chapter_021.xhtml",
+        "canonicalPath": "OPS/chapter_021.xhtml",
+        "mediaType": "application/xhtml+xml"
+      },
+      {
+        "declarationIndex": 38,
+        "authoredId": {
+          "state": "valid",
+          "value": "xchapter_022"
+        },
+        "authoredHref": "chapter_022.xhtml",
+        "canonicalPath": "OPS/chapter_022.xhtml",
+        "mediaType": "application/xhtml+xml"
+      },
+      {
+        "declarationIndex": 39,
+        "authoredId": {
+          "state": "valid",
+          "value": "xchapter_023"
+        },
+        "authoredHref": "chapter_023.xhtml",
+        "canonicalPath": "OPS/chapter_023.xhtml",
+        "mediaType": "application/xhtml+xml"
+      },
+      {
+        "declarationIndex": 40,
+        "authoredId": {
+          "state": "valid",
+          "value": "xchapter_024"
+        },
+        "authoredHref": "chapter_024.xhtml",
+        "canonicalPath": "OPS/chapter_024.xhtml",
+        "mediaType": "application/xhtml+xml"
+      },
+      {
+        "declarationIndex": 41,
+        "authoredId": {
+          "state": "valid",
+          "value": "xchapter_025"
+        },
+        "authoredHref": "chapter_025.xhtml",
+        "canonicalPath": "OPS/chapter_025.xhtml",
+        "mediaType": "application/xhtml+xml"
+      },
+      {
+        "declarationIndex": 42,
+        "authoredId": {
+          "state": "valid",
+          "value": "xchapter_026"
+        },
+        "authoredHref": "chapter_026.xhtml",
+        "canonicalPath": "OPS/chapter_026.xhtml",
+        "mediaType": "application/xhtml+xml"
+      },
+      {
+        "declarationIndex": 43,
+        "authoredId": {
+          "state": "valid",
+          "value": "xchapter_027"
+        },
+        "authoredHref": "chapter_027.xhtml",
+        "canonicalPath": "OPS/chapter_027.xhtml",
+        "mediaType": "application/xhtml+xml"
+      },
+      {
+        "declarationIndex": 44,
+        "authoredId": {
+          "state": "valid",
+          "value": "xchapter_028"
+        },
+        "authoredHref": "chapter_028.xhtml",
+        "canonicalPath": "OPS/chapter_028.xhtml",
+        "mediaType": "application/xhtml+xml"
+      },
+      {
+        "declarationIndex": 45,
+        "authoredId": {
+          "state": "valid",
+          "value": "xchapter_029"
+        },
+        "authoredHref": "chapter_029.xhtml",
+        "canonicalPath": "OPS/chapter_029.xhtml",
+        "mediaType": "application/xhtml+xml"
+      },
+      {
+        "declarationIndex": 46,
+        "authoredId": {
+          "state": "valid",
+          "value": "xchapter_030"
+        },
+        "authoredHref": "chapter_030.xhtml",
+        "canonicalPath": "OPS/chapter_030.xhtml",
+        "mediaType": "application/xhtml+xml"
+      },
+      {
+        "declarationIndex": 47,
+        "authoredId": {
+          "state": "valid",
+          "value": "xchapter_031"
+        },
+        "authoredHref": "chapter_031.xhtml",
+        "canonicalPath": "OPS/chapter_031.xhtml",
+        "mediaType": "application/xhtml+xml"
+      },
+      {
+        "declarationIndex": 48,
+        "authoredId": {
+          "state": "valid",
+          "value": "xchapter_032"
+        },
+        "authoredHref": "chapter_032.xhtml",
+        "canonicalPath": "OPS/chapter_032.xhtml",
+        "mediaType": "application/xhtml+xml"
+      },
+      {
+        "declarationIndex": 49,
+        "authoredId": {
+          "state": "valid",
+          "value": "xchapter_033"
+        },
+        "authoredHref": "chapter_033.xhtml",
+        "canonicalPath": "OPS/chapter_033.xhtml",
+        "mediaType": "application/xhtml+xml"
+      },
+      {
+        "declarationIndex": 50,
+        "authoredId": {
+          "state": "valid",
+          "value": "xchapter_034"
+        },
+        "authoredHref": "chapter_034.xhtml",
+        "canonicalPath": "OPS/chapter_034.xhtml",
+        "mediaType": "application/xhtml+xml"
+      },
+      {
+        "declarationIndex": 51,
+        "authoredId": {
+          "state": "valid",
+          "value": "xchapter_035"
+        },
+        "authoredHref": "chapter_035.xhtml",
+        "canonicalPath": "OPS/chapter_035.xhtml",
+        "mediaType": "application/xhtml+xml"
+      },
+      {
+        "declarationIndex": 52,
+        "authoredId": {
+          "state": "valid",
+          "value": "xchapter_036"
+        },
+        "authoredHref": "chapter_036.xhtml",
+        "canonicalPath": "OPS/chapter_036.xhtml",
+        "mediaType": "application/xhtml+xml"
+      },
+      {
+        "declarationIndex": 53,
+        "authoredId": {
+          "state": "valid",
+          "value": "xchapter_037"
+        },
+        "authoredHref": "chapter_037.xhtml",
+        "canonicalPath": "OPS/chapter_037.xhtml",
+        "mediaType": "application/xhtml+xml"
+      },
+      {
+        "declarationIndex": 54,
+        "authoredId": {
+          "state": "valid",
+          "value": "xchapter_038"
+        },
+        "authoredHref": "chapter_038.xhtml",
+        "canonicalPath": "OPS/chapter_038.xhtml",
+        "mediaType": "application/xhtml+xml"
+      },
+      {
+        "declarationIndex": 55,
+        "authoredId": {
+          "state": "valid",
+          "value": "xchapter_039"
+        },
+        "authoredHref": "chapter_039.xhtml",
+        "canonicalPath": "OPS/chapter_039.xhtml",
+        "mediaType": "application/xhtml+xml"
+      },
+      {
+        "declarationIndex": 56,
+        "authoredId": {
+          "state": "valid",
+          "value": "xchapter_040"
+        },
+        "authoredHref": "chapter_040.xhtml",
+        "canonicalPath": "OPS/chapter_040.xhtml",
+        "mediaType": "application/xhtml+xml"
+      },
+      {
+        "declarationIndex": 57,
+        "authoredId": {
+          "state": "valid",
+          "value": "xchapter_041"
+        },
+        "authoredHref": "chapter_041.xhtml",
+        "canonicalPath": "OPS/chapter_041.xhtml",
+        "mediaType": "application/xhtml+xml"
+      },
+      {
+        "declarationIndex": 58,
+        "authoredId": {
+          "state": "valid",
+          "value": "xchapter_042"
+        },
+        "authoredHref": "chapter_042.xhtml",
+        "canonicalPath": "OPS/chapter_042.xhtml",
+        "mediaType": "application/xhtml+xml"
+      },
+      {
+        "declarationIndex": 59,
+        "authoredId": {
+          "state": "valid",
+          "value": "xchapter_043"
+        },
+        "authoredHref": "chapter_043.xhtml",
+        "canonicalPath": "OPS/chapter_043.xhtml",
+        "mediaType": "application/xhtml+xml"
+      },
+      {
+        "declarationIndex": 60,
+        "authoredId": {
+          "state": "valid",
+          "value": "xchapter_044"
+        },
+        "authoredHref": "chapter_044.xhtml",
+        "canonicalPath": "OPS/chapter_044.xhtml",
+        "mediaType": "application/xhtml+xml"
+      },
+      {
+        "declarationIndex": 61,
+        "authoredId": {
+          "state": "valid",
+          "value": "xchapter_045"
+        },
+        "authoredHref": "chapter_045.xhtml",
+        "canonicalPath": "OPS/chapter_045.xhtml",
+        "mediaType": "application/xhtml+xml"
+      },
+      {
+        "declarationIndex": 62,
+        "authoredId": {
+          "state": "valid",
+          "value": "xchapter_046"
+        },
+        "authoredHref": "chapter_046.xhtml",
+        "canonicalPath": "OPS/chapter_046.xhtml",
+        "mediaType": "application/xhtml+xml"
+      },
+      {
+        "declarationIndex": 63,
+        "authoredId": {
+          "state": "valid",
+          "value": "xchapter_047"
+        },
+        "authoredHref": "chapter_047.xhtml",
+        "canonicalPath": "OPS/chapter_047.xhtml",
+        "mediaType": "application/xhtml+xml"
+      },
+      {
+        "declarationIndex": 64,
+        "authoredId": {
+          "state": "valid",
+          "value": "xchapter_048"
+        },
+        "authoredHref": "chapter_048.xhtml",
+        "canonicalPath": "OPS/chapter_048.xhtml",
+        "mediaType": "application/xhtml+xml"
+      },
+      {
+        "declarationIndex": 65,
+        "authoredId": {
+          "state": "valid",
+          "value": "xchapter_049"
+        },
+        "authoredHref": "chapter_049.xhtml",
+        "canonicalPath": "OPS/chapter_049.xhtml",
+        "mediaType": "application/xhtml+xml"
+      },
+      {
+        "declarationIndex": 66,
+        "authoredId": {
+          "state": "valid",
+          "value": "xchapter_050"
+        },
+        "authoredHref": "chapter_050.xhtml",
+        "canonicalPath": "OPS/chapter_050.xhtml",
+        "mediaType": "application/xhtml+xml"
+      },
+      {
+        "declarationIndex": 67,
+        "authoredId": {
+          "state": "valid",
+          "value": "xchapter_051"
+        },
+        "authoredHref": "chapter_051.xhtml",
+        "canonicalPath": "OPS/chapter_051.xhtml",
+        "mediaType": "application/xhtml+xml"
+      },
+      {
+        "declarationIndex": 68,
+        "authoredId": {
+          "state": "valid",
+          "value": "xchapter_052"
+        },
+        "authoredHref": "chapter_052.xhtml",
+        "canonicalPath": "OPS/chapter_052.xhtml",
+        "mediaType": "application/xhtml+xml"
+      },
+      {
+        "declarationIndex": 69,
+        "authoredId": {
+          "state": "valid",
+          "value": "xchapter_053"
+        },
+        "authoredHref": "chapter_053.xhtml",
+        "canonicalPath": "OPS/chapter_053.xhtml",
+        "mediaType": "application/xhtml+xml"
+      },
+      {
+        "declarationIndex": 70,
+        "authoredId": {
+          "state": "valid",
+          "value": "xchapter_054"
+        },
+        "authoredHref": "chapter_054.xhtml",
+        "canonicalPath": "OPS/chapter_054.xhtml",
+        "mediaType": "application/xhtml+xml"
+      },
+      {
+        "declarationIndex": 71,
+        "authoredId": {
+          "state": "valid",
+          "value": "xchapter_055"
+        },
+        "authoredHref": "chapter_055.xhtml",
+        "canonicalPath": "OPS/chapter_055.xhtml",
+        "mediaType": "application/xhtml+xml"
+      },
+      {
+        "declarationIndex": 72,
+        "authoredId": {
+          "state": "valid",
+          "value": "xchapter_056"
+        },
+        "authoredHref": "chapter_056.xhtml",
+        "canonicalPath": "OPS/chapter_056.xhtml",
+        "mediaType": "application/xhtml+xml"
+      },
+      {
+        "declarationIndex": 73,
+        "authoredId": {
+          "state": "valid",
+          "value": "xchapter_057"
+        },
+        "authoredHref": "chapter_057.xhtml",
+        "canonicalPath": "OPS/chapter_057.xhtml",
+        "mediaType": "application/xhtml+xml"
+      },
+      {
+        "declarationIndex": 74,
+        "authoredId": {
+          "state": "valid",
+          "value": "xchapter_058"
+        },
+        "authoredHref": "chapter_058.xhtml",
+        "canonicalPath": "OPS/chapter_058.xhtml",
+        "mediaType": "application/xhtml+xml"
+      },
+      {
+        "declarationIndex": 75,
+        "authoredId": {
+          "state": "valid",
+          "value": "xchapter_059"
+        },
+        "authoredHref": "chapter_059.xhtml",
+        "canonicalPath": "OPS/chapter_059.xhtml",
+        "mediaType": "application/xhtml+xml"
+      },
+      {
+        "declarationIndex": 76,
+        "authoredId": {
+          "state": "valid",
+          "value": "xchapter_060"
+        },
+        "authoredHref": "chapter_060.xhtml",
+        "canonicalPath": "OPS/chapter_060.xhtml",
+        "mediaType": "application/xhtml+xml"
+      },
+      {
+        "declarationIndex": 77,
+        "authoredId": {
+          "state": "valid",
+          "value": "xchapter_061"
+        },
+        "authoredHref": "chapter_061.xhtml",
+        "canonicalPath": "OPS/chapter_061.xhtml",
+        "mediaType": "application/xhtml+xml"
+      },
+      {
+        "declarationIndex": 78,
+        "authoredId": {
+          "state": "valid",
+          "value": "xchapter_062"
+        },
+        "authoredHref": "chapter_062.xhtml",
+        "canonicalPath": "OPS/chapter_062.xhtml",
+        "mediaType": "application/xhtml+xml"
+      },
+      {
+        "declarationIndex": 79,
+        "authoredId": {
+          "state": "valid",
+          "value": "xchapter_063"
+        },
+        "authoredHref": "chapter_063.xhtml",
+        "canonicalPath": "OPS/chapter_063.xhtml",
+        "mediaType": "application/xhtml+xml"
+      },
+      {
+        "declarationIndex": 80,
+        "authoredId": {
+          "state": "valid",
+          "value": "xchapter_064"
+        },
+        "authoredHref": "chapter_064.xhtml",
+        "canonicalPath": "OPS/chapter_064.xhtml",
+        "mediaType": "application/xhtml+xml"
+      },
+      {
+        "declarationIndex": 81,
+        "authoredId": {
+          "state": "valid",
+          "value": "xchapter_065"
+        },
+        "authoredHref": "chapter_065.xhtml",
+        "canonicalPath": "OPS/chapter_065.xhtml",
+        "mediaType": "application/xhtml+xml"
+      },
+      {
+        "declarationIndex": 82,
+        "authoredId": {
+          "state": "valid",
+          "value": "xchapter_066"
+        },
+        "authoredHref": "chapter_066.xhtml",
+        "canonicalPath": "OPS/chapter_066.xhtml",
+        "mediaType": "application/xhtml+xml"
+      },
+      {
+        "declarationIndex": 83,
+        "authoredId": {
+          "state": "valid",
+          "value": "xchapter_067"
+        },
+        "authoredHref": "chapter_067.xhtml",
+        "canonicalPath": "OPS/chapter_067.xhtml",
+        "mediaType": "application/xhtml+xml"
+      },
+      {
+        "declarationIndex": 84,
+        "authoredId": {
+          "state": "valid",
+          "value": "xchapter_068"
+        },
+        "authoredHref": "chapter_068.xhtml",
+        "canonicalPath": "OPS/chapter_068.xhtml",
+        "mediaType": "application/xhtml+xml"
+      },
+      {
+        "declarationIndex": 85,
+        "authoredId": {
+          "state": "valid",
+          "value": "xchapter_069"
+        },
+        "authoredHref": "chapter_069.xhtml",
+        "canonicalPath": "OPS/chapter_069.xhtml",
+        "mediaType": "application/xhtml+xml"
+      },
+      {
+        "declarationIndex": 86,
+        "authoredId": {
+          "state": "valid",
+          "value": "xchapter_070"
+        },
+        "authoredHref": "chapter_070.xhtml",
+        "canonicalPath": "OPS/chapter_070.xhtml",
+        "mediaType": "application/xhtml+xml"
+      },
+      {
+        "declarationIndex": 87,
+        "authoredId": {
+          "state": "valid",
+          "value": "xchapter_071"
+        },
+        "authoredHref": "chapter_071.xhtml",
+        "canonicalPath": "OPS/chapter_071.xhtml",
+        "mediaType": "application/xhtml+xml"
+      },
+      {
+        "declarationIndex": 88,
+        "authoredId": {
+          "state": "valid",
+          "value": "xchapter_072"
+        },
+        "authoredHref": "chapter_072.xhtml",
+        "canonicalPath": "OPS/chapter_072.xhtml",
+        "mediaType": "application/xhtml+xml"
+      },
+      {
+        "declarationIndex": 89,
+        "authoredId": {
+          "state": "valid",
+          "value": "xchapter_073"
+        },
+        "authoredHref": "chapter_073.xhtml",
+        "canonicalPath": "OPS/chapter_073.xhtml",
+        "mediaType": "application/xhtml+xml"
+      },
+      {
+        "declarationIndex": 90,
+        "authoredId": {
+          "state": "valid",
+          "value": "xchapter_074"
+        },
+        "authoredHref": "chapter_074.xhtml",
+        "canonicalPath": "OPS/chapter_074.xhtml",
+        "mediaType": "application/xhtml+xml"
+      },
+      {
+        "declarationIndex": 91,
+        "authoredId": {
+          "state": "valid",
+          "value": "xchapter_075"
+        },
+        "authoredHref": "chapter_075.xhtml",
+        "canonicalPath": "OPS/chapter_075.xhtml",
+        "mediaType": "application/xhtml+xml"
+      },
+      {
+        "declarationIndex": 92,
+        "authoredId": {
+          "state": "valid",
+          "value": "xchapter_076"
+        },
+        "authoredHref": "chapter_076.xhtml",
+        "canonicalPath": "OPS/chapter_076.xhtml",
+        "mediaType": "application/xhtml+xml"
+      },
+      {
+        "declarationIndex": 93,
+        "authoredId": {
+          "state": "valid",
+          "value": "xchapter_077"
+        },
+        "authoredHref": "chapter_077.xhtml",
+        "canonicalPath": "OPS/chapter_077.xhtml",
+        "mediaType": "application/xhtml+xml"
+      },
+      {
+        "declarationIndex": 94,
+        "authoredId": {
+          "state": "valid",
+          "value": "xchapter_078"
+        },
+        "authoredHref": "chapter_078.xhtml",
+        "canonicalPath": "OPS/chapter_078.xhtml",
+        "mediaType": "application/xhtml+xml"
+      },
+      {
+        "declarationIndex": 95,
+        "authoredId": {
+          "state": "valid",
+          "value": "xchapter_079"
+        },
+        "authoredHref": "chapter_079.xhtml",
+        "canonicalPath": "OPS/chapter_079.xhtml",
+        "mediaType": "application/xhtml+xml"
+      },
+      {
+        "declarationIndex": 96,
+        "authoredId": {
+          "state": "valid",
+          "value": "xchapter_080"
+        },
+        "authoredHref": "chapter_080.xhtml",
+        "canonicalPath": "OPS/chapter_080.xhtml",
+        "mediaType": "application/xhtml+xml"
+      },
+      {
+        "declarationIndex": 97,
+        "authoredId": {
+          "state": "valid",
+          "value": "xchapter_081"
+        },
+        "authoredHref": "chapter_081.xhtml",
+        "canonicalPath": "OPS/chapter_081.xhtml",
+        "mediaType": "application/xhtml+xml"
+      },
+      {
+        "declarationIndex": 98,
+        "authoredId": {
+          "state": "valid",
+          "value": "xchapter_082"
+        },
+        "authoredHref": "chapter_082.xhtml",
+        "canonicalPath": "OPS/chapter_082.xhtml",
+        "mediaType": "application/xhtml+xml"
+      },
+      {
+        "declarationIndex": 99,
+        "authoredId": {
+          "state": "valid",
+          "value": "xchapter_083"
+        },
+        "authoredHref": "chapter_083.xhtml",
+        "canonicalPath": "OPS/chapter_083.xhtml",
+        "mediaType": "application/xhtml+xml"
+      },
+      {
+        "declarationIndex": 100,
+        "authoredId": {
+          "state": "valid",
+          "value": "xchapter_084"
+        },
+        "authoredHref": "chapter_084.xhtml",
+        "canonicalPath": "OPS/chapter_084.xhtml",
+        "mediaType": "application/xhtml+xml"
+      },
+      {
+        "declarationIndex": 101,
+        "authoredId": {
+          "state": "valid",
+          "value": "xchapter_085"
+        },
+        "authoredHref": "chapter_085.xhtml",
+        "canonicalPath": "OPS/chapter_085.xhtml",
+        "mediaType": "application/xhtml+xml"
+      },
+      {
+        "declarationIndex": 102,
+        "authoredId": {
+          "state": "valid",
+          "value": "xchapter_086"
+        },
+        "authoredHref": "chapter_086.xhtml",
+        "canonicalPath": "OPS/chapter_086.xhtml",
+        "mediaType": "application/xhtml+xml"
+      },
+      {
+        "declarationIndex": 103,
+        "authoredId": {
+          "state": "valid",
+          "value": "xchapter_087"
+        },
+        "authoredHref": "chapter_087.xhtml",
+        "canonicalPath": "OPS/chapter_087.xhtml",
+        "mediaType": "application/xhtml+xml"
+      },
+      {
+        "declarationIndex": 104,
+        "authoredId": {
+          "state": "valid",
+          "value": "xchapter_088"
+        },
+        "authoredHref": "chapter_088.xhtml",
+        "canonicalPath": "OPS/chapter_088.xhtml",
+        "mediaType": "application/xhtml+xml"
+      },
+      {
+        "declarationIndex": 105,
+        "authoredId": {
+          "state": "valid",
+          "value": "xchapter_089"
+        },
+        "authoredHref": "chapter_089.xhtml",
+        "canonicalPath": "OPS/chapter_089.xhtml",
+        "mediaType": "application/xhtml+xml"
+      },
+      {
+        "declarationIndex": 106,
+        "authoredId": {
+          "state": "valid",
+          "value": "xchapter_090"
+        },
+        "authoredHref": "chapter_090.xhtml",
+        "canonicalPath": "OPS/chapter_090.xhtml",
+        "mediaType": "application/xhtml+xml"
+      },
+      {
+        "declarationIndex": 107,
+        "authoredId": {
+          "state": "valid",
+          "value": "xchapter_091"
+        },
+        "authoredHref": "chapter_091.xhtml",
+        "canonicalPath": "OPS/chapter_091.xhtml",
+        "mediaType": "application/xhtml+xml"
+      },
+      {
+        "declarationIndex": 108,
+        "authoredId": {
+          "state": "valid",
+          "value": "xchapter_092"
+        },
+        "authoredHref": "chapter_092.xhtml",
+        "canonicalPath": "OPS/chapter_092.xhtml",
+        "mediaType": "application/xhtml+xml"
+      },
+      {
+        "declarationIndex": 109,
+        "authoredId": {
+          "state": "valid",
+          "value": "xchapter_093"
+        },
+        "authoredHref": "chapter_093.xhtml",
+        "canonicalPath": "OPS/chapter_093.xhtml",
+        "mediaType": "application/xhtml+xml"
+      },
+      {
+        "declarationIndex": 110,
+        "authoredId": {
+          "state": "valid",
+          "value": "xchapter_094"
+        },
+        "authoredHref": "chapter_094.xhtml",
+        "canonicalPath": "OPS/chapter_094.xhtml",
+        "mediaType": "application/xhtml+xml"
+      },
+      {
+        "declarationIndex": 111,
+        "authoredId": {
+          "state": "valid",
+          "value": "xchapter_095"
+        },
+        "authoredHref": "chapter_095.xhtml",
+        "canonicalPath": "OPS/chapter_095.xhtml",
+        "mediaType": "application/xhtml+xml"
+      },
+      {
+        "declarationIndex": 112,
+        "authoredId": {
+          "state": "valid",
+          "value": "xchapter_096"
+        },
+        "authoredHref": "chapter_096.xhtml",
+        "canonicalPath": "OPS/chapter_096.xhtml",
+        "mediaType": "application/xhtml+xml"
+      },
+      {
+        "declarationIndex": 113,
+        "authoredId": {
+          "state": "valid",
+          "value": "xchapter_097"
+        },
+        "authoredHref": "chapter_097.xhtml",
+        "canonicalPath": "OPS/chapter_097.xhtml",
+        "mediaType": "application/xhtml+xml"
+      },
+      {
+        "declarationIndex": 114,
+        "authoredId": {
+          "state": "valid",
+          "value": "xchapter_098"
+        },
+        "authoredHref": "chapter_098.xhtml",
+        "canonicalPath": "OPS/chapter_098.xhtml",
+        "mediaType": "application/xhtml+xml"
+      },
+      {
+        "declarationIndex": 115,
+        "authoredId": {
+          "state": "valid",
+          "value": "xchapter_099"
+        },
+        "authoredHref": "chapter_099.xhtml",
+        "canonicalPath": "OPS/chapter_099.xhtml",
+        "mediaType": "application/xhtml+xml"
+      },
+      {
+        "declarationIndex": 116,
+        "authoredId": {
+          "state": "valid",
+          "value": "xchapter_100"
+        },
+        "authoredHref": "chapter_100.xhtml",
+        "canonicalPath": "OPS/chapter_100.xhtml",
+        "mediaType": "application/xhtml+xml"
+      },
+      {
+        "declarationIndex": 117,
+        "authoredId": {
+          "state": "valid",
+          "value": "xchapter_101"
+        },
+        "authoredHref": "chapter_101.xhtml",
+        "canonicalPath": "OPS/chapter_101.xhtml",
+        "mediaType": "application/xhtml+xml"
+      },
+      {
+        "declarationIndex": 118,
+        "authoredId": {
+          "state": "valid",
+          "value": "xchapter_102"
+        },
+        "authoredHref": "chapter_102.xhtml",
+        "canonicalPath": "OPS/chapter_102.xhtml",
+        "mediaType": "application/xhtml+xml"
+      },
+      {
+        "declarationIndex": 119,
+        "authoredId": {
+          "state": "valid",
+          "value": "xchapter_103"
+        },
+        "authoredHref": "chapter_103.xhtml",
+        "canonicalPath": "OPS/chapter_103.xhtml",
+        "mediaType": "application/xhtml+xml"
+      },
+      {
+        "declarationIndex": 120,
+        "authoredId": {
+          "state": "valid",
+          "value": "xchapter_104"
+        },
+        "authoredHref": "chapter_104.xhtml",
+        "canonicalPath": "OPS/chapter_104.xhtml",
+        "mediaType": "application/xhtml+xml"
+      },
+      {
+        "declarationIndex": 121,
+        "authoredId": {
+          "state": "valid",
+          "value": "xchapter_105"
+        },
+        "authoredHref": "chapter_105.xhtml",
+        "canonicalPath": "OPS/chapter_105.xhtml",
+        "mediaType": "application/xhtml+xml"
+      },
+      {
+        "declarationIndex": 122,
+        "authoredId": {
+          "state": "valid",
+          "value": "xchapter_106"
+        },
+        "authoredHref": "chapter_106.xhtml",
+        "canonicalPath": "OPS/chapter_106.xhtml",
+        "mediaType": "application/xhtml+xml"
+      },
+      {
+        "declarationIndex": 123,
+        "authoredId": {
+          "state": "valid",
+          "value": "xchapter_107"
+        },
+        "authoredHref": "chapter_107.xhtml",
+        "canonicalPath": "OPS/chapter_107.xhtml",
+        "mediaType": "application/xhtml+xml"
+      },
+      {
+        "declarationIndex": 124,
+        "authoredId": {
+          "state": "valid",
+          "value": "xchapter_108"
+        },
+        "authoredHref": "chapter_108.xhtml",
+        "canonicalPath": "OPS/chapter_108.xhtml",
+        "mediaType": "application/xhtml+xml"
+      },
+      {
+        "declarationIndex": 125,
+        "authoredId": {
+          "state": "valid",
+          "value": "xchapter_109"
+        },
+        "authoredHref": "chapter_109.xhtml",
+        "canonicalPath": "OPS/chapter_109.xhtml",
+        "mediaType": "application/xhtml+xml"
+      },
+      {
+        "declarationIndex": 126,
+        "authoredId": {
+          "state": "valid",
+          "value": "xchapter_110"
+        },
+        "authoredHref": "chapter_110.xhtml",
+        "canonicalPath": "OPS/chapter_110.xhtml",
+        "mediaType": "application/xhtml+xml"
+      },
+      {
+        "declarationIndex": 127,
+        "authoredId": {
+          "state": "valid",
+          "value": "xchapter_111"
+        },
+        "authoredHref": "chapter_111.xhtml",
+        "canonicalPath": "OPS/chapter_111.xhtml",
+        "mediaType": "application/xhtml+xml"
+      },
+      {
+        "declarationIndex": 128,
+        "authoredId": {
+          "state": "valid",
+          "value": "xchapter_112"
+        },
+        "authoredHref": "chapter_112.xhtml",
+        "canonicalPath": "OPS/chapter_112.xhtml",
+        "mediaType": "application/xhtml+xml"
+      },
+      {
+        "declarationIndex": 129,
+        "authoredId": {
+          "state": "valid",
+          "value": "xchapter_113"
+        },
+        "authoredHref": "chapter_113.xhtml",
+        "canonicalPath": "OPS/chapter_113.xhtml",
+        "mediaType": "application/xhtml+xml"
+      },
+      {
+        "declarationIndex": 130,
+        "authoredId": {
+          "state": "valid",
+          "value": "xchapter_114"
+        },
+        "authoredHref": "chapter_114.xhtml",
+        "canonicalPath": "OPS/chapter_114.xhtml",
+        "mediaType": "application/xhtml+xml"
+      },
+      {
+        "declarationIndex": 131,
+        "authoredId": {
+          "state": "valid",
+          "value": "xchapter_115"
+        },
+        "authoredHref": "chapter_115.xhtml",
+        "canonicalPath": "OPS/chapter_115.xhtml",
+        "mediaType": "application/xhtml+xml"
+      },
+      {
+        "declarationIndex": 132,
+        "authoredId": {
+          "state": "valid",
+          "value": "xchapter_116"
+        },
+        "authoredHref": "chapter_116.xhtml",
+        "canonicalPath": "OPS/chapter_116.xhtml",
+        "mediaType": "application/xhtml+xml"
+      },
+      {
+        "declarationIndex": 133,
+        "authoredId": {
+          "state": "valid",
+          "value": "xchapter_117"
+        },
+        "authoredHref": "chapter_117.xhtml",
+        "canonicalPath": "OPS/chapter_117.xhtml",
+        "mediaType": "application/xhtml+xml"
+      },
+      {
+        "declarationIndex": 134,
+        "authoredId": {
+          "state": "valid",
+          "value": "xchapter_118"
+        },
+        "authoredHref": "chapter_118.xhtml",
+        "canonicalPath": "OPS/chapter_118.xhtml",
+        "mediaType": "application/xhtml+xml"
+      },
+      {
+        "declarationIndex": 135,
+        "authoredId": {
+          "state": "valid",
+          "value": "xchapter_119"
+        },
+        "authoredHref": "chapter_119.xhtml",
+        "canonicalPath": "OPS/chapter_119.xhtml",
+        "mediaType": "application/xhtml+xml"
+      },
+      {
+        "declarationIndex": 136,
+        "authoredId": {
+          "state": "valid",
+          "value": "xchapter_120"
+        },
+        "authoredHref": "chapter_120.xhtml",
+        "canonicalPath": "OPS/chapter_120.xhtml",
+        "mediaType": "application/xhtml+xml"
+      },
+      {
+        "declarationIndex": 137,
+        "authoredId": {
+          "state": "valid",
+          "value": "xchapter_121"
+        },
+        "authoredHref": "chapter_121.xhtml",
+        "canonicalPath": "OPS/chapter_121.xhtml",
+        "mediaType": "application/xhtml+xml"
+      },
+      {
+        "declarationIndex": 138,
+        "authoredId": {
+          "state": "valid",
+          "value": "xchapter_122"
+        },
+        "authoredHref": "chapter_122.xhtml",
+        "canonicalPath": "OPS/chapter_122.xhtml",
+        "mediaType": "application/xhtml+xml"
+      },
+      {
+        "declarationIndex": 139,
+        "authoredId": {
+          "state": "valid",
+          "value": "xchapter_123"
+        },
+        "authoredHref": "chapter_123.xhtml",
+        "canonicalPath": "OPS/chapter_123.xhtml",
+        "mediaType": "application/xhtml+xml"
+      },
+      {
+        "declarationIndex": 140,
+        "authoredId": {
+          "state": "valid",
+          "value": "xchapter_124"
+        },
+        "authoredHref": "chapter_124.xhtml",
+        "canonicalPath": "OPS/chapter_124.xhtml",
+        "mediaType": "application/xhtml+xml"
+      },
+      {
+        "declarationIndex": 141,
+        "authoredId": {
+          "state": "valid",
+          "value": "xchapter_125"
+        },
+        "authoredHref": "chapter_125.xhtml",
+        "canonicalPath": "OPS/chapter_125.xhtml",
+        "mediaType": "application/xhtml+xml"
+      },
+      {
+        "declarationIndex": 142,
+        "authoredId": {
+          "state": "valid",
+          "value": "xchapter_126"
+        },
+        "authoredHref": "chapter_126.xhtml",
+        "canonicalPath": "OPS/chapter_126.xhtml",
+        "mediaType": "application/xhtml+xml"
+      },
+      {
+        "declarationIndex": 143,
+        "authoredId": {
+          "state": "valid",
+          "value": "xchapter_127"
+        },
+        "authoredHref": "chapter_127.xhtml",
+        "canonicalPath": "OPS/chapter_127.xhtml",
+        "mediaType": "application/xhtml+xml"
+      },
+      {
+        "declarationIndex": 144,
+        "authoredId": {
+          "state": "valid",
+          "value": "xchapter_128"
+        },
+        "authoredHref": "chapter_128.xhtml",
+        "canonicalPath": "OPS/chapter_128.xhtml",
+        "mediaType": "application/xhtml+xml"
+      },
+      {
+        "declarationIndex": 145,
+        "authoredId": {
+          "state": "valid",
+          "value": "xchapter_129"
+        },
+        "authoredHref": "chapter_129.xhtml",
+        "canonicalPath": "OPS/chapter_129.xhtml",
+        "mediaType": "application/xhtml+xml"
+      },
+      {
+        "declarationIndex": 146,
+        "authoredId": {
+          "state": "valid",
+          "value": "xchapter_130"
+        },
+        "authoredHref": "chapter_130.xhtml",
+        "canonicalPath": "OPS/chapter_130.xhtml",
+        "mediaType": "application/xhtml+xml"
+      },
+      {
+        "declarationIndex": 147,
+        "authoredId": {
+          "state": "valid",
+          "value": "xchapter_131"
+        },
+        "authoredHref": "chapter_131.xhtml",
+        "canonicalPath": "OPS/chapter_131.xhtml",
+        "mediaType": "application/xhtml+xml"
+      },
+      {
+        "declarationIndex": 148,
+        "authoredId": {
+          "state": "valid",
+          "value": "xchapter_132"
+        },
+        "authoredHref": "chapter_132.xhtml",
+        "canonicalPath": "OPS/chapter_132.xhtml",
+        "mediaType": "application/xhtml+xml"
+      },
+      {
+        "declarationIndex": 149,
+        "authoredId": {
+          "state": "valid",
+          "value": "xchapter_133"
+        },
+        "authoredHref": "chapter_133.xhtml",
+        "canonicalPath": "OPS/chapter_133.xhtml",
+        "mediaType": "application/xhtml+xml"
+      },
+      {
+        "declarationIndex": 150,
+        "authoredId": {
+          "state": "valid",
+          "value": "xchapter_134"
+        },
+        "authoredHref": "chapter_134.xhtml",
+        "canonicalPath": "OPS/chapter_134.xhtml",
+        "mediaType": "application/xhtml+xml"
+      },
+      {
+        "declarationIndex": 151,
+        "authoredId": {
+          "state": "valid",
+          "value": "xchapter_135"
+        },
+        "authoredHref": "chapter_135.xhtml",
+        "canonicalPath": "OPS/chapter_135.xhtml",
+        "mediaType": "application/xhtml+xml"
+      },
+      {
+        "declarationIndex": 152,
+        "authoredId": {
+          "state": "valid",
+          "value": "xchapter_136"
+        },
+        "authoredHref": "chapter_136.xhtml",
+        "canonicalPath": "OPS/chapter_136.xhtml",
+        "mediaType": "application/xhtml+xml"
+      },
+      {
+        "declarationIndex": 153,
+        "authoredId": {
+          "state": "valid",
+          "value": "brief-toc"
+        },
+        "authoredHref": "toc-short.xhtml",
+        "canonicalPath": "OPS/toc-short.xhtml",
+        "mediaType": "application/xhtml+xml"
+      }
+    ],
+    "metadata": {
+      "totalDurations": [
+        {
+          "authored": "0:23:23.500",
+          "clock": {
+            "state": "parsed",
+            "milliseconds": "1403500"
+          },
+          "refines": null,
+          "declarationIndexes": []
+        }
+      ],
+      "itemDurations": [
+        {
+          "authored": "0:14:20.500",
+          "clock": {
+            "state": "parsed",
+            "milliseconds": "860500"
+          },
+          "refines": "#chapter_001_overlay",
+          "declarationIndexes": [15]
+        },
+        {
+          "authored": "0:09:03.000",
+          "clock": {
+            "state": "parsed",
+            "milliseconds": "543000"
+          },
+          "refines": "#chapter_002_overlay",
+          "declarationIndexes": [17]
+        }
+      ],
+      "narrators": ["Stuart Wills"],
+      "activeClasses": ["-epub-media-overlay-active"],
+      "playbackActiveClasses": []
+    }
+  },
+  "coverage": {
+    "state": "complete",
+    "packageRelationships": {
+      "state": "complete"
+    },
+    "smilExtraction": [
+      {
+        "canonicalPath": "OPS/chapter_001_overlay.smil",
+        "result": {
+          "state": "complete"
+        }
+      },
+      {
+        "canonicalPath": "OPS/chapter_002_overlay.smil",
+        "result": {
+          "state": "complete"
+        }
+      }
+    ],
+    "smilRelationships": [
+      {
+        "canonicalPath": "OPS/chapter_001_overlay.smil",
+        "result": {
+          "state": "complete"
+        }
+      },
+      {
+        "canonicalPath": "OPS/chapter_002_overlay.smil",
+        "result": {
+          "state": "complete"
+        }
+      }
+    ],
+    "fragmentObservations": [
+      {
+        "canonicalPath": "OPS/chapter_001.xhtml",
+        "result": {
+          "state": "complete"
+        }
+      },
+      {
+        "canonicalPath": "OPS/chapter_002.xhtml",
+        "result": {
+          "state": "complete"
+        }
+      }
+    ],
+    "mediaInspection": [
+      {
+        "canonicalPath": "OPS/audio/mobydick_001_002_melville.mp4",
+        "result": {
+          "state": "complete"
+        }
+      }
+    ]
+  },
+  "playback": {
+    "state": "available",
+    "overlays": [
+      {
+        "overlayIndex": 0,
+        "canonicalPath": "OPS/chapter_001_overlay.smil",
+        "declarations": [
+          {
+            "declarationIndex": 15,
+            "authoredId": {
+              "state": "valid",
+              "value": "chapter_001_overlay"
+            },
+            "authoredHref": "chapter_001_overlay.smil",
+            "canonicalPath": "OPS/chapter_001_overlay.smil",
+            "mediaType": "application/smil+xml"
+          }
+        ],
+        "skippable": [],
+        "escapable": [],
+        "segmentCount": 27,
+        "playableSegmentCount": 27,
+        "availability": {
+          "state": "available"
+        }
+      },
+      {
+        "overlayIndex": 1,
+        "canonicalPath": "OPS/chapter_002_overlay.smil",
+        "declarations": [
+          {
+            "declarationIndex": 17,
+            "authoredId": {
+              "state": "valid",
+              "value": "chapter_002_overlay"
+            },
+            "authoredHref": "chapter_002_overlay.smil",
+            "canonicalPath": "OPS/chapter_002_overlay.smil",
+            "mediaType": "application/smil+xml"
+          }
+        ],
+        "skippable": [],
+        "escapable": [],
+        "segmentCount": 13,
+        "playableSegmentCount": 13,
+        "availability": {
+          "state": "available"
+        }
+      }
+    ],
+    "associations": [
+      {
+        "occurrenceIndex": 0,
+        "effectiveLinear": "no",
+        "content": {
+          "state": "resolved",
+          "declaration": {
+            "declarationIndex": 7,
+            "authoredId": {
+              "state": "valid",
+              "value": "cover"
+            },
+            "authoredHref": "cover.xhtml",
+            "canonicalPath": "OPS/cover.xhtml",
+            "mediaType": "application/xhtml+xml"
+          },
+          "canonicalPath": "OPS/cover.xhtml",
+          "bytes": {
+            "state": "present"
+          }
+        },
+        "overlay": {
+          "state": "not-declared"
+        },
+        "entrySegmentIndexes": []
+      },
+      {
+        "occurrenceIndex": 1,
+        "effectiveLinear": "yes",
+        "content": {
+          "state": "resolved",
+          "declaration": {
+            "declarationIndex": 6,
+            "authoredId": {
+              "state": "valid",
+              "value": "titlepage"
+            },
+            "authoredHref": "titlepage.xhtml",
+            "canonicalPath": "OPS/titlepage.xhtml",
+            "mediaType": "application/xhtml+xml"
+          },
+          "canonicalPath": "OPS/titlepage.xhtml",
+          "bytes": {
+            "state": "present"
+          }
+        },
+        "overlay": {
+          "state": "not-declared"
+        },
+        "entrySegmentIndexes": []
+      },
+      {
+        "occurrenceIndex": 2,
+        "effectiveLinear": "yes",
+        "content": {
+          "state": "resolved",
+          "declaration": {
+            "declarationIndex": 153,
+            "authoredId": {
+              "state": "valid",
+              "value": "brief-toc"
+            },
+            "authoredHref": "toc-short.xhtml",
+            "canonicalPath": "OPS/toc-short.xhtml",
+            "mediaType": "application/xhtml+xml"
+          },
+          "canonicalPath": "OPS/toc-short.xhtml",
+          "bytes": {
+            "state": "present"
+          }
+        },
+        "overlay": {
+          "state": "not-declared"
+        },
+        "entrySegmentIndexes": []
+      },
+      {
+        "occurrenceIndex": 3,
+        "effectiveLinear": "yes",
+        "content": {
+          "state": "resolved",
+          "declaration": {
+            "declarationIndex": 11,
+            "authoredId": {
+              "state": "valid",
+              "value": "xpreface_001"
+            },
+            "authoredHref": "preface_001.xhtml",
+            "canonicalPath": "OPS/preface_001.xhtml",
+            "mediaType": "application/xhtml+xml"
+          },
+          "canonicalPath": "OPS/preface_001.xhtml",
+          "bytes": {
+            "state": "present"
+          }
+        },
+        "overlay": {
+          "state": "not-declared"
+        },
+        "entrySegmentIndexes": []
+      },
+      {
+        "occurrenceIndex": 4,
+        "effectiveLinear": "yes",
+        "content": {
+          "state": "resolved",
+          "declaration": {
+            "declarationIndex": 12,
+            "authoredId": {
+              "state": "valid",
+              "value": "xintroduction_001"
+            },
+            "authoredHref": "introduction_001.xhtml",
+            "canonicalPath": "OPS/introduction_001.xhtml",
+            "mediaType": "application/xhtml+xml"
+          },
+          "canonicalPath": "OPS/introduction_001.xhtml",
+          "bytes": {
+            "state": "present"
+          }
+        },
+        "overlay": {
+          "state": "not-declared"
+        },
+        "entrySegmentIndexes": []
+      },
+      {
+        "occurrenceIndex": 5,
+        "effectiveLinear": "yes",
+        "content": {
+          "state": "resolved",
+          "declaration": {
+            "declarationIndex": 13,
+            "authoredId": {
+              "state": "valid",
+              "value": "xepigraph_001"
+            },
+            "authoredHref": "epigraph_001.xhtml",
+            "canonicalPath": "OPS/epigraph_001.xhtml",
+            "mediaType": "application/xhtml+xml"
+          },
+          "canonicalPath": "OPS/epigraph_001.xhtml",
+          "bytes": {
+            "state": "present"
+          }
+        },
+        "overlay": {
+          "state": "not-declared"
+        },
+        "entrySegmentIndexes": []
+      },
+      {
+        "occurrenceIndex": 6,
+        "effectiveLinear": "yes",
+        "content": {
+          "state": "resolved",
+          "declaration": {
+            "declarationIndex": 14,
+            "authoredId": {
+              "state": "valid",
+              "value": "xchapter_001"
+            },
+            "authoredHref": "chapter_001.xhtml",
+            "canonicalPath": "OPS/chapter_001.xhtml",
+            "mediaType": "application/xhtml+xml"
+          },
+          "canonicalPath": "OPS/chapter_001.xhtml",
+          "bytes": {
+            "state": "present"
+          }
+        },
+        "overlay": {
+          "state": "resolved",
+          "declaration": {
+            "declarationIndex": 15,
+            "authoredId": {
+              "state": "valid",
+              "value": "chapter_001_overlay"
+            },
+            "authoredHref": "chapter_001_overlay.smil",
+            "canonicalPath": "OPS/chapter_001_overlay.smil",
+            "mediaType": "application/smil+xml"
+          },
+          "overlayIndex": 0
+        },
+        "entrySegmentIndexes": [
+          0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24,
+          25, 26
+        ]
+      },
+      {
+        "occurrenceIndex": 7,
+        "effectiveLinear": "yes",
+        "content": {
+          "state": "resolved",
+          "declaration": {
+            "declarationIndex": 16,
+            "authoredId": {
+              "state": "valid",
+              "value": "xchapter_002"
+            },
+            "authoredHref": "chapter_002.xhtml",
+            "canonicalPath": "OPS/chapter_002.xhtml",
+            "mediaType": "application/xhtml+xml"
+          },
+          "canonicalPath": "OPS/chapter_002.xhtml",
+          "bytes": {
+            "state": "present"
+          }
+        },
+        "overlay": {
+          "state": "resolved",
+          "declaration": {
+            "declarationIndex": 17,
+            "authoredId": {
+              "state": "valid",
+              "value": "chapter_002_overlay"
+            },
+            "authoredHref": "chapter_002_overlay.smil",
+            "canonicalPath": "OPS/chapter_002_overlay.smil",
+            "mediaType": "application/smil+xml"
+          },
+          "overlayIndex": 1
+        },
+        "entrySegmentIndexes": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]
+      },
+      {
+        "occurrenceIndex": 8,
+        "effectiveLinear": "yes",
+        "content": {
+          "state": "resolved",
+          "declaration": {
+            "declarationIndex": 18,
+            "authoredId": {
+              "state": "valid",
+              "value": "xchapter_003"
+            },
+            "authoredHref": "chapter_003.xhtml",
+            "canonicalPath": "OPS/chapter_003.xhtml",
+            "mediaType": "application/xhtml+xml"
+          },
+          "canonicalPath": "OPS/chapter_003.xhtml",
+          "bytes": {
+            "state": "present"
+          }
+        },
+        "overlay": {
+          "state": "not-declared"
+        },
+        "entrySegmentIndexes": []
+      },
+      {
+        "occurrenceIndex": 9,
+        "effectiveLinear": "yes",
+        "content": {
+          "state": "resolved",
+          "declaration": {
+            "declarationIndex": 20,
+            "authoredId": {
+              "state": "valid",
+              "value": "xchapter_004"
+            },
+            "authoredHref": "chapter_004.xhtml",
+            "canonicalPath": "OPS/chapter_004.xhtml",
+            "mediaType": "application/xhtml+xml"
+          },
+          "canonicalPath": "OPS/chapter_004.xhtml",
+          "bytes": {
+            "state": "present"
+          }
+        },
+        "overlay": {
+          "state": "not-declared"
+        },
+        "entrySegmentIndexes": []
+      },
+      {
+        "occurrenceIndex": 10,
+        "effectiveLinear": "yes",
+        "content": {
+          "state": "resolved",
+          "declaration": {
+            "declarationIndex": 21,
+            "authoredId": {
+              "state": "valid",
+              "value": "xchapter_005"
+            },
+            "authoredHref": "chapter_005.xhtml",
+            "canonicalPath": "OPS/chapter_005.xhtml",
+            "mediaType": "application/xhtml+xml"
+          },
+          "canonicalPath": "OPS/chapter_005.xhtml",
+          "bytes": {
+            "state": "present"
+          }
+        },
+        "overlay": {
+          "state": "not-declared"
+        },
+        "entrySegmentIndexes": []
+      },
+      {
+        "occurrenceIndex": 11,
+        "effectiveLinear": "yes",
+        "content": {
+          "state": "resolved",
+          "declaration": {
+            "declarationIndex": 22,
+            "authoredId": {
+              "state": "valid",
+              "value": "xchapter_006"
+            },
+            "authoredHref": "chapter_006.xhtml",
+            "canonicalPath": "OPS/chapter_006.xhtml",
+            "mediaType": "application/xhtml+xml"
+          },
+          "canonicalPath": "OPS/chapter_006.xhtml",
+          "bytes": {
+            "state": "present"
+          }
+        },
+        "overlay": {
+          "state": "not-declared"
+        },
+        "entrySegmentIndexes": []
+      },
+      {
+        "occurrenceIndex": 12,
+        "effectiveLinear": "yes",
+        "content": {
+          "state": "resolved",
+          "declaration": {
+            "declarationIndex": 23,
+            "authoredId": {
+              "state": "valid",
+              "value": "xchapter_007"
+            },
+            "authoredHref": "chapter_007.xhtml",
+            "canonicalPath": "OPS/chapter_007.xhtml",
+            "mediaType": "application/xhtml+xml"
+          },
+          "canonicalPath": "OPS/chapter_007.xhtml",
+          "bytes": {
+            "state": "present"
+          }
+        },
+        "overlay": {
+          "state": "not-declared"
+        },
+        "entrySegmentIndexes": []
+      },
+      {
+        "occurrenceIndex": 13,
+        "effectiveLinear": "yes",
+        "content": {
+          "state": "resolved",
+          "declaration": {
+            "declarationIndex": 24,
+            "authoredId": {
+              "state": "valid",
+              "value": "xchapter_008"
+            },
+            "authoredHref": "chapter_008.xhtml",
+            "canonicalPath": "OPS/chapter_008.xhtml",
+            "mediaType": "application/xhtml+xml"
+          },
+          "canonicalPath": "OPS/chapter_008.xhtml",
+          "bytes": {
+            "state": "present"
+          }
+        },
+        "overlay": {
+          "state": "not-declared"
+        },
+        "entrySegmentIndexes": []
+      },
+      {
+        "occurrenceIndex": 14,
+        "effectiveLinear": "yes",
+        "content": {
+          "state": "resolved",
+          "declaration": {
+            "declarationIndex": 25,
+            "authoredId": {
+              "state": "valid",
+              "value": "xchapter_009"
+            },
+            "authoredHref": "chapter_009.xhtml",
+            "canonicalPath": "OPS/chapter_009.xhtml",
+            "mediaType": "application/xhtml+xml"
+          },
+          "canonicalPath": "OPS/chapter_009.xhtml",
+          "bytes": {
+            "state": "present"
+          }
+        },
+        "overlay": {
+          "state": "not-declared"
+        },
+        "entrySegmentIndexes": []
+      },
+      {
+        "occurrenceIndex": 15,
+        "effectiveLinear": "yes",
+        "content": {
+          "state": "resolved",
+          "declaration": {
+            "declarationIndex": 26,
+            "authoredId": {
+              "state": "valid",
+              "value": "xchapter_010"
+            },
+            "authoredHref": "chapter_010.xhtml",
+            "canonicalPath": "OPS/chapter_010.xhtml",
+            "mediaType": "application/xhtml+xml"
+          },
+          "canonicalPath": "OPS/chapter_010.xhtml",
+          "bytes": {
+            "state": "present"
+          }
+        },
+        "overlay": {
+          "state": "not-declared"
+        },
+        "entrySegmentIndexes": []
+      },
+      {
+        "occurrenceIndex": 16,
+        "effectiveLinear": "yes",
+        "content": {
+          "state": "resolved",
+          "declaration": {
+            "declarationIndex": 27,
+            "authoredId": {
+              "state": "valid",
+              "value": "xchapter_011"
+            },
+            "authoredHref": "chapter_011.xhtml",
+            "canonicalPath": "OPS/chapter_011.xhtml",
+            "mediaType": "application/xhtml+xml"
+          },
+          "canonicalPath": "OPS/chapter_011.xhtml",
+          "bytes": {
+            "state": "present"
+          }
+        },
+        "overlay": {
+          "state": "not-declared"
+        },
+        "entrySegmentIndexes": []
+      },
+      {
+        "occurrenceIndex": 17,
+        "effectiveLinear": "yes",
+        "content": {
+          "state": "resolved",
+          "declaration": {
+            "declarationIndex": 28,
+            "authoredId": {
+              "state": "valid",
+              "value": "xchapter_012"
+            },
+            "authoredHref": "chapter_012.xhtml",
+            "canonicalPath": "OPS/chapter_012.xhtml",
+            "mediaType": "application/xhtml+xml"
+          },
+          "canonicalPath": "OPS/chapter_012.xhtml",
+          "bytes": {
+            "state": "present"
+          }
+        },
+        "overlay": {
+          "state": "not-declared"
+        },
+        "entrySegmentIndexes": []
+      },
+      {
+        "occurrenceIndex": 18,
+        "effectiveLinear": "yes",
+        "content": {
+          "state": "resolved",
+          "declaration": {
+            "declarationIndex": 29,
+            "authoredId": {
+              "state": "valid",
+              "value": "xchapter_013"
+            },
+            "authoredHref": "chapter_013.xhtml",
+            "canonicalPath": "OPS/chapter_013.xhtml",
+            "mediaType": "application/xhtml+xml"
+          },
+          "canonicalPath": "OPS/chapter_013.xhtml",
+          "bytes": {
+            "state": "present"
+          }
+        },
+        "overlay": {
+          "state": "not-declared"
+        },
+        "entrySegmentIndexes": []
+      },
+      {
+        "occurrenceIndex": 19,
+        "effectiveLinear": "yes",
+        "content": {
+          "state": "resolved",
+          "declaration": {
+            "declarationIndex": 30,
+            "authoredId": {
+              "state": "valid",
+              "value": "xchapter_014"
+            },
+            "authoredHref": "chapter_014.xhtml",
+            "canonicalPath": "OPS/chapter_014.xhtml",
+            "mediaType": "application/xhtml+xml"
+          },
+          "canonicalPath": "OPS/chapter_014.xhtml",
+          "bytes": {
+            "state": "present"
+          }
+        },
+        "overlay": {
+          "state": "not-declared"
+        },
+        "entrySegmentIndexes": []
+      },
+      {
+        "occurrenceIndex": 20,
+        "effectiveLinear": "yes",
+        "content": {
+          "state": "resolved",
+          "declaration": {
+            "declarationIndex": 31,
+            "authoredId": {
+              "state": "valid",
+              "value": "xchapter_015"
+            },
+            "authoredHref": "chapter_015.xhtml",
+            "canonicalPath": "OPS/chapter_015.xhtml",
+            "mediaType": "application/xhtml+xml"
+          },
+          "canonicalPath": "OPS/chapter_015.xhtml",
+          "bytes": {
+            "state": "present"
+          }
+        },
+        "overlay": {
+          "state": "not-declared"
+        },
+        "entrySegmentIndexes": []
+      },
+      {
+        "occurrenceIndex": 21,
+        "effectiveLinear": "yes",
+        "content": {
+          "state": "resolved",
+          "declaration": {
+            "declarationIndex": 32,
+            "authoredId": {
+              "state": "valid",
+              "value": "xchapter_016"
+            },
+            "authoredHref": "chapter_016.xhtml",
+            "canonicalPath": "OPS/chapter_016.xhtml",
+            "mediaType": "application/xhtml+xml"
+          },
+          "canonicalPath": "OPS/chapter_016.xhtml",
+          "bytes": {
+            "state": "present"
+          }
+        },
+        "overlay": {
+          "state": "not-declared"
+        },
+        "entrySegmentIndexes": []
+      },
+      {
+        "occurrenceIndex": 22,
+        "effectiveLinear": "yes",
+        "content": {
+          "state": "resolved",
+          "declaration": {
+            "declarationIndex": 33,
+            "authoredId": {
+              "state": "valid",
+              "value": "xchapter_017"
+            },
+            "authoredHref": "chapter_017.xhtml",
+            "canonicalPath": "OPS/chapter_017.xhtml",
+            "mediaType": "application/xhtml+xml"
+          },
+          "canonicalPath": "OPS/chapter_017.xhtml",
+          "bytes": {
+            "state": "present"
+          }
+        },
+        "overlay": {
+          "state": "not-declared"
+        },
+        "entrySegmentIndexes": []
+      },
+      {
+        "occurrenceIndex": 23,
+        "effectiveLinear": "yes",
+        "content": {
+          "state": "resolved",
+          "declaration": {
+            "declarationIndex": 34,
+            "authoredId": {
+              "state": "valid",
+              "value": "xchapter_018"
+            },
+            "authoredHref": "chapter_018.xhtml",
+            "canonicalPath": "OPS/chapter_018.xhtml",
+            "mediaType": "application/xhtml+xml"
+          },
+          "canonicalPath": "OPS/chapter_018.xhtml",
+          "bytes": {
+            "state": "present"
+          }
+        },
+        "overlay": {
+          "state": "not-declared"
+        },
+        "entrySegmentIndexes": []
+      },
+      {
+        "occurrenceIndex": 24,
+        "effectiveLinear": "yes",
+        "content": {
+          "state": "resolved",
+          "declaration": {
+            "declarationIndex": 35,
+            "authoredId": {
+              "state": "valid",
+              "value": "xchapter_019"
+            },
+            "authoredHref": "chapter_019.xhtml",
+            "canonicalPath": "OPS/chapter_019.xhtml",
+            "mediaType": "application/xhtml+xml"
+          },
+          "canonicalPath": "OPS/chapter_019.xhtml",
+          "bytes": {
+            "state": "present"
+          }
+        },
+        "overlay": {
+          "state": "not-declared"
+        },
+        "entrySegmentIndexes": []
+      },
+      {
+        "occurrenceIndex": 25,
+        "effectiveLinear": "yes",
+        "content": {
+          "state": "resolved",
+          "declaration": {
+            "declarationIndex": 36,
+            "authoredId": {
+              "state": "valid",
+              "value": "xchapter_020"
+            },
+            "authoredHref": "chapter_020.xhtml",
+            "canonicalPath": "OPS/chapter_020.xhtml",
+            "mediaType": "application/xhtml+xml"
+          },
+          "canonicalPath": "OPS/chapter_020.xhtml",
+          "bytes": {
+            "state": "present"
+          }
+        },
+        "overlay": {
+          "state": "not-declared"
+        },
+        "entrySegmentIndexes": []
+      },
+      {
+        "occurrenceIndex": 26,
+        "effectiveLinear": "yes",
+        "content": {
+          "state": "resolved",
+          "declaration": {
+            "declarationIndex": 37,
+            "authoredId": {
+              "state": "valid",
+              "value": "xchapter_021"
+            },
+            "authoredHref": "chapter_021.xhtml",
+            "canonicalPath": "OPS/chapter_021.xhtml",
+            "mediaType": "application/xhtml+xml"
+          },
+          "canonicalPath": "OPS/chapter_021.xhtml",
+          "bytes": {
+            "state": "present"
+          }
+        },
+        "overlay": {
+          "state": "not-declared"
+        },
+        "entrySegmentIndexes": []
+      },
+      {
+        "occurrenceIndex": 27,
+        "effectiveLinear": "yes",
+        "content": {
+          "state": "resolved",
+          "declaration": {
+            "declarationIndex": 38,
+            "authoredId": {
+              "state": "valid",
+              "value": "xchapter_022"
+            },
+            "authoredHref": "chapter_022.xhtml",
+            "canonicalPath": "OPS/chapter_022.xhtml",
+            "mediaType": "application/xhtml+xml"
+          },
+          "canonicalPath": "OPS/chapter_022.xhtml",
+          "bytes": {
+            "state": "present"
+          }
+        },
+        "overlay": {
+          "state": "not-declared"
+        },
+        "entrySegmentIndexes": []
+      },
+      {
+        "occurrenceIndex": 28,
+        "effectiveLinear": "yes",
+        "content": {
+          "state": "resolved",
+          "declaration": {
+            "declarationIndex": 39,
+            "authoredId": {
+              "state": "valid",
+              "value": "xchapter_023"
+            },
+            "authoredHref": "chapter_023.xhtml",
+            "canonicalPath": "OPS/chapter_023.xhtml",
+            "mediaType": "application/xhtml+xml"
+          },
+          "canonicalPath": "OPS/chapter_023.xhtml",
+          "bytes": {
+            "state": "present"
+          }
+        },
+        "overlay": {
+          "state": "not-declared"
+        },
+        "entrySegmentIndexes": []
+      },
+      {
+        "occurrenceIndex": 29,
+        "effectiveLinear": "yes",
+        "content": {
+          "state": "resolved",
+          "declaration": {
+            "declarationIndex": 40,
+            "authoredId": {
+              "state": "valid",
+              "value": "xchapter_024"
+            },
+            "authoredHref": "chapter_024.xhtml",
+            "canonicalPath": "OPS/chapter_024.xhtml",
+            "mediaType": "application/xhtml+xml"
+          },
+          "canonicalPath": "OPS/chapter_024.xhtml",
+          "bytes": {
+            "state": "present"
+          }
+        },
+        "overlay": {
+          "state": "not-declared"
+        },
+        "entrySegmentIndexes": []
+      },
+      {
+        "occurrenceIndex": 30,
+        "effectiveLinear": "yes",
+        "content": {
+          "state": "resolved",
+          "declaration": {
+            "declarationIndex": 41,
+            "authoredId": {
+              "state": "valid",
+              "value": "xchapter_025"
+            },
+            "authoredHref": "chapter_025.xhtml",
+            "canonicalPath": "OPS/chapter_025.xhtml",
+            "mediaType": "application/xhtml+xml"
+          },
+          "canonicalPath": "OPS/chapter_025.xhtml",
+          "bytes": {
+            "state": "present"
+          }
+        },
+        "overlay": {
+          "state": "not-declared"
+        },
+        "entrySegmentIndexes": []
+      },
+      {
+        "occurrenceIndex": 31,
+        "effectiveLinear": "yes",
+        "content": {
+          "state": "resolved",
+          "declaration": {
+            "declarationIndex": 42,
+            "authoredId": {
+              "state": "valid",
+              "value": "xchapter_026"
+            },
+            "authoredHref": "chapter_026.xhtml",
+            "canonicalPath": "OPS/chapter_026.xhtml",
+            "mediaType": "application/xhtml+xml"
+          },
+          "canonicalPath": "OPS/chapter_026.xhtml",
+          "bytes": {
+            "state": "present"
+          }
+        },
+        "overlay": {
+          "state": "not-declared"
+        },
+        "entrySegmentIndexes": []
+      },
+      {
+        "occurrenceIndex": 32,
+        "effectiveLinear": "yes",
+        "content": {
+          "state": "resolved",
+          "declaration": {
+            "declarationIndex": 43,
+            "authoredId": {
+              "state": "valid",
+              "value": "xchapter_027"
+            },
+            "authoredHref": "chapter_027.xhtml",
+            "canonicalPath": "OPS/chapter_027.xhtml",
+            "mediaType": "application/xhtml+xml"
+          },
+          "canonicalPath": "OPS/chapter_027.xhtml",
+          "bytes": {
+            "state": "present"
+          }
+        },
+        "overlay": {
+          "state": "not-declared"
+        },
+        "entrySegmentIndexes": []
+      },
+      {
+        "occurrenceIndex": 33,
+        "effectiveLinear": "yes",
+        "content": {
+          "state": "resolved",
+          "declaration": {
+            "declarationIndex": 44,
+            "authoredId": {
+              "state": "valid",
+              "value": "xchapter_028"
+            },
+            "authoredHref": "chapter_028.xhtml",
+            "canonicalPath": "OPS/chapter_028.xhtml",
+            "mediaType": "application/xhtml+xml"
+          },
+          "canonicalPath": "OPS/chapter_028.xhtml",
+          "bytes": {
+            "state": "present"
+          }
+        },
+        "overlay": {
+          "state": "not-declared"
+        },
+        "entrySegmentIndexes": []
+      },
+      {
+        "occurrenceIndex": 34,
+        "effectiveLinear": "yes",
+        "content": {
+          "state": "resolved",
+          "declaration": {
+            "declarationIndex": 45,
+            "authoredId": {
+              "state": "valid",
+              "value": "xchapter_029"
+            },
+            "authoredHref": "chapter_029.xhtml",
+            "canonicalPath": "OPS/chapter_029.xhtml",
+            "mediaType": "application/xhtml+xml"
+          },
+          "canonicalPath": "OPS/chapter_029.xhtml",
+          "bytes": {
+            "state": "present"
+          }
+        },
+        "overlay": {
+          "state": "not-declared"
+        },
+        "entrySegmentIndexes": []
+      },
+      {
+        "occurrenceIndex": 35,
+        "effectiveLinear": "yes",
+        "content": {
+          "state": "resolved",
+          "declaration": {
+            "declarationIndex": 46,
+            "authoredId": {
+              "state": "valid",
+              "value": "xchapter_030"
+            },
+            "authoredHref": "chapter_030.xhtml",
+            "canonicalPath": "OPS/chapter_030.xhtml",
+            "mediaType": "application/xhtml+xml"
+          },
+          "canonicalPath": "OPS/chapter_030.xhtml",
+          "bytes": {
+            "state": "present"
+          }
+        },
+        "overlay": {
+          "state": "not-declared"
+        },
+        "entrySegmentIndexes": []
+      },
+      {
+        "occurrenceIndex": 36,
+        "effectiveLinear": "yes",
+        "content": {
+          "state": "resolved",
+          "declaration": {
+            "declarationIndex": 47,
+            "authoredId": {
+              "state": "valid",
+              "value": "xchapter_031"
+            },
+            "authoredHref": "chapter_031.xhtml",
+            "canonicalPath": "OPS/chapter_031.xhtml",
+            "mediaType": "application/xhtml+xml"
+          },
+          "canonicalPath": "OPS/chapter_031.xhtml",
+          "bytes": {
+            "state": "present"
+          }
+        },
+        "overlay": {
+          "state": "not-declared"
+        },
+        "entrySegmentIndexes": []
+      },
+      {
+        "occurrenceIndex": 37,
+        "effectiveLinear": "yes",
+        "content": {
+          "state": "resolved",
+          "declaration": {
+            "declarationIndex": 48,
+            "authoredId": {
+              "state": "valid",
+              "value": "xchapter_032"
+            },
+            "authoredHref": "chapter_032.xhtml",
+            "canonicalPath": "OPS/chapter_032.xhtml",
+            "mediaType": "application/xhtml+xml"
+          },
+          "canonicalPath": "OPS/chapter_032.xhtml",
+          "bytes": {
+            "state": "present"
+          }
+        },
+        "overlay": {
+          "state": "not-declared"
+        },
+        "entrySegmentIndexes": []
+      },
+      {
+        "occurrenceIndex": 38,
+        "effectiveLinear": "yes",
+        "content": {
+          "state": "resolved",
+          "declaration": {
+            "declarationIndex": 49,
+            "authoredId": {
+              "state": "valid",
+              "value": "xchapter_033"
+            },
+            "authoredHref": "chapter_033.xhtml",
+            "canonicalPath": "OPS/chapter_033.xhtml",
+            "mediaType": "application/xhtml+xml"
+          },
+          "canonicalPath": "OPS/chapter_033.xhtml",
+          "bytes": {
+            "state": "present"
+          }
+        },
+        "overlay": {
+          "state": "not-declared"
+        },
+        "entrySegmentIndexes": []
+      },
+      {
+        "occurrenceIndex": 39,
+        "effectiveLinear": "yes",
+        "content": {
+          "state": "resolved",
+          "declaration": {
+            "declarationIndex": 50,
+            "authoredId": {
+              "state": "valid",
+              "value": "xchapter_034"
+            },
+            "authoredHref": "chapter_034.xhtml",
+            "canonicalPath": "OPS/chapter_034.xhtml",
+            "mediaType": "application/xhtml+xml"
+          },
+          "canonicalPath": "OPS/chapter_034.xhtml",
+          "bytes": {
+            "state": "present"
+          }
+        },
+        "overlay": {
+          "state": "not-declared"
+        },
+        "entrySegmentIndexes": []
+      },
+      {
+        "occurrenceIndex": 40,
+        "effectiveLinear": "yes",
+        "content": {
+          "state": "resolved",
+          "declaration": {
+            "declarationIndex": 51,
+            "authoredId": {
+              "state": "valid",
+              "value": "xchapter_035"
+            },
+            "authoredHref": "chapter_035.xhtml",
+            "canonicalPath": "OPS/chapter_035.xhtml",
+            "mediaType": "application/xhtml+xml"
+          },
+          "canonicalPath": "OPS/chapter_035.xhtml",
+          "bytes": {
+            "state": "present"
+          }
+        },
+        "overlay": {
+          "state": "not-declared"
+        },
+        "entrySegmentIndexes": []
+      },
+      {
+        "occurrenceIndex": 41,
+        "effectiveLinear": "yes",
+        "content": {
+          "state": "resolved",
+          "declaration": {
+            "declarationIndex": 52,
+            "authoredId": {
+              "state": "valid",
+              "value": "xchapter_036"
+            },
+            "authoredHref": "chapter_036.xhtml",
+            "canonicalPath": "OPS/chapter_036.xhtml",
+            "mediaType": "application/xhtml+xml"
+          },
+          "canonicalPath": "OPS/chapter_036.xhtml",
+          "bytes": {
+            "state": "present"
+          }
+        },
+        "overlay": {
+          "state": "not-declared"
+        },
+        "entrySegmentIndexes": []
+      },
+      {
+        "occurrenceIndex": 42,
+        "effectiveLinear": "yes",
+        "content": {
+          "state": "resolved",
+          "declaration": {
+            "declarationIndex": 53,
+            "authoredId": {
+              "state": "valid",
+              "value": "xchapter_037"
+            },
+            "authoredHref": "chapter_037.xhtml",
+            "canonicalPath": "OPS/chapter_037.xhtml",
+            "mediaType": "application/xhtml+xml"
+          },
+          "canonicalPath": "OPS/chapter_037.xhtml",
+          "bytes": {
+            "state": "present"
+          }
+        },
+        "overlay": {
+          "state": "not-declared"
+        },
+        "entrySegmentIndexes": []
+      },
+      {
+        "occurrenceIndex": 43,
+        "effectiveLinear": "yes",
+        "content": {
+          "state": "resolved",
+          "declaration": {
+            "declarationIndex": 54,
+            "authoredId": {
+              "state": "valid",
+              "value": "xchapter_038"
+            },
+            "authoredHref": "chapter_038.xhtml",
+            "canonicalPath": "OPS/chapter_038.xhtml",
+            "mediaType": "application/xhtml+xml"
+          },
+          "canonicalPath": "OPS/chapter_038.xhtml",
+          "bytes": {
+            "state": "present"
+          }
+        },
+        "overlay": {
+          "state": "not-declared"
+        },
+        "entrySegmentIndexes": []
+      },
+      {
+        "occurrenceIndex": 44,
+        "effectiveLinear": "yes",
+        "content": {
+          "state": "resolved",
+          "declaration": {
+            "declarationIndex": 55,
+            "authoredId": {
+              "state": "valid",
+              "value": "xchapter_039"
+            },
+            "authoredHref": "chapter_039.xhtml",
+            "canonicalPath": "OPS/chapter_039.xhtml",
+            "mediaType": "application/xhtml+xml"
+          },
+          "canonicalPath": "OPS/chapter_039.xhtml",
+          "bytes": {
+            "state": "present"
+          }
+        },
+        "overlay": {
+          "state": "not-declared"
+        },
+        "entrySegmentIndexes": []
+      },
+      {
+        "occurrenceIndex": 45,
+        "effectiveLinear": "yes",
+        "content": {
+          "state": "resolved",
+          "declaration": {
+            "declarationIndex": 56,
+            "authoredId": {
+              "state": "valid",
+              "value": "xchapter_040"
+            },
+            "authoredHref": "chapter_040.xhtml",
+            "canonicalPath": "OPS/chapter_040.xhtml",
+            "mediaType": "application/xhtml+xml"
+          },
+          "canonicalPath": "OPS/chapter_040.xhtml",
+          "bytes": {
+            "state": "present"
+          }
+        },
+        "overlay": {
+          "state": "not-declared"
+        },
+        "entrySegmentIndexes": []
+      },
+      {
+        "occurrenceIndex": 46,
+        "effectiveLinear": "yes",
+        "content": {
+          "state": "resolved",
+          "declaration": {
+            "declarationIndex": 57,
+            "authoredId": {
+              "state": "valid",
+              "value": "xchapter_041"
+            },
+            "authoredHref": "chapter_041.xhtml",
+            "canonicalPath": "OPS/chapter_041.xhtml",
+            "mediaType": "application/xhtml+xml"
+          },
+          "canonicalPath": "OPS/chapter_041.xhtml",
+          "bytes": {
+            "state": "present"
+          }
+        },
+        "overlay": {
+          "state": "not-declared"
+        },
+        "entrySegmentIndexes": []
+      },
+      {
+        "occurrenceIndex": 47,
+        "effectiveLinear": "yes",
+        "content": {
+          "state": "resolved",
+          "declaration": {
+            "declarationIndex": 58,
+            "authoredId": {
+              "state": "valid",
+              "value": "xchapter_042"
+            },
+            "authoredHref": "chapter_042.xhtml",
+            "canonicalPath": "OPS/chapter_042.xhtml",
+            "mediaType": "application/xhtml+xml"
+          },
+          "canonicalPath": "OPS/chapter_042.xhtml",
+          "bytes": {
+            "state": "present"
+          }
+        },
+        "overlay": {
+          "state": "not-declared"
+        },
+        "entrySegmentIndexes": []
+      },
+      {
+        "occurrenceIndex": 48,
+        "effectiveLinear": "yes",
+        "content": {
+          "state": "resolved",
+          "declaration": {
+            "declarationIndex": 59,
+            "authoredId": {
+              "state": "valid",
+              "value": "xchapter_043"
+            },
+            "authoredHref": "chapter_043.xhtml",
+            "canonicalPath": "OPS/chapter_043.xhtml",
+            "mediaType": "application/xhtml+xml"
+          },
+          "canonicalPath": "OPS/chapter_043.xhtml",
+          "bytes": {
+            "state": "present"
+          }
+        },
+        "overlay": {
+          "state": "not-declared"
+        },
+        "entrySegmentIndexes": []
+      },
+      {
+        "occurrenceIndex": 49,
+        "effectiveLinear": "yes",
+        "content": {
+          "state": "resolved",
+          "declaration": {
+            "declarationIndex": 60,
+            "authoredId": {
+              "state": "valid",
+              "value": "xchapter_044"
+            },
+            "authoredHref": "chapter_044.xhtml",
+            "canonicalPath": "OPS/chapter_044.xhtml",
+            "mediaType": "application/xhtml+xml"
+          },
+          "canonicalPath": "OPS/chapter_044.xhtml",
+          "bytes": {
+            "state": "present"
+          }
+        },
+        "overlay": {
+          "state": "not-declared"
+        },
+        "entrySegmentIndexes": []
+      },
+      {
+        "occurrenceIndex": 50,
+        "effectiveLinear": "yes",
+        "content": {
+          "state": "resolved",
+          "declaration": {
+            "declarationIndex": 61,
+            "authoredId": {
+              "state": "valid",
+              "value": "xchapter_045"
+            },
+            "authoredHref": "chapter_045.xhtml",
+            "canonicalPath": "OPS/chapter_045.xhtml",
+            "mediaType": "application/xhtml+xml"
+          },
+          "canonicalPath": "OPS/chapter_045.xhtml",
+          "bytes": {
+            "state": "present"
+          }
+        },
+        "overlay": {
+          "state": "not-declared"
+        },
+        "entrySegmentIndexes": []
+      },
+      {
+        "occurrenceIndex": 51,
+        "effectiveLinear": "yes",
+        "content": {
+          "state": "resolved",
+          "declaration": {
+            "declarationIndex": 62,
+            "authoredId": {
+              "state": "valid",
+              "value": "xchapter_046"
+            },
+            "authoredHref": "chapter_046.xhtml",
+            "canonicalPath": "OPS/chapter_046.xhtml",
+            "mediaType": "application/xhtml+xml"
+          },
+          "canonicalPath": "OPS/chapter_046.xhtml",
+          "bytes": {
+            "state": "present"
+          }
+        },
+        "overlay": {
+          "state": "not-declared"
+        },
+        "entrySegmentIndexes": []
+      },
+      {
+        "occurrenceIndex": 52,
+        "effectiveLinear": "yes",
+        "content": {
+          "state": "resolved",
+          "declaration": {
+            "declarationIndex": 63,
+            "authoredId": {
+              "state": "valid",
+              "value": "xchapter_047"
+            },
+            "authoredHref": "chapter_047.xhtml",
+            "canonicalPath": "OPS/chapter_047.xhtml",
+            "mediaType": "application/xhtml+xml"
+          },
+          "canonicalPath": "OPS/chapter_047.xhtml",
+          "bytes": {
+            "state": "present"
+          }
+        },
+        "overlay": {
+          "state": "not-declared"
+        },
+        "entrySegmentIndexes": []
+      },
+      {
+        "occurrenceIndex": 53,
+        "effectiveLinear": "yes",
+        "content": {
+          "state": "resolved",
+          "declaration": {
+            "declarationIndex": 64,
+            "authoredId": {
+              "state": "valid",
+              "value": "xchapter_048"
+            },
+            "authoredHref": "chapter_048.xhtml",
+            "canonicalPath": "OPS/chapter_048.xhtml",
+            "mediaType": "application/xhtml+xml"
+          },
+          "canonicalPath": "OPS/chapter_048.xhtml",
+          "bytes": {
+            "state": "present"
+          }
+        },
+        "overlay": {
+          "state": "not-declared"
+        },
+        "entrySegmentIndexes": []
+      },
+      {
+        "occurrenceIndex": 54,
+        "effectiveLinear": "yes",
+        "content": {
+          "state": "resolved",
+          "declaration": {
+            "declarationIndex": 65,
+            "authoredId": {
+              "state": "valid",
+              "value": "xchapter_049"
+            },
+            "authoredHref": "chapter_049.xhtml",
+            "canonicalPath": "OPS/chapter_049.xhtml",
+            "mediaType": "application/xhtml+xml"
+          },
+          "canonicalPath": "OPS/chapter_049.xhtml",
+          "bytes": {
+            "state": "present"
+          }
+        },
+        "overlay": {
+          "state": "not-declared"
+        },
+        "entrySegmentIndexes": []
+      },
+      {
+        "occurrenceIndex": 55,
+        "effectiveLinear": "yes",
+        "content": {
+          "state": "resolved",
+          "declaration": {
+            "declarationIndex": 66,
+            "authoredId": {
+              "state": "valid",
+              "value": "xchapter_050"
+            },
+            "authoredHref": "chapter_050.xhtml",
+            "canonicalPath": "OPS/chapter_050.xhtml",
+            "mediaType": "application/xhtml+xml"
+          },
+          "canonicalPath": "OPS/chapter_050.xhtml",
+          "bytes": {
+            "state": "present"
+          }
+        },
+        "overlay": {
+          "state": "not-declared"
+        },
+        "entrySegmentIndexes": []
+      },
+      {
+        "occurrenceIndex": 56,
+        "effectiveLinear": "yes",
+        "content": {
+          "state": "resolved",
+          "declaration": {
+            "declarationIndex": 67,
+            "authoredId": {
+              "state": "valid",
+              "value": "xchapter_051"
+            },
+            "authoredHref": "chapter_051.xhtml",
+            "canonicalPath": "OPS/chapter_051.xhtml",
+            "mediaType": "application/xhtml+xml"
+          },
+          "canonicalPath": "OPS/chapter_051.xhtml",
+          "bytes": {
+            "state": "present"
+          }
+        },
+        "overlay": {
+          "state": "not-declared"
+        },
+        "entrySegmentIndexes": []
+      },
+      {
+        "occurrenceIndex": 57,
+        "effectiveLinear": "yes",
+        "content": {
+          "state": "resolved",
+          "declaration": {
+            "declarationIndex": 68,
+            "authoredId": {
+              "state": "valid",
+              "value": "xchapter_052"
+            },
+            "authoredHref": "chapter_052.xhtml",
+            "canonicalPath": "OPS/chapter_052.xhtml",
+            "mediaType": "application/xhtml+xml"
+          },
+          "canonicalPath": "OPS/chapter_052.xhtml",
+          "bytes": {
+            "state": "present"
+          }
+        },
+        "overlay": {
+          "state": "not-declared"
+        },
+        "entrySegmentIndexes": []
+      },
+      {
+        "occurrenceIndex": 58,
+        "effectiveLinear": "yes",
+        "content": {
+          "state": "resolved",
+          "declaration": {
+            "declarationIndex": 69,
+            "authoredId": {
+              "state": "valid",
+              "value": "xchapter_053"
+            },
+            "authoredHref": "chapter_053.xhtml",
+            "canonicalPath": "OPS/chapter_053.xhtml",
+            "mediaType": "application/xhtml+xml"
+          },
+          "canonicalPath": "OPS/chapter_053.xhtml",
+          "bytes": {
+            "state": "present"
+          }
+        },
+        "overlay": {
+          "state": "not-declared"
+        },
+        "entrySegmentIndexes": []
+      },
+      {
+        "occurrenceIndex": 59,
+        "effectiveLinear": "yes",
+        "content": {
+          "state": "resolved",
+          "declaration": {
+            "declarationIndex": 70,
+            "authoredId": {
+              "state": "valid",
+              "value": "xchapter_054"
+            },
+            "authoredHref": "chapter_054.xhtml",
+            "canonicalPath": "OPS/chapter_054.xhtml",
+            "mediaType": "application/xhtml+xml"
+          },
+          "canonicalPath": "OPS/chapter_054.xhtml",
+          "bytes": {
+            "state": "present"
+          }
+        },
+        "overlay": {
+          "state": "not-declared"
+        },
+        "entrySegmentIndexes": []
+      },
+      {
+        "occurrenceIndex": 60,
+        "effectiveLinear": "yes",
+        "content": {
+          "state": "resolved",
+          "declaration": {
+            "declarationIndex": 71,
+            "authoredId": {
+              "state": "valid",
+              "value": "xchapter_055"
+            },
+            "authoredHref": "chapter_055.xhtml",
+            "canonicalPath": "OPS/chapter_055.xhtml",
+            "mediaType": "application/xhtml+xml"
+          },
+          "canonicalPath": "OPS/chapter_055.xhtml",
+          "bytes": {
+            "state": "present"
+          }
+        },
+        "overlay": {
+          "state": "not-declared"
+        },
+        "entrySegmentIndexes": []
+      },
+      {
+        "occurrenceIndex": 61,
+        "effectiveLinear": "yes",
+        "content": {
+          "state": "resolved",
+          "declaration": {
+            "declarationIndex": 72,
+            "authoredId": {
+              "state": "valid",
+              "value": "xchapter_056"
+            },
+            "authoredHref": "chapter_056.xhtml",
+            "canonicalPath": "OPS/chapter_056.xhtml",
+            "mediaType": "application/xhtml+xml"
+          },
+          "canonicalPath": "OPS/chapter_056.xhtml",
+          "bytes": {
+            "state": "present"
+          }
+        },
+        "overlay": {
+          "state": "not-declared"
+        },
+        "entrySegmentIndexes": []
+      },
+      {
+        "occurrenceIndex": 62,
+        "effectiveLinear": "yes",
+        "content": {
+          "state": "resolved",
+          "declaration": {
+            "declarationIndex": 73,
+            "authoredId": {
+              "state": "valid",
+              "value": "xchapter_057"
+            },
+            "authoredHref": "chapter_057.xhtml",
+            "canonicalPath": "OPS/chapter_057.xhtml",
+            "mediaType": "application/xhtml+xml"
+          },
+          "canonicalPath": "OPS/chapter_057.xhtml",
+          "bytes": {
+            "state": "present"
+          }
+        },
+        "overlay": {
+          "state": "not-declared"
+        },
+        "entrySegmentIndexes": []
+      },
+      {
+        "occurrenceIndex": 63,
+        "effectiveLinear": "yes",
+        "content": {
+          "state": "resolved",
+          "declaration": {
+            "declarationIndex": 74,
+            "authoredId": {
+              "state": "valid",
+              "value": "xchapter_058"
+            },
+            "authoredHref": "chapter_058.xhtml",
+            "canonicalPath": "OPS/chapter_058.xhtml",
+            "mediaType": "application/xhtml+xml"
+          },
+          "canonicalPath": "OPS/chapter_058.xhtml",
+          "bytes": {
+            "state": "present"
+          }
+        },
+        "overlay": {
+          "state": "not-declared"
+        },
+        "entrySegmentIndexes": []
+      },
+      {
+        "occurrenceIndex": 64,
+        "effectiveLinear": "yes",
+        "content": {
+          "state": "resolved",
+          "declaration": {
+            "declarationIndex": 75,
+            "authoredId": {
+              "state": "valid",
+              "value": "xchapter_059"
+            },
+            "authoredHref": "chapter_059.xhtml",
+            "canonicalPath": "OPS/chapter_059.xhtml",
+            "mediaType": "application/xhtml+xml"
+          },
+          "canonicalPath": "OPS/chapter_059.xhtml",
+          "bytes": {
+            "state": "present"
+          }
+        },
+        "overlay": {
+          "state": "not-declared"
+        },
+        "entrySegmentIndexes": []
+      },
+      {
+        "occurrenceIndex": 65,
+        "effectiveLinear": "yes",
+        "content": {
+          "state": "resolved",
+          "declaration": {
+            "declarationIndex": 76,
+            "authoredId": {
+              "state": "valid",
+              "value": "xchapter_060"
+            },
+            "authoredHref": "chapter_060.xhtml",
+            "canonicalPath": "OPS/chapter_060.xhtml",
+            "mediaType": "application/xhtml+xml"
+          },
+          "canonicalPath": "OPS/chapter_060.xhtml",
+          "bytes": {
+            "state": "present"
+          }
+        },
+        "overlay": {
+          "state": "not-declared"
+        },
+        "entrySegmentIndexes": []
+      },
+      {
+        "occurrenceIndex": 66,
+        "effectiveLinear": "yes",
+        "content": {
+          "state": "resolved",
+          "declaration": {
+            "declarationIndex": 77,
+            "authoredId": {
+              "state": "valid",
+              "value": "xchapter_061"
+            },
+            "authoredHref": "chapter_061.xhtml",
+            "canonicalPath": "OPS/chapter_061.xhtml",
+            "mediaType": "application/xhtml+xml"
+          },
+          "canonicalPath": "OPS/chapter_061.xhtml",
+          "bytes": {
+            "state": "present"
+          }
+        },
+        "overlay": {
+          "state": "not-declared"
+        },
+        "entrySegmentIndexes": []
+      },
+      {
+        "occurrenceIndex": 67,
+        "effectiveLinear": "yes",
+        "content": {
+          "state": "resolved",
+          "declaration": {
+            "declarationIndex": 78,
+            "authoredId": {
+              "state": "valid",
+              "value": "xchapter_062"
+            },
+            "authoredHref": "chapter_062.xhtml",
+            "canonicalPath": "OPS/chapter_062.xhtml",
+            "mediaType": "application/xhtml+xml"
+          },
+          "canonicalPath": "OPS/chapter_062.xhtml",
+          "bytes": {
+            "state": "present"
+          }
+        },
+        "overlay": {
+          "state": "not-declared"
+        },
+        "entrySegmentIndexes": []
+      },
+      {
+        "occurrenceIndex": 68,
+        "effectiveLinear": "yes",
+        "content": {
+          "state": "resolved",
+          "declaration": {
+            "declarationIndex": 79,
+            "authoredId": {
+              "state": "valid",
+              "value": "xchapter_063"
+            },
+            "authoredHref": "chapter_063.xhtml",
+            "canonicalPath": "OPS/chapter_063.xhtml",
+            "mediaType": "application/xhtml+xml"
+          },
+          "canonicalPath": "OPS/chapter_063.xhtml",
+          "bytes": {
+            "state": "present"
+          }
+        },
+        "overlay": {
+          "state": "not-declared"
+        },
+        "entrySegmentIndexes": []
+      },
+      {
+        "occurrenceIndex": 69,
+        "effectiveLinear": "yes",
+        "content": {
+          "state": "resolved",
+          "declaration": {
+            "declarationIndex": 80,
+            "authoredId": {
+              "state": "valid",
+              "value": "xchapter_064"
+            },
+            "authoredHref": "chapter_064.xhtml",
+            "canonicalPath": "OPS/chapter_064.xhtml",
+            "mediaType": "application/xhtml+xml"
+          },
+          "canonicalPath": "OPS/chapter_064.xhtml",
+          "bytes": {
+            "state": "present"
+          }
+        },
+        "overlay": {
+          "state": "not-declared"
+        },
+        "entrySegmentIndexes": []
+      },
+      {
+        "occurrenceIndex": 70,
+        "effectiveLinear": "yes",
+        "content": {
+          "state": "resolved",
+          "declaration": {
+            "declarationIndex": 81,
+            "authoredId": {
+              "state": "valid",
+              "value": "xchapter_065"
+            },
+            "authoredHref": "chapter_065.xhtml",
+            "canonicalPath": "OPS/chapter_065.xhtml",
+            "mediaType": "application/xhtml+xml"
+          },
+          "canonicalPath": "OPS/chapter_065.xhtml",
+          "bytes": {
+            "state": "present"
+          }
+        },
+        "overlay": {
+          "state": "not-declared"
+        },
+        "entrySegmentIndexes": []
+      },
+      {
+        "occurrenceIndex": 71,
+        "effectiveLinear": "yes",
+        "content": {
+          "state": "resolved",
+          "declaration": {
+            "declarationIndex": 82,
+            "authoredId": {
+              "state": "valid",
+              "value": "xchapter_066"
+            },
+            "authoredHref": "chapter_066.xhtml",
+            "canonicalPath": "OPS/chapter_066.xhtml",
+            "mediaType": "application/xhtml+xml"
+          },
+          "canonicalPath": "OPS/chapter_066.xhtml",
+          "bytes": {
+            "state": "present"
+          }
+        },
+        "overlay": {
+          "state": "not-declared"
+        },
+        "entrySegmentIndexes": []
+      },
+      {
+        "occurrenceIndex": 72,
+        "effectiveLinear": "yes",
+        "content": {
+          "state": "resolved",
+          "declaration": {
+            "declarationIndex": 83,
+            "authoredId": {
+              "state": "valid",
+              "value": "xchapter_067"
+            },
+            "authoredHref": "chapter_067.xhtml",
+            "canonicalPath": "OPS/chapter_067.xhtml",
+            "mediaType": "application/xhtml+xml"
+          },
+          "canonicalPath": "OPS/chapter_067.xhtml",
+          "bytes": {
+            "state": "present"
+          }
+        },
+        "overlay": {
+          "state": "not-declared"
+        },
+        "entrySegmentIndexes": []
+      },
+      {
+        "occurrenceIndex": 73,
+        "effectiveLinear": "yes",
+        "content": {
+          "state": "resolved",
+          "declaration": {
+            "declarationIndex": 84,
+            "authoredId": {
+              "state": "valid",
+              "value": "xchapter_068"
+            },
+            "authoredHref": "chapter_068.xhtml",
+            "canonicalPath": "OPS/chapter_068.xhtml",
+            "mediaType": "application/xhtml+xml"
+          },
+          "canonicalPath": "OPS/chapter_068.xhtml",
+          "bytes": {
+            "state": "present"
+          }
+        },
+        "overlay": {
+          "state": "not-declared"
+        },
+        "entrySegmentIndexes": []
+      },
+      {
+        "occurrenceIndex": 74,
+        "effectiveLinear": "yes",
+        "content": {
+          "state": "resolved",
+          "declaration": {
+            "declarationIndex": 85,
+            "authoredId": {
+              "state": "valid",
+              "value": "xchapter_069"
+            },
+            "authoredHref": "chapter_069.xhtml",
+            "canonicalPath": "OPS/chapter_069.xhtml",
+            "mediaType": "application/xhtml+xml"
+          },
+          "canonicalPath": "OPS/chapter_069.xhtml",
+          "bytes": {
+            "state": "present"
+          }
+        },
+        "overlay": {
+          "state": "not-declared"
+        },
+        "entrySegmentIndexes": []
+      },
+      {
+        "occurrenceIndex": 75,
+        "effectiveLinear": "yes",
+        "content": {
+          "state": "resolved",
+          "declaration": {
+            "declarationIndex": 86,
+            "authoredId": {
+              "state": "valid",
+              "value": "xchapter_070"
+            },
+            "authoredHref": "chapter_070.xhtml",
+            "canonicalPath": "OPS/chapter_070.xhtml",
+            "mediaType": "application/xhtml+xml"
+          },
+          "canonicalPath": "OPS/chapter_070.xhtml",
+          "bytes": {
+            "state": "present"
+          }
+        },
+        "overlay": {
+          "state": "not-declared"
+        },
+        "entrySegmentIndexes": []
+      },
+      {
+        "occurrenceIndex": 76,
+        "effectiveLinear": "yes",
+        "content": {
+          "state": "resolved",
+          "declaration": {
+            "declarationIndex": 87,
+            "authoredId": {
+              "state": "valid",
+              "value": "xchapter_071"
+            },
+            "authoredHref": "chapter_071.xhtml",
+            "canonicalPath": "OPS/chapter_071.xhtml",
+            "mediaType": "application/xhtml+xml"
+          },
+          "canonicalPath": "OPS/chapter_071.xhtml",
+          "bytes": {
+            "state": "present"
+          }
+        },
+        "overlay": {
+          "state": "not-declared"
+        },
+        "entrySegmentIndexes": []
+      },
+      {
+        "occurrenceIndex": 77,
+        "effectiveLinear": "yes",
+        "content": {
+          "state": "resolved",
+          "declaration": {
+            "declarationIndex": 88,
+            "authoredId": {
+              "state": "valid",
+              "value": "xchapter_072"
+            },
+            "authoredHref": "chapter_072.xhtml",
+            "canonicalPath": "OPS/chapter_072.xhtml",
+            "mediaType": "application/xhtml+xml"
+          },
+          "canonicalPath": "OPS/chapter_072.xhtml",
+          "bytes": {
+            "state": "present"
+          }
+        },
+        "overlay": {
+          "state": "not-declared"
+        },
+        "entrySegmentIndexes": []
+      },
+      {
+        "occurrenceIndex": 78,
+        "effectiveLinear": "yes",
+        "content": {
+          "state": "resolved",
+          "declaration": {
+            "declarationIndex": 89,
+            "authoredId": {
+              "state": "valid",
+              "value": "xchapter_073"
+            },
+            "authoredHref": "chapter_073.xhtml",
+            "canonicalPath": "OPS/chapter_073.xhtml",
+            "mediaType": "application/xhtml+xml"
+          },
+          "canonicalPath": "OPS/chapter_073.xhtml",
+          "bytes": {
+            "state": "present"
+          }
+        },
+        "overlay": {
+          "state": "not-declared"
+        },
+        "entrySegmentIndexes": []
+      },
+      {
+        "occurrenceIndex": 79,
+        "effectiveLinear": "yes",
+        "content": {
+          "state": "resolved",
+          "declaration": {
+            "declarationIndex": 90,
+            "authoredId": {
+              "state": "valid",
+              "value": "xchapter_074"
+            },
+            "authoredHref": "chapter_074.xhtml",
+            "canonicalPath": "OPS/chapter_074.xhtml",
+            "mediaType": "application/xhtml+xml"
+          },
+          "canonicalPath": "OPS/chapter_074.xhtml",
+          "bytes": {
+            "state": "present"
+          }
+        },
+        "overlay": {
+          "state": "not-declared"
+        },
+        "entrySegmentIndexes": []
+      },
+      {
+        "occurrenceIndex": 80,
+        "effectiveLinear": "yes",
+        "content": {
+          "state": "resolved",
+          "declaration": {
+            "declarationIndex": 91,
+            "authoredId": {
+              "state": "valid",
+              "value": "xchapter_075"
+            },
+            "authoredHref": "chapter_075.xhtml",
+            "canonicalPath": "OPS/chapter_075.xhtml",
+            "mediaType": "application/xhtml+xml"
+          },
+          "canonicalPath": "OPS/chapter_075.xhtml",
+          "bytes": {
+            "state": "present"
+          }
+        },
+        "overlay": {
+          "state": "not-declared"
+        },
+        "entrySegmentIndexes": []
+      },
+      {
+        "occurrenceIndex": 81,
+        "effectiveLinear": "yes",
+        "content": {
+          "state": "resolved",
+          "declaration": {
+            "declarationIndex": 92,
+            "authoredId": {
+              "state": "valid",
+              "value": "xchapter_076"
+            },
+            "authoredHref": "chapter_076.xhtml",
+            "canonicalPath": "OPS/chapter_076.xhtml",
+            "mediaType": "application/xhtml+xml"
+          },
+          "canonicalPath": "OPS/chapter_076.xhtml",
+          "bytes": {
+            "state": "present"
+          }
+        },
+        "overlay": {
+          "state": "not-declared"
+        },
+        "entrySegmentIndexes": []
+      },
+      {
+        "occurrenceIndex": 82,
+        "effectiveLinear": "yes",
+        "content": {
+          "state": "resolved",
+          "declaration": {
+            "declarationIndex": 93,
+            "authoredId": {
+              "state": "valid",
+              "value": "xchapter_077"
+            },
+            "authoredHref": "chapter_077.xhtml",
+            "canonicalPath": "OPS/chapter_077.xhtml",
+            "mediaType": "application/xhtml+xml"
+          },
+          "canonicalPath": "OPS/chapter_077.xhtml",
+          "bytes": {
+            "state": "present"
+          }
+        },
+        "overlay": {
+          "state": "not-declared"
+        },
+        "entrySegmentIndexes": []
+      },
+      {
+        "occurrenceIndex": 83,
+        "effectiveLinear": "yes",
+        "content": {
+          "state": "resolved",
+          "declaration": {
+            "declarationIndex": 94,
+            "authoredId": {
+              "state": "valid",
+              "value": "xchapter_078"
+            },
+            "authoredHref": "chapter_078.xhtml",
+            "canonicalPath": "OPS/chapter_078.xhtml",
+            "mediaType": "application/xhtml+xml"
+          },
+          "canonicalPath": "OPS/chapter_078.xhtml",
+          "bytes": {
+            "state": "present"
+          }
+        },
+        "overlay": {
+          "state": "not-declared"
+        },
+        "entrySegmentIndexes": []
+      },
+      {
+        "occurrenceIndex": 84,
+        "effectiveLinear": "yes",
+        "content": {
+          "state": "resolved",
+          "declaration": {
+            "declarationIndex": 95,
+            "authoredId": {
+              "state": "valid",
+              "value": "xchapter_079"
+            },
+            "authoredHref": "chapter_079.xhtml",
+            "canonicalPath": "OPS/chapter_079.xhtml",
+            "mediaType": "application/xhtml+xml"
+          },
+          "canonicalPath": "OPS/chapter_079.xhtml",
+          "bytes": {
+            "state": "present"
+          }
+        },
+        "overlay": {
+          "state": "not-declared"
+        },
+        "entrySegmentIndexes": []
+      },
+      {
+        "occurrenceIndex": 85,
+        "effectiveLinear": "yes",
+        "content": {
+          "state": "resolved",
+          "declaration": {
+            "declarationIndex": 96,
+            "authoredId": {
+              "state": "valid",
+              "value": "xchapter_080"
+            },
+            "authoredHref": "chapter_080.xhtml",
+            "canonicalPath": "OPS/chapter_080.xhtml",
+            "mediaType": "application/xhtml+xml"
+          },
+          "canonicalPath": "OPS/chapter_080.xhtml",
+          "bytes": {
+            "state": "present"
+          }
+        },
+        "overlay": {
+          "state": "not-declared"
+        },
+        "entrySegmentIndexes": []
+      },
+      {
+        "occurrenceIndex": 86,
+        "effectiveLinear": "yes",
+        "content": {
+          "state": "resolved",
+          "declaration": {
+            "declarationIndex": 97,
+            "authoredId": {
+              "state": "valid",
+              "value": "xchapter_081"
+            },
+            "authoredHref": "chapter_081.xhtml",
+            "canonicalPath": "OPS/chapter_081.xhtml",
+            "mediaType": "application/xhtml+xml"
+          },
+          "canonicalPath": "OPS/chapter_081.xhtml",
+          "bytes": {
+            "state": "present"
+          }
+        },
+        "overlay": {
+          "state": "not-declared"
+        },
+        "entrySegmentIndexes": []
+      },
+      {
+        "occurrenceIndex": 87,
+        "effectiveLinear": "yes",
+        "content": {
+          "state": "resolved",
+          "declaration": {
+            "declarationIndex": 98,
+            "authoredId": {
+              "state": "valid",
+              "value": "xchapter_082"
+            },
+            "authoredHref": "chapter_082.xhtml",
+            "canonicalPath": "OPS/chapter_082.xhtml",
+            "mediaType": "application/xhtml+xml"
+          },
+          "canonicalPath": "OPS/chapter_082.xhtml",
+          "bytes": {
+            "state": "present"
+          }
+        },
+        "overlay": {
+          "state": "not-declared"
+        },
+        "entrySegmentIndexes": []
+      },
+      {
+        "occurrenceIndex": 88,
+        "effectiveLinear": "yes",
+        "content": {
+          "state": "resolved",
+          "declaration": {
+            "declarationIndex": 99,
+            "authoredId": {
+              "state": "valid",
+              "value": "xchapter_083"
+            },
+            "authoredHref": "chapter_083.xhtml",
+            "canonicalPath": "OPS/chapter_083.xhtml",
+            "mediaType": "application/xhtml+xml"
+          },
+          "canonicalPath": "OPS/chapter_083.xhtml",
+          "bytes": {
+            "state": "present"
+          }
+        },
+        "overlay": {
+          "state": "not-declared"
+        },
+        "entrySegmentIndexes": []
+      },
+      {
+        "occurrenceIndex": 89,
+        "effectiveLinear": "yes",
+        "content": {
+          "state": "resolved",
+          "declaration": {
+            "declarationIndex": 100,
+            "authoredId": {
+              "state": "valid",
+              "value": "xchapter_084"
+            },
+            "authoredHref": "chapter_084.xhtml",
+            "canonicalPath": "OPS/chapter_084.xhtml",
+            "mediaType": "application/xhtml+xml"
+          },
+          "canonicalPath": "OPS/chapter_084.xhtml",
+          "bytes": {
+            "state": "present"
+          }
+        },
+        "overlay": {
+          "state": "not-declared"
+        },
+        "entrySegmentIndexes": []
+      },
+      {
+        "occurrenceIndex": 90,
+        "effectiveLinear": "yes",
+        "content": {
+          "state": "resolved",
+          "declaration": {
+            "declarationIndex": 101,
+            "authoredId": {
+              "state": "valid",
+              "value": "xchapter_085"
+            },
+            "authoredHref": "chapter_085.xhtml",
+            "canonicalPath": "OPS/chapter_085.xhtml",
+            "mediaType": "application/xhtml+xml"
+          },
+          "canonicalPath": "OPS/chapter_085.xhtml",
+          "bytes": {
+            "state": "present"
+          }
+        },
+        "overlay": {
+          "state": "not-declared"
+        },
+        "entrySegmentIndexes": []
+      },
+      {
+        "occurrenceIndex": 91,
+        "effectiveLinear": "yes",
+        "content": {
+          "state": "resolved",
+          "declaration": {
+            "declarationIndex": 102,
+            "authoredId": {
+              "state": "valid",
+              "value": "xchapter_086"
+            },
+            "authoredHref": "chapter_086.xhtml",
+            "canonicalPath": "OPS/chapter_086.xhtml",
+            "mediaType": "application/xhtml+xml"
+          },
+          "canonicalPath": "OPS/chapter_086.xhtml",
+          "bytes": {
+            "state": "present"
+          }
+        },
+        "overlay": {
+          "state": "not-declared"
+        },
+        "entrySegmentIndexes": []
+      },
+      {
+        "occurrenceIndex": 92,
+        "effectiveLinear": "yes",
+        "content": {
+          "state": "resolved",
+          "declaration": {
+            "declarationIndex": 103,
+            "authoredId": {
+              "state": "valid",
+              "value": "xchapter_087"
+            },
+            "authoredHref": "chapter_087.xhtml",
+            "canonicalPath": "OPS/chapter_087.xhtml",
+            "mediaType": "application/xhtml+xml"
+          },
+          "canonicalPath": "OPS/chapter_087.xhtml",
+          "bytes": {
+            "state": "present"
+          }
+        },
+        "overlay": {
+          "state": "not-declared"
+        },
+        "entrySegmentIndexes": []
+      },
+      {
+        "occurrenceIndex": 93,
+        "effectiveLinear": "yes",
+        "content": {
+          "state": "resolved",
+          "declaration": {
+            "declarationIndex": 104,
+            "authoredId": {
+              "state": "valid",
+              "value": "xchapter_088"
+            },
+            "authoredHref": "chapter_088.xhtml",
+            "canonicalPath": "OPS/chapter_088.xhtml",
+            "mediaType": "application/xhtml+xml"
+          },
+          "canonicalPath": "OPS/chapter_088.xhtml",
+          "bytes": {
+            "state": "present"
+          }
+        },
+        "overlay": {
+          "state": "not-declared"
+        },
+        "entrySegmentIndexes": []
+      },
+      {
+        "occurrenceIndex": 94,
+        "effectiveLinear": "yes",
+        "content": {
+          "state": "resolved",
+          "declaration": {
+            "declarationIndex": 105,
+            "authoredId": {
+              "state": "valid",
+              "value": "xchapter_089"
+            },
+            "authoredHref": "chapter_089.xhtml",
+            "canonicalPath": "OPS/chapter_089.xhtml",
+            "mediaType": "application/xhtml+xml"
+          },
+          "canonicalPath": "OPS/chapter_089.xhtml",
+          "bytes": {
+            "state": "present"
+          }
+        },
+        "overlay": {
+          "state": "not-declared"
+        },
+        "entrySegmentIndexes": []
+      },
+      {
+        "occurrenceIndex": 95,
+        "effectiveLinear": "yes",
+        "content": {
+          "state": "resolved",
+          "declaration": {
+            "declarationIndex": 106,
+            "authoredId": {
+              "state": "valid",
+              "value": "xchapter_090"
+            },
+            "authoredHref": "chapter_090.xhtml",
+            "canonicalPath": "OPS/chapter_090.xhtml",
+            "mediaType": "application/xhtml+xml"
+          },
+          "canonicalPath": "OPS/chapter_090.xhtml",
+          "bytes": {
+            "state": "present"
+          }
+        },
+        "overlay": {
+          "state": "not-declared"
+        },
+        "entrySegmentIndexes": []
+      },
+      {
+        "occurrenceIndex": 96,
+        "effectiveLinear": "yes",
+        "content": {
+          "state": "resolved",
+          "declaration": {
+            "declarationIndex": 107,
+            "authoredId": {
+              "state": "valid",
+              "value": "xchapter_091"
+            },
+            "authoredHref": "chapter_091.xhtml",
+            "canonicalPath": "OPS/chapter_091.xhtml",
+            "mediaType": "application/xhtml+xml"
+          },
+          "canonicalPath": "OPS/chapter_091.xhtml",
+          "bytes": {
+            "state": "present"
+          }
+        },
+        "overlay": {
+          "state": "not-declared"
+        },
+        "entrySegmentIndexes": []
+      },
+      {
+        "occurrenceIndex": 97,
+        "effectiveLinear": "yes",
+        "content": {
+          "state": "resolved",
+          "declaration": {
+            "declarationIndex": 108,
+            "authoredId": {
+              "state": "valid",
+              "value": "xchapter_092"
+            },
+            "authoredHref": "chapter_092.xhtml",
+            "canonicalPath": "OPS/chapter_092.xhtml",
+            "mediaType": "application/xhtml+xml"
+          },
+          "canonicalPath": "OPS/chapter_092.xhtml",
+          "bytes": {
+            "state": "present"
+          }
+        },
+        "overlay": {
+          "state": "not-declared"
+        },
+        "entrySegmentIndexes": []
+      },
+      {
+        "occurrenceIndex": 98,
+        "effectiveLinear": "yes",
+        "content": {
+          "state": "resolved",
+          "declaration": {
+            "declarationIndex": 109,
+            "authoredId": {
+              "state": "valid",
+              "value": "xchapter_093"
+            },
+            "authoredHref": "chapter_093.xhtml",
+            "canonicalPath": "OPS/chapter_093.xhtml",
+            "mediaType": "application/xhtml+xml"
+          },
+          "canonicalPath": "OPS/chapter_093.xhtml",
+          "bytes": {
+            "state": "present"
+          }
+        },
+        "overlay": {
+          "state": "not-declared"
+        },
+        "entrySegmentIndexes": []
+      },
+      {
+        "occurrenceIndex": 99,
+        "effectiveLinear": "yes",
+        "content": {
+          "state": "resolved",
+          "declaration": {
+            "declarationIndex": 110,
+            "authoredId": {
+              "state": "valid",
+              "value": "xchapter_094"
+            },
+            "authoredHref": "chapter_094.xhtml",
+            "canonicalPath": "OPS/chapter_094.xhtml",
+            "mediaType": "application/xhtml+xml"
+          },
+          "canonicalPath": "OPS/chapter_094.xhtml",
+          "bytes": {
+            "state": "present"
+          }
+        },
+        "overlay": {
+          "state": "not-declared"
+        },
+        "entrySegmentIndexes": []
+      },
+      {
+        "occurrenceIndex": 100,
+        "effectiveLinear": "yes",
+        "content": {
+          "state": "resolved",
+          "declaration": {
+            "declarationIndex": 111,
+            "authoredId": {
+              "state": "valid",
+              "value": "xchapter_095"
+            },
+            "authoredHref": "chapter_095.xhtml",
+            "canonicalPath": "OPS/chapter_095.xhtml",
+            "mediaType": "application/xhtml+xml"
+          },
+          "canonicalPath": "OPS/chapter_095.xhtml",
+          "bytes": {
+            "state": "present"
+          }
+        },
+        "overlay": {
+          "state": "not-declared"
+        },
+        "entrySegmentIndexes": []
+      },
+      {
+        "occurrenceIndex": 101,
+        "effectiveLinear": "yes",
+        "content": {
+          "state": "resolved",
+          "declaration": {
+            "declarationIndex": 112,
+            "authoredId": {
+              "state": "valid",
+              "value": "xchapter_096"
+            },
+            "authoredHref": "chapter_096.xhtml",
+            "canonicalPath": "OPS/chapter_096.xhtml",
+            "mediaType": "application/xhtml+xml"
+          },
+          "canonicalPath": "OPS/chapter_096.xhtml",
+          "bytes": {
+            "state": "present"
+          }
+        },
+        "overlay": {
+          "state": "not-declared"
+        },
+        "entrySegmentIndexes": []
+      },
+      {
+        "occurrenceIndex": 102,
+        "effectiveLinear": "yes",
+        "content": {
+          "state": "resolved",
+          "declaration": {
+            "declarationIndex": 113,
+            "authoredId": {
+              "state": "valid",
+              "value": "xchapter_097"
+            },
+            "authoredHref": "chapter_097.xhtml",
+            "canonicalPath": "OPS/chapter_097.xhtml",
+            "mediaType": "application/xhtml+xml"
+          },
+          "canonicalPath": "OPS/chapter_097.xhtml",
+          "bytes": {
+            "state": "present"
+          }
+        },
+        "overlay": {
+          "state": "not-declared"
+        },
+        "entrySegmentIndexes": []
+      },
+      {
+        "occurrenceIndex": 103,
+        "effectiveLinear": "yes",
+        "content": {
+          "state": "resolved",
+          "declaration": {
+            "declarationIndex": 114,
+            "authoredId": {
+              "state": "valid",
+              "value": "xchapter_098"
+            },
+            "authoredHref": "chapter_098.xhtml",
+            "canonicalPath": "OPS/chapter_098.xhtml",
+            "mediaType": "application/xhtml+xml"
+          },
+          "canonicalPath": "OPS/chapter_098.xhtml",
+          "bytes": {
+            "state": "present"
+          }
+        },
+        "overlay": {
+          "state": "not-declared"
+        },
+        "entrySegmentIndexes": []
+      },
+      {
+        "occurrenceIndex": 104,
+        "effectiveLinear": "yes",
+        "content": {
+          "state": "resolved",
+          "declaration": {
+            "declarationIndex": 115,
+            "authoredId": {
+              "state": "valid",
+              "value": "xchapter_099"
+            },
+            "authoredHref": "chapter_099.xhtml",
+            "canonicalPath": "OPS/chapter_099.xhtml",
+            "mediaType": "application/xhtml+xml"
+          },
+          "canonicalPath": "OPS/chapter_099.xhtml",
+          "bytes": {
+            "state": "present"
+          }
+        },
+        "overlay": {
+          "state": "not-declared"
+        },
+        "entrySegmentIndexes": []
+      },
+      {
+        "occurrenceIndex": 105,
+        "effectiveLinear": "yes",
+        "content": {
+          "state": "resolved",
+          "declaration": {
+            "declarationIndex": 116,
+            "authoredId": {
+              "state": "valid",
+              "value": "xchapter_100"
+            },
+            "authoredHref": "chapter_100.xhtml",
+            "canonicalPath": "OPS/chapter_100.xhtml",
+            "mediaType": "application/xhtml+xml"
+          },
+          "canonicalPath": "OPS/chapter_100.xhtml",
+          "bytes": {
+            "state": "present"
+          }
+        },
+        "overlay": {
+          "state": "not-declared"
+        },
+        "entrySegmentIndexes": []
+      },
+      {
+        "occurrenceIndex": 106,
+        "effectiveLinear": "yes",
+        "content": {
+          "state": "resolved",
+          "declaration": {
+            "declarationIndex": 117,
+            "authoredId": {
+              "state": "valid",
+              "value": "xchapter_101"
+            },
+            "authoredHref": "chapter_101.xhtml",
+            "canonicalPath": "OPS/chapter_101.xhtml",
+            "mediaType": "application/xhtml+xml"
+          },
+          "canonicalPath": "OPS/chapter_101.xhtml",
+          "bytes": {
+            "state": "present"
+          }
+        },
+        "overlay": {
+          "state": "not-declared"
+        },
+        "entrySegmentIndexes": []
+      },
+      {
+        "occurrenceIndex": 107,
+        "effectiveLinear": "yes",
+        "content": {
+          "state": "resolved",
+          "declaration": {
+            "declarationIndex": 118,
+            "authoredId": {
+              "state": "valid",
+              "value": "xchapter_102"
+            },
+            "authoredHref": "chapter_102.xhtml",
+            "canonicalPath": "OPS/chapter_102.xhtml",
+            "mediaType": "application/xhtml+xml"
+          },
+          "canonicalPath": "OPS/chapter_102.xhtml",
+          "bytes": {
+            "state": "present"
+          }
+        },
+        "overlay": {
+          "state": "not-declared"
+        },
+        "entrySegmentIndexes": []
+      },
+      {
+        "occurrenceIndex": 108,
+        "effectiveLinear": "yes",
+        "content": {
+          "state": "resolved",
+          "declaration": {
+            "declarationIndex": 119,
+            "authoredId": {
+              "state": "valid",
+              "value": "xchapter_103"
+            },
+            "authoredHref": "chapter_103.xhtml",
+            "canonicalPath": "OPS/chapter_103.xhtml",
+            "mediaType": "application/xhtml+xml"
+          },
+          "canonicalPath": "OPS/chapter_103.xhtml",
+          "bytes": {
+            "state": "present"
+          }
+        },
+        "overlay": {
+          "state": "not-declared"
+        },
+        "entrySegmentIndexes": []
+      },
+      {
+        "occurrenceIndex": 109,
+        "effectiveLinear": "yes",
+        "content": {
+          "state": "resolved",
+          "declaration": {
+            "declarationIndex": 120,
+            "authoredId": {
+              "state": "valid",
+              "value": "xchapter_104"
+            },
+            "authoredHref": "chapter_104.xhtml",
+            "canonicalPath": "OPS/chapter_104.xhtml",
+            "mediaType": "application/xhtml+xml"
+          },
+          "canonicalPath": "OPS/chapter_104.xhtml",
+          "bytes": {
+            "state": "present"
+          }
+        },
+        "overlay": {
+          "state": "not-declared"
+        },
+        "entrySegmentIndexes": []
+      },
+      {
+        "occurrenceIndex": 110,
+        "effectiveLinear": "yes",
+        "content": {
+          "state": "resolved",
+          "declaration": {
+            "declarationIndex": 121,
+            "authoredId": {
+              "state": "valid",
+              "value": "xchapter_105"
+            },
+            "authoredHref": "chapter_105.xhtml",
+            "canonicalPath": "OPS/chapter_105.xhtml",
+            "mediaType": "application/xhtml+xml"
+          },
+          "canonicalPath": "OPS/chapter_105.xhtml",
+          "bytes": {
+            "state": "present"
+          }
+        },
+        "overlay": {
+          "state": "not-declared"
+        },
+        "entrySegmentIndexes": []
+      },
+      {
+        "occurrenceIndex": 111,
+        "effectiveLinear": "yes",
+        "content": {
+          "state": "resolved",
+          "declaration": {
+            "declarationIndex": 122,
+            "authoredId": {
+              "state": "valid",
+              "value": "xchapter_106"
+            },
+            "authoredHref": "chapter_106.xhtml",
+            "canonicalPath": "OPS/chapter_106.xhtml",
+            "mediaType": "application/xhtml+xml"
+          },
+          "canonicalPath": "OPS/chapter_106.xhtml",
+          "bytes": {
+            "state": "present"
+          }
+        },
+        "overlay": {
+          "state": "not-declared"
+        },
+        "entrySegmentIndexes": []
+      },
+      {
+        "occurrenceIndex": 112,
+        "effectiveLinear": "yes",
+        "content": {
+          "state": "resolved",
+          "declaration": {
+            "declarationIndex": 123,
+            "authoredId": {
+              "state": "valid",
+              "value": "xchapter_107"
+            },
+            "authoredHref": "chapter_107.xhtml",
+            "canonicalPath": "OPS/chapter_107.xhtml",
+            "mediaType": "application/xhtml+xml"
+          },
+          "canonicalPath": "OPS/chapter_107.xhtml",
+          "bytes": {
+            "state": "present"
+          }
+        },
+        "overlay": {
+          "state": "not-declared"
+        },
+        "entrySegmentIndexes": []
+      },
+      {
+        "occurrenceIndex": 113,
+        "effectiveLinear": "yes",
+        "content": {
+          "state": "resolved",
+          "declaration": {
+            "declarationIndex": 124,
+            "authoredId": {
+              "state": "valid",
+              "value": "xchapter_108"
+            },
+            "authoredHref": "chapter_108.xhtml",
+            "canonicalPath": "OPS/chapter_108.xhtml",
+            "mediaType": "application/xhtml+xml"
+          },
+          "canonicalPath": "OPS/chapter_108.xhtml",
+          "bytes": {
+            "state": "present"
+          }
+        },
+        "overlay": {
+          "state": "not-declared"
+        },
+        "entrySegmentIndexes": []
+      },
+      {
+        "occurrenceIndex": 114,
+        "effectiveLinear": "yes",
+        "content": {
+          "state": "resolved",
+          "declaration": {
+            "declarationIndex": 125,
+            "authoredId": {
+              "state": "valid",
+              "value": "xchapter_109"
+            },
+            "authoredHref": "chapter_109.xhtml",
+            "canonicalPath": "OPS/chapter_109.xhtml",
+            "mediaType": "application/xhtml+xml"
+          },
+          "canonicalPath": "OPS/chapter_109.xhtml",
+          "bytes": {
+            "state": "present"
+          }
+        },
+        "overlay": {
+          "state": "not-declared"
+        },
+        "entrySegmentIndexes": []
+      },
+      {
+        "occurrenceIndex": 115,
+        "effectiveLinear": "yes",
+        "content": {
+          "state": "resolved",
+          "declaration": {
+            "declarationIndex": 126,
+            "authoredId": {
+              "state": "valid",
+              "value": "xchapter_110"
+            },
+            "authoredHref": "chapter_110.xhtml",
+            "canonicalPath": "OPS/chapter_110.xhtml",
+            "mediaType": "application/xhtml+xml"
+          },
+          "canonicalPath": "OPS/chapter_110.xhtml",
+          "bytes": {
+            "state": "present"
+          }
+        },
+        "overlay": {
+          "state": "not-declared"
+        },
+        "entrySegmentIndexes": []
+      },
+      {
+        "occurrenceIndex": 116,
+        "effectiveLinear": "yes",
+        "content": {
+          "state": "resolved",
+          "declaration": {
+            "declarationIndex": 127,
+            "authoredId": {
+              "state": "valid",
+              "value": "xchapter_111"
+            },
+            "authoredHref": "chapter_111.xhtml",
+            "canonicalPath": "OPS/chapter_111.xhtml",
+            "mediaType": "application/xhtml+xml"
+          },
+          "canonicalPath": "OPS/chapter_111.xhtml",
+          "bytes": {
+            "state": "present"
+          }
+        },
+        "overlay": {
+          "state": "not-declared"
+        },
+        "entrySegmentIndexes": []
+      },
+      {
+        "occurrenceIndex": 117,
+        "effectiveLinear": "yes",
+        "content": {
+          "state": "resolved",
+          "declaration": {
+            "declarationIndex": 128,
+            "authoredId": {
+              "state": "valid",
+              "value": "xchapter_112"
+            },
+            "authoredHref": "chapter_112.xhtml",
+            "canonicalPath": "OPS/chapter_112.xhtml",
+            "mediaType": "application/xhtml+xml"
+          },
+          "canonicalPath": "OPS/chapter_112.xhtml",
+          "bytes": {
+            "state": "present"
+          }
+        },
+        "overlay": {
+          "state": "not-declared"
+        },
+        "entrySegmentIndexes": []
+      },
+      {
+        "occurrenceIndex": 118,
+        "effectiveLinear": "yes",
+        "content": {
+          "state": "resolved",
+          "declaration": {
+            "declarationIndex": 129,
+            "authoredId": {
+              "state": "valid",
+              "value": "xchapter_113"
+            },
+            "authoredHref": "chapter_113.xhtml",
+            "canonicalPath": "OPS/chapter_113.xhtml",
+            "mediaType": "application/xhtml+xml"
+          },
+          "canonicalPath": "OPS/chapter_113.xhtml",
+          "bytes": {
+            "state": "present"
+          }
+        },
+        "overlay": {
+          "state": "not-declared"
+        },
+        "entrySegmentIndexes": []
+      },
+      {
+        "occurrenceIndex": 119,
+        "effectiveLinear": "yes",
+        "content": {
+          "state": "resolved",
+          "declaration": {
+            "declarationIndex": 130,
+            "authoredId": {
+              "state": "valid",
+              "value": "xchapter_114"
+            },
+            "authoredHref": "chapter_114.xhtml",
+            "canonicalPath": "OPS/chapter_114.xhtml",
+            "mediaType": "application/xhtml+xml"
+          },
+          "canonicalPath": "OPS/chapter_114.xhtml",
+          "bytes": {
+            "state": "present"
+          }
+        },
+        "overlay": {
+          "state": "not-declared"
+        },
+        "entrySegmentIndexes": []
+      },
+      {
+        "occurrenceIndex": 120,
+        "effectiveLinear": "yes",
+        "content": {
+          "state": "resolved",
+          "declaration": {
+            "declarationIndex": 131,
+            "authoredId": {
+              "state": "valid",
+              "value": "xchapter_115"
+            },
+            "authoredHref": "chapter_115.xhtml",
+            "canonicalPath": "OPS/chapter_115.xhtml",
+            "mediaType": "application/xhtml+xml"
+          },
+          "canonicalPath": "OPS/chapter_115.xhtml",
+          "bytes": {
+            "state": "present"
+          }
+        },
+        "overlay": {
+          "state": "not-declared"
+        },
+        "entrySegmentIndexes": []
+      },
+      {
+        "occurrenceIndex": 121,
+        "effectiveLinear": "yes",
+        "content": {
+          "state": "resolved",
+          "declaration": {
+            "declarationIndex": 132,
+            "authoredId": {
+              "state": "valid",
+              "value": "xchapter_116"
+            },
+            "authoredHref": "chapter_116.xhtml",
+            "canonicalPath": "OPS/chapter_116.xhtml",
+            "mediaType": "application/xhtml+xml"
+          },
+          "canonicalPath": "OPS/chapter_116.xhtml",
+          "bytes": {
+            "state": "present"
+          }
+        },
+        "overlay": {
+          "state": "not-declared"
+        },
+        "entrySegmentIndexes": []
+      },
+      {
+        "occurrenceIndex": 122,
+        "effectiveLinear": "yes",
+        "content": {
+          "state": "resolved",
+          "declaration": {
+            "declarationIndex": 133,
+            "authoredId": {
+              "state": "valid",
+              "value": "xchapter_117"
+            },
+            "authoredHref": "chapter_117.xhtml",
+            "canonicalPath": "OPS/chapter_117.xhtml",
+            "mediaType": "application/xhtml+xml"
+          },
+          "canonicalPath": "OPS/chapter_117.xhtml",
+          "bytes": {
+            "state": "present"
+          }
+        },
+        "overlay": {
+          "state": "not-declared"
+        },
+        "entrySegmentIndexes": []
+      },
+      {
+        "occurrenceIndex": 123,
+        "effectiveLinear": "yes",
+        "content": {
+          "state": "resolved",
+          "declaration": {
+            "declarationIndex": 134,
+            "authoredId": {
+              "state": "valid",
+              "value": "xchapter_118"
+            },
+            "authoredHref": "chapter_118.xhtml",
+            "canonicalPath": "OPS/chapter_118.xhtml",
+            "mediaType": "application/xhtml+xml"
+          },
+          "canonicalPath": "OPS/chapter_118.xhtml",
+          "bytes": {
+            "state": "present"
+          }
+        },
+        "overlay": {
+          "state": "not-declared"
+        },
+        "entrySegmentIndexes": []
+      },
+      {
+        "occurrenceIndex": 124,
+        "effectiveLinear": "yes",
+        "content": {
+          "state": "resolved",
+          "declaration": {
+            "declarationIndex": 135,
+            "authoredId": {
+              "state": "valid",
+              "value": "xchapter_119"
+            },
+            "authoredHref": "chapter_119.xhtml",
+            "canonicalPath": "OPS/chapter_119.xhtml",
+            "mediaType": "application/xhtml+xml"
+          },
+          "canonicalPath": "OPS/chapter_119.xhtml",
+          "bytes": {
+            "state": "present"
+          }
+        },
+        "overlay": {
+          "state": "not-declared"
+        },
+        "entrySegmentIndexes": []
+      },
+      {
+        "occurrenceIndex": 125,
+        "effectiveLinear": "yes",
+        "content": {
+          "state": "resolved",
+          "declaration": {
+            "declarationIndex": 136,
+            "authoredId": {
+              "state": "valid",
+              "value": "xchapter_120"
+            },
+            "authoredHref": "chapter_120.xhtml",
+            "canonicalPath": "OPS/chapter_120.xhtml",
+            "mediaType": "application/xhtml+xml"
+          },
+          "canonicalPath": "OPS/chapter_120.xhtml",
+          "bytes": {
+            "state": "present"
+          }
+        },
+        "overlay": {
+          "state": "not-declared"
+        },
+        "entrySegmentIndexes": []
+      },
+      {
+        "occurrenceIndex": 126,
+        "effectiveLinear": "yes",
+        "content": {
+          "state": "resolved",
+          "declaration": {
+            "declarationIndex": 137,
+            "authoredId": {
+              "state": "valid",
+              "value": "xchapter_121"
+            },
+            "authoredHref": "chapter_121.xhtml",
+            "canonicalPath": "OPS/chapter_121.xhtml",
+            "mediaType": "application/xhtml+xml"
+          },
+          "canonicalPath": "OPS/chapter_121.xhtml",
+          "bytes": {
+            "state": "present"
+          }
+        },
+        "overlay": {
+          "state": "not-declared"
+        },
+        "entrySegmentIndexes": []
+      },
+      {
+        "occurrenceIndex": 127,
+        "effectiveLinear": "yes",
+        "content": {
+          "state": "resolved",
+          "declaration": {
+            "declarationIndex": 138,
+            "authoredId": {
+              "state": "valid",
+              "value": "xchapter_122"
+            },
+            "authoredHref": "chapter_122.xhtml",
+            "canonicalPath": "OPS/chapter_122.xhtml",
+            "mediaType": "application/xhtml+xml"
+          },
+          "canonicalPath": "OPS/chapter_122.xhtml",
+          "bytes": {
+            "state": "present"
+          }
+        },
+        "overlay": {
+          "state": "not-declared"
+        },
+        "entrySegmentIndexes": []
+      },
+      {
+        "occurrenceIndex": 128,
+        "effectiveLinear": "yes",
+        "content": {
+          "state": "resolved",
+          "declaration": {
+            "declarationIndex": 139,
+            "authoredId": {
+              "state": "valid",
+              "value": "xchapter_123"
+            },
+            "authoredHref": "chapter_123.xhtml",
+            "canonicalPath": "OPS/chapter_123.xhtml",
+            "mediaType": "application/xhtml+xml"
+          },
+          "canonicalPath": "OPS/chapter_123.xhtml",
+          "bytes": {
+            "state": "present"
+          }
+        },
+        "overlay": {
+          "state": "not-declared"
+        },
+        "entrySegmentIndexes": []
+      },
+      {
+        "occurrenceIndex": 129,
+        "effectiveLinear": "yes",
+        "content": {
+          "state": "resolved",
+          "declaration": {
+            "declarationIndex": 140,
+            "authoredId": {
+              "state": "valid",
+              "value": "xchapter_124"
+            },
+            "authoredHref": "chapter_124.xhtml",
+            "canonicalPath": "OPS/chapter_124.xhtml",
+            "mediaType": "application/xhtml+xml"
+          },
+          "canonicalPath": "OPS/chapter_124.xhtml",
+          "bytes": {
+            "state": "present"
+          }
+        },
+        "overlay": {
+          "state": "not-declared"
+        },
+        "entrySegmentIndexes": []
+      },
+      {
+        "occurrenceIndex": 130,
+        "effectiveLinear": "yes",
+        "content": {
+          "state": "resolved",
+          "declaration": {
+            "declarationIndex": 141,
+            "authoredId": {
+              "state": "valid",
+              "value": "xchapter_125"
+            },
+            "authoredHref": "chapter_125.xhtml",
+            "canonicalPath": "OPS/chapter_125.xhtml",
+            "mediaType": "application/xhtml+xml"
+          },
+          "canonicalPath": "OPS/chapter_125.xhtml",
+          "bytes": {
+            "state": "present"
+          }
+        },
+        "overlay": {
+          "state": "not-declared"
+        },
+        "entrySegmentIndexes": []
+      },
+      {
+        "occurrenceIndex": 131,
+        "effectiveLinear": "yes",
+        "content": {
+          "state": "resolved",
+          "declaration": {
+            "declarationIndex": 142,
+            "authoredId": {
+              "state": "valid",
+              "value": "xchapter_126"
+            },
+            "authoredHref": "chapter_126.xhtml",
+            "canonicalPath": "OPS/chapter_126.xhtml",
+            "mediaType": "application/xhtml+xml"
+          },
+          "canonicalPath": "OPS/chapter_126.xhtml",
+          "bytes": {
+            "state": "present"
+          }
+        },
+        "overlay": {
+          "state": "not-declared"
+        },
+        "entrySegmentIndexes": []
+      },
+      {
+        "occurrenceIndex": 132,
+        "effectiveLinear": "yes",
+        "content": {
+          "state": "resolved",
+          "declaration": {
+            "declarationIndex": 143,
+            "authoredId": {
+              "state": "valid",
+              "value": "xchapter_127"
+            },
+            "authoredHref": "chapter_127.xhtml",
+            "canonicalPath": "OPS/chapter_127.xhtml",
+            "mediaType": "application/xhtml+xml"
+          },
+          "canonicalPath": "OPS/chapter_127.xhtml",
+          "bytes": {
+            "state": "present"
+          }
+        },
+        "overlay": {
+          "state": "not-declared"
+        },
+        "entrySegmentIndexes": []
+      },
+      {
+        "occurrenceIndex": 133,
+        "effectiveLinear": "yes",
+        "content": {
+          "state": "resolved",
+          "declaration": {
+            "declarationIndex": 144,
+            "authoredId": {
+              "state": "valid",
+              "value": "xchapter_128"
+            },
+            "authoredHref": "chapter_128.xhtml",
+            "canonicalPath": "OPS/chapter_128.xhtml",
+            "mediaType": "application/xhtml+xml"
+          },
+          "canonicalPath": "OPS/chapter_128.xhtml",
+          "bytes": {
+            "state": "present"
+          }
+        },
+        "overlay": {
+          "state": "not-declared"
+        },
+        "entrySegmentIndexes": []
+      },
+      {
+        "occurrenceIndex": 134,
+        "effectiveLinear": "yes",
+        "content": {
+          "state": "resolved",
+          "declaration": {
+            "declarationIndex": 145,
+            "authoredId": {
+              "state": "valid",
+              "value": "xchapter_129"
+            },
+            "authoredHref": "chapter_129.xhtml",
+            "canonicalPath": "OPS/chapter_129.xhtml",
+            "mediaType": "application/xhtml+xml"
+          },
+          "canonicalPath": "OPS/chapter_129.xhtml",
+          "bytes": {
+            "state": "present"
+          }
+        },
+        "overlay": {
+          "state": "not-declared"
+        },
+        "entrySegmentIndexes": []
+      },
+      {
+        "occurrenceIndex": 135,
+        "effectiveLinear": "yes",
+        "content": {
+          "state": "resolved",
+          "declaration": {
+            "declarationIndex": 146,
+            "authoredId": {
+              "state": "valid",
+              "value": "xchapter_130"
+            },
+            "authoredHref": "chapter_130.xhtml",
+            "canonicalPath": "OPS/chapter_130.xhtml",
+            "mediaType": "application/xhtml+xml"
+          },
+          "canonicalPath": "OPS/chapter_130.xhtml",
+          "bytes": {
+            "state": "present"
+          }
+        },
+        "overlay": {
+          "state": "not-declared"
+        },
+        "entrySegmentIndexes": []
+      },
+      {
+        "occurrenceIndex": 136,
+        "effectiveLinear": "yes",
+        "content": {
+          "state": "resolved",
+          "declaration": {
+            "declarationIndex": 147,
+            "authoredId": {
+              "state": "valid",
+              "value": "xchapter_131"
+            },
+            "authoredHref": "chapter_131.xhtml",
+            "canonicalPath": "OPS/chapter_131.xhtml",
+            "mediaType": "application/xhtml+xml"
+          },
+          "canonicalPath": "OPS/chapter_131.xhtml",
+          "bytes": {
+            "state": "present"
+          }
+        },
+        "overlay": {
+          "state": "not-declared"
+        },
+        "entrySegmentIndexes": []
+      },
+      {
+        "occurrenceIndex": 137,
+        "effectiveLinear": "yes",
+        "content": {
+          "state": "resolved",
+          "declaration": {
+            "declarationIndex": 148,
+            "authoredId": {
+              "state": "valid",
+              "value": "xchapter_132"
+            },
+            "authoredHref": "chapter_132.xhtml",
+            "canonicalPath": "OPS/chapter_132.xhtml",
+            "mediaType": "application/xhtml+xml"
+          },
+          "canonicalPath": "OPS/chapter_132.xhtml",
+          "bytes": {
+            "state": "present"
+          }
+        },
+        "overlay": {
+          "state": "not-declared"
+        },
+        "entrySegmentIndexes": []
+      },
+      {
+        "occurrenceIndex": 138,
+        "effectiveLinear": "yes",
+        "content": {
+          "state": "resolved",
+          "declaration": {
+            "declarationIndex": 149,
+            "authoredId": {
+              "state": "valid",
+              "value": "xchapter_133"
+            },
+            "authoredHref": "chapter_133.xhtml",
+            "canonicalPath": "OPS/chapter_133.xhtml",
+            "mediaType": "application/xhtml+xml"
+          },
+          "canonicalPath": "OPS/chapter_133.xhtml",
+          "bytes": {
+            "state": "present"
+          }
+        },
+        "overlay": {
+          "state": "not-declared"
+        },
+        "entrySegmentIndexes": []
+      },
+      {
+        "occurrenceIndex": 139,
+        "effectiveLinear": "yes",
+        "content": {
+          "state": "resolved",
+          "declaration": {
+            "declarationIndex": 150,
+            "authoredId": {
+              "state": "valid",
+              "value": "xchapter_134"
+            },
+            "authoredHref": "chapter_134.xhtml",
+            "canonicalPath": "OPS/chapter_134.xhtml",
+            "mediaType": "application/xhtml+xml"
+          },
+          "canonicalPath": "OPS/chapter_134.xhtml",
+          "bytes": {
+            "state": "present"
+          }
+        },
+        "overlay": {
+          "state": "not-declared"
+        },
+        "entrySegmentIndexes": []
+      },
+      {
+        "occurrenceIndex": 140,
+        "effectiveLinear": "yes",
+        "content": {
+          "state": "resolved",
+          "declaration": {
+            "declarationIndex": 151,
+            "authoredId": {
+              "state": "valid",
+              "value": "xchapter_135"
+            },
+            "authoredHref": "chapter_135.xhtml",
+            "canonicalPath": "OPS/chapter_135.xhtml",
+            "mediaType": "application/xhtml+xml"
+          },
+          "canonicalPath": "OPS/chapter_135.xhtml",
+          "bytes": {
+            "state": "present"
+          }
+        },
+        "overlay": {
+          "state": "not-declared"
+        },
+        "entrySegmentIndexes": []
+      },
+      {
+        "occurrenceIndex": 141,
+        "effectiveLinear": "yes",
+        "content": {
+          "state": "resolved",
+          "declaration": {
+            "declarationIndex": 152,
+            "authoredId": {
+              "state": "valid",
+              "value": "xchapter_136"
+            },
+            "authoredHref": "chapter_136.xhtml",
+            "canonicalPath": "OPS/chapter_136.xhtml",
+            "mediaType": "application/xhtml+xml"
+          },
+          "canonicalPath": "OPS/chapter_136.xhtml",
+          "bytes": {
+            "state": "present"
+          }
+        },
+        "overlay": {
+          "state": "not-declared"
+        },
+        "entrySegmentIndexes": []
+      },
+      {
+        "occurrenceIndex": 142,
+        "effectiveLinear": "yes",
+        "content": {
+          "state": "resolved",
+          "declaration": {
+            "declarationIndex": 5,
+            "authoredId": {
+              "state": "valid",
+              "value": "copyright"
+            },
+            "authoredHref": "copyright.xhtml",
+            "canonicalPath": "OPS/copyright.xhtml",
+            "mediaType": "application/xhtml+xml"
+          },
+          "canonicalPath": "OPS/copyright.xhtml",
+          "bytes": {
+            "state": "present"
+          }
+        },
+        "overlay": {
+          "state": "not-declared"
+        },
+        "entrySegmentIndexes": []
+      },
+      {
+        "occurrenceIndex": 143,
+        "effectiveLinear": "no",
+        "content": {
+          "state": "resolved",
+          "declaration": {
+            "declarationIndex": 4,
+            "authoredId": {
+              "state": "valid",
+              "value": "toc"
+            },
+            "authoredHref": "toc.xhtml",
+            "canonicalPath": "OPS/toc.xhtml",
+            "mediaType": "application/xhtml+xml"
+          },
+          "canonicalPath": "OPS/toc.xhtml",
+          "bytes": {
+            "state": "present"
+          }
+        },
+        "overlay": {
+          "state": "not-declared"
+        },
+        "entrySegmentIndexes": []
+      }
+    ]
+  }
+}

@@ -1,0 +1,1675 @@
+{
+  "state": "available",
+  "timeline": {
+    "overlayIndex": 0,
+    "canonicalPath": "OPS/chapter_001_overlay.smil",
+    "declarations": [
+      {
+        "declarationIndex": 15,
+        "authoredId": {
+          "state": "valid",
+          "value": "chapter_001_overlay"
+        },
+        "authoredHref": "chapter_001_overlay.smil",
+        "canonicalPath": "OPS/chapter_001_overlay.smil",
+        "mediaType": "application/smil+xml"
+      }
+    ],
+    "skippable": [],
+    "escapable": [],
+    "segmentCount": 27,
+    "playableSegmentCount": 27,
+    "availability": {
+      "state": "available"
+    },
+    "segments": [
+      {
+        "segmentIndex": 0,
+        "semanticPath": [
+          {
+            "kind": "sequence",
+            "epubTypes": ["bodymatter", "chapter"],
+            "textReference": null
+          },
+          {
+            "kind": "parallel",
+            "epubTypes": [],
+            "textReference": {
+              "state": "local-fragment",
+              "authoredHref": "chapter_001.xhtml#c01h01",
+              "canonicalPath": "OPS/chapter_001.xhtml",
+              "query": null,
+              "fragment": "c01h01",
+              "fragmentExists": {
+                "state": "exists"
+              }
+            }
+          }
+        ],
+        "text": {
+          "reference": {
+            "state": "local-fragment",
+            "authoredHref": "chapter_001.xhtml#c01h01",
+            "canonicalPath": "OPS/chapter_001.xhtml",
+            "query": null,
+            "fragment": "c01h01",
+            "fragmentExists": {
+              "state": "exists"
+            }
+          },
+          "availability": {
+            "state": "available"
+          }
+        },
+        "audio": {
+          "reference": {
+            "state": "local-resource",
+            "authoredHref": "audio/mobydick_001_002_melville.mp4",
+            "canonicalPath": "OPS/audio/mobydick_001_002_melville.mp4",
+            "query": null
+          },
+          "availability": {
+            "state": "available"
+          }
+        },
+        "clipBegin": {
+          "state": "parsed",
+          "milliseconds": "24500"
+        },
+        "clipEnd": {
+          "state": "parsed",
+          "milliseconds": "29268"
+        },
+        "playability": {
+          "state": "playable"
+        }
+      },
+      {
+        "segmentIndex": 1,
+        "semanticPath": [
+          {
+            "kind": "sequence",
+            "epubTypes": ["bodymatter", "chapter"],
+            "textReference": null
+          },
+          {
+            "kind": "parallel",
+            "epubTypes": [],
+            "textReference": {
+              "state": "local-fragment",
+              "authoredHref": "chapter_001.xhtml#c01w00001",
+              "canonicalPath": "OPS/chapter_001.xhtml",
+              "query": null,
+              "fragment": "c01w00001",
+              "fragmentExists": {
+                "state": "exists"
+              }
+            }
+          }
+        ],
+        "text": {
+          "reference": {
+            "state": "local-fragment",
+            "authoredHref": "chapter_001.xhtml#c01w00001",
+            "canonicalPath": "OPS/chapter_001.xhtml",
+            "query": null,
+            "fragment": "c01w00001",
+            "fragmentExists": {
+              "state": "exists"
+            }
+          },
+          "availability": {
+            "state": "available"
+          }
+        },
+        "audio": {
+          "reference": {
+            "state": "local-resource",
+            "authoredHref": "audio/mobydick_001_002_melville.mp4",
+            "canonicalPath": "OPS/audio/mobydick_001_002_melville.mp4",
+            "query": null
+          },
+          "availability": {
+            "state": "available"
+          }
+        },
+        "clipBegin": {
+          "state": "parsed",
+          "milliseconds": "29268"
+        },
+        "clipEnd": {
+          "state": "parsed",
+          "milliseconds": "29441"
+        },
+        "playability": {
+          "state": "playable"
+        }
+      },
+      {
+        "segmentIndex": 2,
+        "semanticPath": [
+          {
+            "kind": "sequence",
+            "epubTypes": ["bodymatter", "chapter"],
+            "textReference": null
+          },
+          {
+            "kind": "parallel",
+            "epubTypes": [],
+            "textReference": {
+              "state": "local-fragment",
+              "authoredHref": "chapter_001.xhtml#c01w00002",
+              "canonicalPath": "OPS/chapter_001.xhtml",
+              "query": null,
+              "fragment": "c01w00002",
+              "fragmentExists": {
+                "state": "exists"
+              }
+            }
+          }
+        ],
+        "text": {
+          "reference": {
+            "state": "local-fragment",
+            "authoredHref": "chapter_001.xhtml#c01w00002",
+            "canonicalPath": "OPS/chapter_001.xhtml",
+            "query": null,
+            "fragment": "c01w00002",
+            "fragmentExists": {
+              "state": "exists"
+            }
+          },
+          "availability": {
+            "state": "available"
+          }
+        },
+        "audio": {
+          "reference": {
+            "state": "local-resource",
+            "authoredHref": "audio/mobydick_001_002_melville.mp4",
+            "canonicalPath": "OPS/audio/mobydick_001_002_melville.mp4",
+            "query": null
+          },
+          "availability": {
+            "state": "available"
+          }
+        },
+        "clipBegin": {
+          "state": "parsed",
+          "milliseconds": "29441"
+        },
+        "clipEnd": {
+          "state": "parsed",
+          "milliseconds": "29640"
+        },
+        "playability": {
+          "state": "playable"
+        }
+      },
+      {
+        "segmentIndex": 3,
+        "semanticPath": [
+          {
+            "kind": "sequence",
+            "epubTypes": ["bodymatter", "chapter"],
+            "textReference": null
+          },
+          {
+            "kind": "parallel",
+            "epubTypes": [],
+            "textReference": {
+              "state": "local-fragment",
+              "authoredHref": "chapter_001.xhtml#c01w00003",
+              "canonicalPath": "OPS/chapter_001.xhtml",
+              "query": null,
+              "fragment": "c01w00003",
+              "fragmentExists": {
+                "state": "exists"
+              }
+            }
+          }
+        ],
+        "text": {
+          "reference": {
+            "state": "local-fragment",
+            "authoredHref": "chapter_001.xhtml#c01w00003",
+            "canonicalPath": "OPS/chapter_001.xhtml",
+            "query": null,
+            "fragment": "c01w00003",
+            "fragmentExists": {
+              "state": "exists"
+            }
+          },
+          "availability": {
+            "state": "available"
+          }
+        },
+        "audio": {
+          "reference": {
+            "state": "local-resource",
+            "authoredHref": "audio/mobydick_001_002_melville.mp4",
+            "canonicalPath": "OPS/audio/mobydick_001_002_melville.mp4",
+            "query": null
+          },
+          "availability": {
+            "state": "available"
+          }
+        },
+        "clipBegin": {
+          "state": "parsed",
+          "milliseconds": "29640"
+        },
+        "clipEnd": {
+          "state": "parsed",
+          "milliseconds": "30397"
+        },
+        "playability": {
+          "state": "playable"
+        }
+      },
+      {
+        "segmentIndex": 4,
+        "semanticPath": [
+          {
+            "kind": "sequence",
+            "epubTypes": ["bodymatter", "chapter"],
+            "textReference": null
+          },
+          {
+            "kind": "parallel",
+            "epubTypes": [],
+            "textReference": {
+              "state": "local-fragment",
+              "authoredHref": "chapter_001.xhtml#c01s0002",
+              "canonicalPath": "OPS/chapter_001.xhtml",
+              "query": null,
+              "fragment": "c01s0002",
+              "fragmentExists": {
+                "state": "exists"
+              }
+            }
+          }
+        ],
+        "text": {
+          "reference": {
+            "state": "local-fragment",
+            "authoredHref": "chapter_001.xhtml#c01s0002",
+            "canonicalPath": "OPS/chapter_001.xhtml",
+            "query": null,
+            "fragment": "c01s0002",
+            "fragmentExists": {
+              "state": "exists"
+            }
+          },
+          "availability": {
+            "state": "available"
+          }
+        },
+        "audio": {
+          "reference": {
+            "state": "local-resource",
+            "authoredHref": "audio/mobydick_001_002_melville.mp4",
+            "canonicalPath": "OPS/audio/mobydick_001_002_melville.mp4",
+            "query": null
+          },
+          "availability": {
+            "state": "available"
+          }
+        },
+        "clipBegin": {
+          "state": "parsed",
+          "milliseconds": "30397"
+        },
+        "clipEnd": {
+          "state": "parsed",
+          "milliseconds": "44783"
+        },
+        "playability": {
+          "state": "playable"
+        }
+      },
+      {
+        "segmentIndex": 5,
+        "semanticPath": [
+          {
+            "kind": "sequence",
+            "epubTypes": ["bodymatter", "chapter"],
+            "textReference": null
+          },
+          {
+            "kind": "parallel",
+            "epubTypes": [],
+            "textReference": {
+              "state": "local-fragment",
+              "authoredHref": "chapter_001.xhtml#c01s0003",
+              "canonicalPath": "OPS/chapter_001.xhtml",
+              "query": null,
+              "fragment": "c01s0003",
+              "fragmentExists": {
+                "state": "exists"
+              }
+            }
+          }
+        ],
+        "text": {
+          "reference": {
+            "state": "local-fragment",
+            "authoredHref": "chapter_001.xhtml#c01s0003",
+            "canonicalPath": "OPS/chapter_001.xhtml",
+            "query": null,
+            "fragment": "c01s0003",
+            "fragmentExists": {
+              "state": "exists"
+            }
+          },
+          "availability": {
+            "state": "available"
+          }
+        },
+        "audio": {
+          "reference": {
+            "state": "local-resource",
+            "authoredHref": "audio/mobydick_001_002_melville.mp4",
+            "canonicalPath": "OPS/audio/mobydick_001_002_melville.mp4",
+            "query": null
+          },
+          "availability": {
+            "state": "available"
+          }
+        },
+        "clipBegin": {
+          "state": "parsed",
+          "milliseconds": "44783"
+        },
+        "clipEnd": {
+          "state": "parsed",
+          "milliseconds": "50450"
+        },
+        "playability": {
+          "state": "playable"
+        }
+      },
+      {
+        "segmentIndex": 6,
+        "semanticPath": [
+          {
+            "kind": "sequence",
+            "epubTypes": ["bodymatter", "chapter"],
+            "textReference": null
+          },
+          {
+            "kind": "parallel",
+            "epubTypes": [],
+            "textReference": {
+              "state": "local-fragment",
+              "authoredHref": "chapter_001.xhtml#c01s0004",
+              "canonicalPath": "OPS/chapter_001.xhtml",
+              "query": null,
+              "fragment": "c01s0004",
+              "fragmentExists": {
+                "state": "exists"
+              }
+            }
+          }
+        ],
+        "text": {
+          "reference": {
+            "state": "local-fragment",
+            "authoredHref": "chapter_001.xhtml#c01s0004",
+            "canonicalPath": "OPS/chapter_001.xhtml",
+            "query": null,
+            "fragment": "c01s0004",
+            "fragmentExists": {
+              "state": "exists"
+            }
+          },
+          "availability": {
+            "state": "available"
+          }
+        },
+        "audio": {
+          "reference": {
+            "state": "local-resource",
+            "authoredHref": "audio/mobydick_001_002_melville.mp4",
+            "canonicalPath": "OPS/audio/mobydick_001_002_melville.mp4",
+            "query": null
+          },
+          "availability": {
+            "state": "available"
+          }
+        },
+        "clipBegin": {
+          "state": "parsed",
+          "milliseconds": "50450"
+        },
+        "clipEnd": {
+          "state": "parsed",
+          "milliseconds": "84300"
+        },
+        "playability": {
+          "state": "playable"
+        }
+      },
+      {
+        "segmentIndex": 7,
+        "semanticPath": [
+          {
+            "kind": "sequence",
+            "epubTypes": ["bodymatter", "chapter"],
+            "textReference": null
+          },
+          {
+            "kind": "parallel",
+            "epubTypes": [],
+            "textReference": {
+              "state": "local-fragment",
+              "authoredHref": "chapter_001.xhtml#c01s0005",
+              "canonicalPath": "OPS/chapter_001.xhtml",
+              "query": null,
+              "fragment": "c01s0005",
+              "fragmentExists": {
+                "state": "exists"
+              }
+            }
+          }
+        ],
+        "text": {
+          "reference": {
+            "state": "local-fragment",
+            "authoredHref": "chapter_001.xhtml#c01s0005",
+            "canonicalPath": "OPS/chapter_001.xhtml",
+            "query": null,
+            "fragment": "c01s0005",
+            "fragmentExists": {
+              "state": "exists"
+            }
+          },
+          "availability": {
+            "state": "available"
+          }
+        },
+        "audio": {
+          "reference": {
+            "state": "local-resource",
+            "authoredHref": "audio/mobydick_001_002_melville.mp4",
+            "canonicalPath": "OPS/audio/mobydick_001_002_melville.mp4",
+            "query": null
+          },
+          "availability": {
+            "state": "available"
+          }
+        },
+        "clipBegin": {
+          "state": "parsed",
+          "milliseconds": "84300"
+        },
+        "clipEnd": {
+          "state": "parsed",
+          "milliseconds": "87850"
+        },
+        "playability": {
+          "state": "playable"
+        }
+      },
+      {
+        "segmentIndex": 8,
+        "semanticPath": [
+          {
+            "kind": "sequence",
+            "epubTypes": ["bodymatter", "chapter"],
+            "textReference": null
+          },
+          {
+            "kind": "parallel",
+            "epubTypes": [],
+            "textReference": {
+              "state": "local-fragment",
+              "authoredHref": "chapter_001.xhtml#c01s0006",
+              "canonicalPath": "OPS/chapter_001.xhtml",
+              "query": null,
+              "fragment": "c01s0006",
+              "fragmentExists": {
+                "state": "exists"
+              }
+            }
+          }
+        ],
+        "text": {
+          "reference": {
+            "state": "local-fragment",
+            "authoredHref": "chapter_001.xhtml#c01s0006",
+            "canonicalPath": "OPS/chapter_001.xhtml",
+            "query": null,
+            "fragment": "c01s0006",
+            "fragmentExists": {
+              "state": "exists"
+            }
+          },
+          "availability": {
+            "state": "available"
+          }
+        },
+        "audio": {
+          "reference": {
+            "state": "local-resource",
+            "authoredHref": "audio/mobydick_001_002_melville.mp4",
+            "canonicalPath": "OPS/audio/mobydick_001_002_melville.mp4",
+            "query": null
+          },
+          "availability": {
+            "state": "available"
+          }
+        },
+        "clipBegin": {
+          "state": "parsed",
+          "milliseconds": "87850"
+        },
+        "clipEnd": {
+          "state": "parsed",
+          "milliseconds": "95000"
+        },
+        "playability": {
+          "state": "playable"
+        }
+      },
+      {
+        "segmentIndex": 9,
+        "semanticPath": [
+          {
+            "kind": "sequence",
+            "epubTypes": ["bodymatter", "chapter"],
+            "textReference": null
+          },
+          {
+            "kind": "parallel",
+            "epubTypes": [],
+            "textReference": {
+              "state": "local-fragment",
+              "authoredHref": "chapter_001.xhtml#c01s0007",
+              "canonicalPath": "OPS/chapter_001.xhtml",
+              "query": null,
+              "fragment": "c01s0007",
+              "fragmentExists": {
+                "state": "exists"
+              }
+            }
+          }
+        ],
+        "text": {
+          "reference": {
+            "state": "local-fragment",
+            "authoredHref": "chapter_001.xhtml#c01s0007",
+            "canonicalPath": "OPS/chapter_001.xhtml",
+            "query": null,
+            "fragment": "c01s0007",
+            "fragmentExists": {
+              "state": "exists"
+            }
+          },
+          "availability": {
+            "state": "available"
+          }
+        },
+        "audio": {
+          "reference": {
+            "state": "local-resource",
+            "authoredHref": "audio/mobydick_001_002_melville.mp4",
+            "canonicalPath": "OPS/audio/mobydick_001_002_melville.mp4",
+            "query": null
+          },
+          "availability": {
+            "state": "available"
+          }
+        },
+        "clipBegin": {
+          "state": "parsed",
+          "milliseconds": "95000"
+        },
+        "clipEnd": {
+          "state": "parsed",
+          "milliseconds": "97500"
+        },
+        "playability": {
+          "state": "playable"
+        }
+      },
+      {
+        "segmentIndex": 10,
+        "semanticPath": [
+          {
+            "kind": "sequence",
+            "epubTypes": ["bodymatter", "chapter"],
+            "textReference": null
+          },
+          {
+            "kind": "parallel",
+            "epubTypes": [],
+            "textReference": {
+              "state": "local-fragment",
+              "authoredHref": "chapter_001.xhtml#c01s0008",
+              "canonicalPath": "OPS/chapter_001.xhtml",
+              "query": null,
+              "fragment": "c01s0008",
+              "fragmentExists": {
+                "state": "exists"
+              }
+            }
+          }
+        ],
+        "text": {
+          "reference": {
+            "state": "local-fragment",
+            "authoredHref": "chapter_001.xhtml#c01s0008",
+            "canonicalPath": "OPS/chapter_001.xhtml",
+            "query": null,
+            "fragment": "c01s0008",
+            "fragmentExists": {
+              "state": "exists"
+            }
+          },
+          "availability": {
+            "state": "available"
+          }
+        },
+        "audio": {
+          "reference": {
+            "state": "local-resource",
+            "authoredHref": "audio/mobydick_001_002_melville.mp4",
+            "canonicalPath": "OPS/audio/mobydick_001_002_melville.mp4",
+            "query": null
+          },
+          "availability": {
+            "state": "available"
+          }
+        },
+        "clipBegin": {
+          "state": "parsed",
+          "milliseconds": "97500"
+        },
+        "clipEnd": {
+          "state": "parsed",
+          "milliseconds": "106450"
+        },
+        "playability": {
+          "state": "playable"
+        }
+      },
+      {
+        "segmentIndex": 11,
+        "semanticPath": [
+          {
+            "kind": "sequence",
+            "epubTypes": ["bodymatter", "chapter"],
+            "textReference": null
+          },
+          {
+            "kind": "parallel",
+            "epubTypes": [],
+            "textReference": {
+              "state": "local-fragment",
+              "authoredHref": "chapter_001.xhtml#c01p0002",
+              "canonicalPath": "OPS/chapter_001.xhtml",
+              "query": null,
+              "fragment": "c01p0002",
+              "fragmentExists": {
+                "state": "exists"
+              }
+            }
+          }
+        ],
+        "text": {
+          "reference": {
+            "state": "local-fragment",
+            "authoredHref": "chapter_001.xhtml#c01p0002",
+            "canonicalPath": "OPS/chapter_001.xhtml",
+            "query": null,
+            "fragment": "c01p0002",
+            "fragmentExists": {
+              "state": "exists"
+            }
+          },
+          "availability": {
+            "state": "available"
+          }
+        },
+        "audio": {
+          "reference": {
+            "state": "local-resource",
+            "authoredHref": "audio/mobydick_001_002_melville.mp4",
+            "canonicalPath": "OPS/audio/mobydick_001_002_melville.mp4",
+            "query": null
+          },
+          "availability": {
+            "state": "available"
+          }
+        },
+        "clipBegin": {
+          "state": "parsed",
+          "milliseconds": "106450"
+        },
+        "clipEnd": {
+          "state": "parsed",
+          "milliseconds": "134138"
+        },
+        "playability": {
+          "state": "playable"
+        }
+      },
+      {
+        "segmentIndex": 12,
+        "semanticPath": [
+          {
+            "kind": "sequence",
+            "epubTypes": ["bodymatter", "chapter"],
+            "textReference": null
+          },
+          {
+            "kind": "parallel",
+            "epubTypes": [],
+            "textReference": {
+              "state": "local-fragment",
+              "authoredHref": "chapter_001.xhtml#c01p0003",
+              "canonicalPath": "OPS/chapter_001.xhtml",
+              "query": null,
+              "fragment": "c01p0003",
+              "fragmentExists": {
+                "state": "exists"
+              }
+            }
+          }
+        ],
+        "text": {
+          "reference": {
+            "state": "local-fragment",
+            "authoredHref": "chapter_001.xhtml#c01p0003",
+            "canonicalPath": "OPS/chapter_001.xhtml",
+            "query": null,
+            "fragment": "c01p0003",
+            "fragmentExists": {
+              "state": "exists"
+            }
+          },
+          "availability": {
+            "state": "available"
+          }
+        },
+        "audio": {
+          "reference": {
+            "state": "local-resource",
+            "authoredHref": "audio/mobydick_001_002_melville.mp4",
+            "canonicalPath": "OPS/audio/mobydick_001_002_melville.mp4",
+            "query": null
+          },
+          "availability": {
+            "state": "available"
+          }
+        },
+        "clipBegin": {
+          "state": "parsed",
+          "milliseconds": "134138"
+        },
+        "clipEnd": {
+          "state": "parsed",
+          "milliseconds": "182000"
+        },
+        "playability": {
+          "state": "playable"
+        }
+      },
+      {
+        "segmentIndex": 13,
+        "semanticPath": [
+          {
+            "kind": "sequence",
+            "epubTypes": ["bodymatter", "chapter"],
+            "textReference": null
+          },
+          {
+            "kind": "parallel",
+            "epubTypes": [],
+            "textReference": {
+              "state": "local-fragment",
+              "authoredHref": "chapter_001.xhtml#c01p0004",
+              "canonicalPath": "OPS/chapter_001.xhtml",
+              "query": null,
+              "fragment": "c01p0004",
+              "fragmentExists": {
+                "state": "exists"
+              }
+            }
+          }
+        ],
+        "text": {
+          "reference": {
+            "state": "local-fragment",
+            "authoredHref": "chapter_001.xhtml#c01p0004",
+            "canonicalPath": "OPS/chapter_001.xhtml",
+            "query": null,
+            "fragment": "c01p0004",
+            "fragmentExists": {
+              "state": "exists"
+            }
+          },
+          "availability": {
+            "state": "available"
+          }
+        },
+        "audio": {
+          "reference": {
+            "state": "local-resource",
+            "authoredHref": "audio/mobydick_001_002_melville.mp4",
+            "canonicalPath": "OPS/audio/mobydick_001_002_melville.mp4",
+            "query": null
+          },
+          "availability": {
+            "state": "available"
+          }
+        },
+        "clipBegin": {
+          "state": "parsed",
+          "milliseconds": "182000"
+        },
+        "clipEnd": {
+          "state": "parsed",
+          "milliseconds": "225500"
+        },
+        "playability": {
+          "state": "playable"
+        }
+      },
+      {
+        "segmentIndex": 14,
+        "semanticPath": [
+          {
+            "kind": "sequence",
+            "epubTypes": ["bodymatter", "chapter"],
+            "textReference": null
+          },
+          {
+            "kind": "parallel",
+            "epubTypes": [],
+            "textReference": {
+              "state": "local-fragment",
+              "authoredHref": "chapter_001.xhtml#c01p0005",
+              "canonicalPath": "OPS/chapter_001.xhtml",
+              "query": null,
+              "fragment": "c01p0005",
+              "fragmentExists": {
+                "state": "exists"
+              }
+            }
+          }
+        ],
+        "text": {
+          "reference": {
+            "state": "local-fragment",
+            "authoredHref": "chapter_001.xhtml#c01p0005",
+            "canonicalPath": "OPS/chapter_001.xhtml",
+            "query": null,
+            "fragment": "c01p0005",
+            "fragmentExists": {
+              "state": "exists"
+            }
+          },
+          "availability": {
+            "state": "available"
+          }
+        },
+        "audio": {
+          "reference": {
+            "state": "local-resource",
+            "authoredHref": "audio/mobydick_001_002_melville.mp4",
+            "canonicalPath": "OPS/audio/mobydick_001_002_melville.mp4",
+            "query": null
+          },
+          "availability": {
+            "state": "available"
+          }
+        },
+        "clipBegin": {
+          "state": "parsed",
+          "milliseconds": "225500"
+        },
+        "clipEnd": {
+          "state": "parsed",
+          "milliseconds": "269300"
+        },
+        "playability": {
+          "state": "playable"
+        }
+      },
+      {
+        "segmentIndex": 15,
+        "semanticPath": [
+          {
+            "kind": "sequence",
+            "epubTypes": ["bodymatter", "chapter"],
+            "textReference": null
+          },
+          {
+            "kind": "parallel",
+            "epubTypes": [],
+            "textReference": {
+              "state": "local-fragment",
+              "authoredHref": "chapter_001.xhtml#c01p0006",
+              "canonicalPath": "OPS/chapter_001.xhtml",
+              "query": null,
+              "fragment": "c01p0006",
+              "fragmentExists": {
+                "state": "exists"
+              }
+            }
+          }
+        ],
+        "text": {
+          "reference": {
+            "state": "local-fragment",
+            "authoredHref": "chapter_001.xhtml#c01p0006",
+            "canonicalPath": "OPS/chapter_001.xhtml",
+            "query": null,
+            "fragment": "c01p0006",
+            "fragmentExists": {
+              "state": "exists"
+            }
+          },
+          "availability": {
+            "state": "available"
+          }
+        },
+        "audio": {
+          "reference": {
+            "state": "local-resource",
+            "authoredHref": "audio/mobydick_001_002_melville.mp4",
+            "canonicalPath": "OPS/audio/mobydick_001_002_melville.mp4",
+            "query": null
+          },
+          "availability": {
+            "state": "available"
+          }
+        },
+        "clipBegin": {
+          "state": "parsed",
+          "milliseconds": "269300"
+        },
+        "clipEnd": {
+          "state": "parsed",
+          "milliseconds": "412500"
+        },
+        "playability": {
+          "state": "playable"
+        }
+      },
+      {
+        "segmentIndex": 16,
+        "semanticPath": [
+          {
+            "kind": "sequence",
+            "epubTypes": ["bodymatter", "chapter"],
+            "textReference": null
+          },
+          {
+            "kind": "parallel",
+            "epubTypes": [],
+            "textReference": {
+              "state": "local-fragment",
+              "authoredHref": "chapter_001.xhtml#c01p0007",
+              "canonicalPath": "OPS/chapter_001.xhtml",
+              "query": null,
+              "fragment": "c01p0007",
+              "fragmentExists": {
+                "state": "exists"
+              }
+            }
+          }
+        ],
+        "text": {
+          "reference": {
+            "state": "local-fragment",
+            "authoredHref": "chapter_001.xhtml#c01p0007",
+            "canonicalPath": "OPS/chapter_001.xhtml",
+            "query": null,
+            "fragment": "c01p0007",
+            "fragmentExists": {
+              "state": "exists"
+            }
+          },
+          "availability": {
+            "state": "available"
+          }
+        },
+        "audio": {
+          "reference": {
+            "state": "local-resource",
+            "authoredHref": "audio/mobydick_001_002_melville.mp4",
+            "canonicalPath": "OPS/audio/mobydick_001_002_melville.mp4",
+            "query": null
+          },
+          "availability": {
+            "state": "available"
+          }
+        },
+        "clipBegin": {
+          "state": "parsed",
+          "milliseconds": "412500"
+        },
+        "clipEnd": {
+          "state": "parsed",
+          "milliseconds": "512500"
+        },
+        "playability": {
+          "state": "playable"
+        }
+      },
+      {
+        "segmentIndex": 17,
+        "semanticPath": [
+          {
+            "kind": "sequence",
+            "epubTypes": ["bodymatter", "chapter"],
+            "textReference": null
+          },
+          {
+            "kind": "parallel",
+            "epubTypes": [],
+            "textReference": {
+              "state": "local-fragment",
+              "authoredHref": "chapter_001.xhtml#c01p0008",
+              "canonicalPath": "OPS/chapter_001.xhtml",
+              "query": null,
+              "fragment": "c01p0008",
+              "fragmentExists": {
+                "state": "exists"
+              }
+            }
+          }
+        ],
+        "text": {
+          "reference": {
+            "state": "local-fragment",
+            "authoredHref": "chapter_001.xhtml#c01p0008",
+            "canonicalPath": "OPS/chapter_001.xhtml",
+            "query": null,
+            "fragment": "c01p0008",
+            "fragmentExists": {
+              "state": "exists"
+            }
+          },
+          "availability": {
+            "state": "available"
+          }
+        },
+        "audio": {
+          "reference": {
+            "state": "local-resource",
+            "authoredHref": "audio/mobydick_001_002_melville.mp4",
+            "canonicalPath": "OPS/audio/mobydick_001_002_melville.mp4",
+            "query": null
+          },
+          "availability": {
+            "state": "available"
+          }
+        },
+        "clipBegin": {
+          "state": "parsed",
+          "milliseconds": "512500"
+        },
+        "clipEnd": {
+          "state": "parsed",
+          "milliseconds": "570500"
+        },
+        "playability": {
+          "state": "playable"
+        }
+      },
+      {
+        "segmentIndex": 18,
+        "semanticPath": [
+          {
+            "kind": "sequence",
+            "epubTypes": ["bodymatter", "chapter"],
+            "textReference": null
+          },
+          {
+            "kind": "parallel",
+            "epubTypes": [],
+            "textReference": {
+              "state": "local-fragment",
+              "authoredHref": "chapter_001.xhtml#c01p0009",
+              "canonicalPath": "OPS/chapter_001.xhtml",
+              "query": null,
+              "fragment": "c01p0009",
+              "fragmentExists": {
+                "state": "exists"
+              }
+            }
+          }
+        ],
+        "text": {
+          "reference": {
+            "state": "local-fragment",
+            "authoredHref": "chapter_001.xhtml#c01p0009",
+            "canonicalPath": "OPS/chapter_001.xhtml",
+            "query": null,
+            "fragment": "c01p0009",
+            "fragmentExists": {
+              "state": "exists"
+            }
+          },
+          "availability": {
+            "state": "available"
+          }
+        },
+        "audio": {
+          "reference": {
+            "state": "local-resource",
+            "authoredHref": "audio/mobydick_001_002_melville.mp4",
+            "canonicalPath": "OPS/audio/mobydick_001_002_melville.mp4",
+            "query": null
+          },
+          "availability": {
+            "state": "available"
+          }
+        },
+        "clipBegin": {
+          "state": "parsed",
+          "milliseconds": "570500"
+        },
+        "clipEnd": {
+          "state": "parsed",
+          "milliseconds": "622750"
+        },
+        "playability": {
+          "state": "playable"
+        }
+      },
+      {
+        "segmentIndex": 19,
+        "semanticPath": [
+          {
+            "kind": "sequence",
+            "epubTypes": ["bodymatter", "chapter"],
+            "textReference": null
+          },
+          {
+            "kind": "parallel",
+            "epubTypes": [],
+            "textReference": {
+              "state": "local-fragment",
+              "authoredHref": "chapter_001.xhtml#c01p0010",
+              "canonicalPath": "OPS/chapter_001.xhtml",
+              "query": null,
+              "fragment": "c01p0010",
+              "fragmentExists": {
+                "state": "exists"
+              }
+            }
+          }
+        ],
+        "text": {
+          "reference": {
+            "state": "local-fragment",
+            "authoredHref": "chapter_001.xhtml#c01p0010",
+            "canonicalPath": "OPS/chapter_001.xhtml",
+            "query": null,
+            "fragment": "c01p0010",
+            "fragmentExists": {
+              "state": "exists"
+            }
+          },
+          "availability": {
+            "state": "available"
+          }
+        },
+        "audio": {
+          "reference": {
+            "state": "local-resource",
+            "authoredHref": "audio/mobydick_001_002_melville.mp4",
+            "canonicalPath": "OPS/audio/mobydick_001_002_melville.mp4",
+            "query": null
+          },
+          "availability": {
+            "state": "available"
+          }
+        },
+        "clipBegin": {
+          "state": "parsed",
+          "milliseconds": "622750"
+        },
+        "clipEnd": {
+          "state": "parsed",
+          "milliseconds": "671750"
+        },
+        "playability": {
+          "state": "playable"
+        }
+      },
+      {
+        "segmentIndex": 20,
+        "semanticPath": [
+          {
+            "kind": "sequence",
+            "epubTypes": ["bodymatter", "chapter"],
+            "textReference": null
+          },
+          {
+            "kind": "parallel",
+            "epubTypes": [],
+            "textReference": {
+              "state": "local-fragment",
+              "authoredHref": "chapter_001.xhtml#c01p0011",
+              "canonicalPath": "OPS/chapter_001.xhtml",
+              "query": null,
+              "fragment": "c01p0011",
+              "fragmentExists": {
+                "state": "exists"
+              }
+            }
+          }
+        ],
+        "text": {
+          "reference": {
+            "state": "local-fragment",
+            "authoredHref": "chapter_001.xhtml#c01p0011",
+            "canonicalPath": "OPS/chapter_001.xhtml",
+            "query": null,
+            "fragment": "c01p0011",
+            "fragmentExists": {
+              "state": "exists"
+            }
+          },
+          "availability": {
+            "state": "available"
+          }
+        },
+        "audio": {
+          "reference": {
+            "state": "local-resource",
+            "authoredHref": "audio/mobydick_001_002_melville.mp4",
+            "canonicalPath": "OPS/audio/mobydick_001_002_melville.mp4",
+            "query": null
+          },
+          "availability": {
+            "state": "available"
+          }
+        },
+        "clipBegin": {
+          "state": "parsed",
+          "milliseconds": "671750"
+        },
+        "clipEnd": {
+          "state": "parsed",
+          "milliseconds": "747500"
+        },
+        "playability": {
+          "state": "playable"
+        }
+      },
+      {
+        "segmentIndex": 21,
+        "semanticPath": [
+          {
+            "kind": "sequence",
+            "epubTypes": ["bodymatter", "chapter"],
+            "textReference": null
+          },
+          {
+            "kind": "parallel",
+            "epubTypes": [],
+            "textReference": {
+              "state": "local-fragment",
+              "authoredHref": "chapter_001.xhtml#c01p0012",
+              "canonicalPath": "OPS/chapter_001.xhtml",
+              "query": null,
+              "fragment": "c01p0012",
+              "fragmentExists": {
+                "state": "exists"
+              }
+            }
+          }
+        ],
+        "text": {
+          "reference": {
+            "state": "local-fragment",
+            "authoredHref": "chapter_001.xhtml#c01p0012",
+            "canonicalPath": "OPS/chapter_001.xhtml",
+            "query": null,
+            "fragment": "c01p0012",
+            "fragmentExists": {
+              "state": "exists"
+            }
+          },
+          "availability": {
+            "state": "available"
+          }
+        },
+        "audio": {
+          "reference": {
+            "state": "local-resource",
+            "authoredHref": "audio/mobydick_001_002_melville.mp4",
+            "canonicalPath": "OPS/audio/mobydick_001_002_melville.mp4",
+            "query": null
+          },
+          "availability": {
+            "state": "available"
+          }
+        },
+        "clipBegin": {
+          "state": "parsed",
+          "milliseconds": "747500"
+        },
+        "clipEnd": {
+          "state": "parsed",
+          "milliseconds": "751900"
+        },
+        "playability": {
+          "state": "playable"
+        }
+      },
+      {
+        "segmentIndex": 22,
+        "semanticPath": [
+          {
+            "kind": "sequence",
+            "epubTypes": ["bodymatter", "chapter"],
+            "textReference": null
+          },
+          {
+            "kind": "parallel",
+            "epubTypes": [],
+            "textReference": {
+              "state": "local-fragment",
+              "authoredHref": "chapter_001.xhtml#c01p0013",
+              "canonicalPath": "OPS/chapter_001.xhtml",
+              "query": null,
+              "fragment": "c01p0013",
+              "fragmentExists": {
+                "state": "exists"
+              }
+            }
+          }
+        ],
+        "text": {
+          "reference": {
+            "state": "local-fragment",
+            "authoredHref": "chapter_001.xhtml#c01p0013",
+            "canonicalPath": "OPS/chapter_001.xhtml",
+            "query": null,
+            "fragment": "c01p0013",
+            "fragmentExists": {
+              "state": "exists"
+            }
+          },
+          "availability": {
+            "state": "available"
+          }
+        },
+        "audio": {
+          "reference": {
+            "state": "local-resource",
+            "authoredHref": "audio/mobydick_001_002_melville.mp4",
+            "canonicalPath": "OPS/audio/mobydick_001_002_melville.mp4",
+            "query": null
+          },
+          "availability": {
+            "state": "available"
+          }
+        },
+        "clipBegin": {
+          "state": "parsed",
+          "milliseconds": "751900"
+        },
+        "clipEnd": {
+          "state": "parsed",
+          "milliseconds": "754500"
+        },
+        "playability": {
+          "state": "playable"
+        }
+      },
+      {
+        "segmentIndex": 23,
+        "semanticPath": [
+          {
+            "kind": "sequence",
+            "epubTypes": ["bodymatter", "chapter"],
+            "textReference": null
+          },
+          {
+            "kind": "parallel",
+            "epubTypes": [],
+            "textReference": {
+              "state": "local-fragment",
+              "authoredHref": "chapter_001.xhtml#c01p0014",
+              "canonicalPath": "OPS/chapter_001.xhtml",
+              "query": null,
+              "fragment": "c01p0014",
+              "fragmentExists": {
+                "state": "exists"
+              }
+            }
+          }
+        ],
+        "text": {
+          "reference": {
+            "state": "local-fragment",
+            "authoredHref": "chapter_001.xhtml#c01p0014",
+            "canonicalPath": "OPS/chapter_001.xhtml",
+            "query": null,
+            "fragment": "c01p0014",
+            "fragmentExists": {
+              "state": "exists"
+            }
+          },
+          "availability": {
+            "state": "available"
+          }
+        },
+        "audio": {
+          "reference": {
+            "state": "local-resource",
+            "authoredHref": "audio/mobydick_001_002_melville.mp4",
+            "canonicalPath": "OPS/audio/mobydick_001_002_melville.mp4",
+            "query": null
+          },
+          "availability": {
+            "state": "available"
+          }
+        },
+        "clipBegin": {
+          "state": "parsed",
+          "milliseconds": "754500"
+        },
+        "clipEnd": {
+          "state": "parsed",
+          "milliseconds": "757400"
+        },
+        "playability": {
+          "state": "playable"
+        }
+      },
+      {
+        "segmentIndex": 24,
+        "semanticPath": [
+          {
+            "kind": "sequence",
+            "epubTypes": ["bodymatter", "chapter"],
+            "textReference": null
+          },
+          {
+            "kind": "parallel",
+            "epubTypes": [],
+            "textReference": {
+              "state": "local-fragment",
+              "authoredHref": "chapter_001.xhtml#c01p0015",
+              "canonicalPath": "OPS/chapter_001.xhtml",
+              "query": null,
+              "fragment": "c01p0015",
+              "fragmentExists": {
+                "state": "exists"
+              }
+            }
+          }
+        ],
+        "text": {
+          "reference": {
+            "state": "local-fragment",
+            "authoredHref": "chapter_001.xhtml#c01p0015",
+            "canonicalPath": "OPS/chapter_001.xhtml",
+            "query": null,
+            "fragment": "c01p0015",
+            "fragmentExists": {
+              "state": "exists"
+            }
+          },
+          "availability": {
+            "state": "available"
+          }
+        },
+        "audio": {
+          "reference": {
+            "state": "local-resource",
+            "authoredHref": "audio/mobydick_001_002_melville.mp4",
+            "canonicalPath": "OPS/audio/mobydick_001_002_melville.mp4",
+            "query": null
+          },
+          "availability": {
+            "state": "available"
+          }
+        },
+        "clipBegin": {
+          "state": "parsed",
+          "milliseconds": "757400"
+        },
+        "clipEnd": {
+          "state": "parsed",
+          "milliseconds": "803000"
+        },
+        "playability": {
+          "state": "playable"
+        }
+      },
+      {
+        "segmentIndex": 25,
+        "semanticPath": [
+          {
+            "kind": "sequence",
+            "epubTypes": ["bodymatter", "chapter"],
+            "textReference": null
+          },
+          {
+            "kind": "parallel",
+            "epubTypes": [],
+            "textReference": {
+              "state": "local-fragment",
+              "authoredHref": "chapter_001.xhtml#c01p0016",
+              "canonicalPath": "OPS/chapter_001.xhtml",
+              "query": null,
+              "fragment": "c01p0016",
+              "fragmentExists": {
+                "state": "exists"
+              }
+            }
+          }
+        ],
+        "text": {
+          "reference": {
+            "state": "local-fragment",
+            "authoredHref": "chapter_001.xhtml#c01p0016",
+            "canonicalPath": "OPS/chapter_001.xhtml",
+            "query": null,
+            "fragment": "c01p0016",
+            "fragmentExists": {
+              "state": "exists"
+            }
+          },
+          "availability": {
+            "state": "available"
+          }
+        },
+        "audio": {
+          "reference": {
+            "state": "local-resource",
+            "authoredHref": "audio/mobydick_001_002_melville.mp4",
+            "canonicalPath": "OPS/audio/mobydick_001_002_melville.mp4",
+            "query": null
+          },
+          "availability": {
+            "state": "available"
+          }
+        },
+        "clipBegin": {
+          "state": "parsed",
+          "milliseconds": "803000"
+        },
+        "clipEnd": {
+          "state": "parsed",
+          "milliseconds": "858800"
+        },
+        "playability": {
+          "state": "playable"
+        }
+      },
+      {
+        "segmentIndex": 26,
+        "semanticPath": [
+          {
+            "kind": "sequence",
+            "epubTypes": ["bodymatter", "chapter"],
+            "textReference": null
+          },
+          {
+            "kind": "parallel",
+            "epubTypes": [],
+            "textReference": {
+              "state": "local-fragment",
+              "authoredHref": "chapter_001.xhtml#c01p0017",
+              "canonicalPath": "OPS/chapter_001.xhtml",
+              "query": null,
+              "fragment": "c01p0017",
+              "fragmentExists": {
+                "state": "exists"
+              }
+            }
+          }
+        ],
+        "text": {
+          "reference": {
+            "state": "local-fragment",
+            "authoredHref": "chapter_001.xhtml#c01p0017",
+            "canonicalPath": "OPS/chapter_001.xhtml",
+            "query": null,
+            "fragment": "c01p0017",
+            "fragmentExists": {
+              "state": "exists"
+            }
+          },
+          "availability": {
+            "state": "available"
+          }
+        },
+        "audio": {
+          "reference": {
+            "state": "local-resource",
+            "authoredHref": "audio/mobydick_001_002_melville.mp4",
+            "canonicalPath": "OPS/audio/mobydick_001_002_melville.mp4",
+            "query": null
+          },
+          "availability": {
+            "state": "available"
+          }
+        },
+        "clipBegin": {
+          "state": "parsed",
+          "milliseconds": "858800"
+        },
+        "clipEnd": {
+          "state": "parsed",
+          "milliseconds": "885000"
+        },
+        "playability": {
+          "state": "playable"
+        }
+      }
+    ]
+  }
+}
