@@ -248,6 +248,10 @@ const harness = {
         "the annotation generation document did not commit",
       );
       const frame = committedFrame(host);
+      // A late font load (the emoji glyph) queues a layout invalidation that
+      // discards a captured selection, so fonts must settle before capturing.
+      await frame.contentDocument?.fonts?.ready;
+      await animationFrames(undefined, 4);
       selectFixtureText(frame, "Exact 😀 annotation range", "#generation-target");
       const capture = await generation.captureSelection();
       if (capture.outcome !== "completed" || capture.selection.status !== "captured") {
