@@ -1,8 +1,10 @@
 import { fileURLToPath, URL } from "node:url";
-import { defineConfig } from "vite";
+import { defineConfig, normalizePath } from "vite";
 
-const wasmModule = fileURLToPath(
-  new URL("./.generated/epub-navigator/epub_navigator.js", import.meta.url),
+// Module ids use forward slashes on every platform, so the `external` and
+// `paths` matches need the same or Windows bundles the wasm instead.
+const wasmModule = normalizePath(
+  fileURLToPath(new URL("./.generated/epub-navigator/epub_navigator.js", import.meta.url)),
 );
 
 export default defineConfig({
