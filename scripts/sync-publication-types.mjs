@@ -5,12 +5,9 @@ import { fileURLToPath } from "node:url";
 
 const projectDirectory = dirname(dirname(fileURLToPath(import.meta.url)));
 const mode = process.argv[2];
-const formatter = resolve(
-  projectDirectory,
-  "node_modules",
-  ".bin",
-  process.platform === "win32" ? "oxfmt.cmd" : "oxfmt",
-);
+// The package's Node entry, not the `.bin` shim: Node refuses to spawn the
+// Windows `.cmd` shim without a shell.
+const formatter = resolve(projectDirectory, "node_modules", "oxfmt", "bin", "oxfmt");
 const contracts = [
   {
     generated: fileURLToPath(new URL("../target/publication.generated.ts", import.meta.url)),
@@ -22,8 +19,8 @@ const contracts = [
   },
 ];
 const formatting = spawnSync(
-  formatter,
-  ["--write", ...contracts.map(({ generated }) => generated)],
+  process.execPath,
+  [formatter, "--write", ...contracts.map(({ generated }) => generated)],
   { stdio: "inherit" },
 );
 
