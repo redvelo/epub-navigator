@@ -13,7 +13,7 @@ import {
 } from "../layout/document-scroll.js";
 import { post } from "../transport.js";
 import { observeDocumentWithRanges } from "../targets/resolver/observation.js";
-import { captureBodyInsets, currentObservationViewport } from "../layout/pagination-geometry.js";
+import { currentObservationViewport } from "../layout/pagination-geometry.js";
 
 export const selectionEdgeInset = 36;
 
@@ -76,8 +76,7 @@ export function paginatedSelectionEdgeLayout(state: ContentAgentState, settling 
   const direction = settlement.measurement.observation.direction;
   const scroll = paginatedMetrics(document, writingMode, direction);
   if (scroll === null) return null;
-  const insets = state.layout.authoredBodyInsets ?? captureBodyInsets(state);
-  return { settlement, writingMode, direction, scroll, insets };
+  return { settlement, writingMode, direction, scroll };
 }
 
 export function clearSelectionEdgeTimer(
@@ -190,7 +189,7 @@ function physicalPoint(
 function columnBlockRange(layout: NonNullable<ReturnType<typeof paginatedSelectionEdgeLayout>>) {
   const blockViewport =
     layout.writingMode === "horizontal-tb" ? window.innerHeight : window.innerWidth;
-  return { start: layout.insets.blockStart + 1, end: blockViewport - layout.insets.blockEnd - 1 };
+  return { start: 1, end: blockViewport - 1 };
 }
 
 function visibleColumnBand(layout: NonNullable<ReturnType<typeof paginatedSelectionEdgeLayout>>) {

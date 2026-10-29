@@ -345,6 +345,7 @@ function documentObservation() {
     visibleStart: { state: "unavailable" as const },
     visibleEnd: { state: "unavailable" as const },
     renderedTextProgression: 0,
+    layoutProgression: null,
     pagination: null,
   };
 }

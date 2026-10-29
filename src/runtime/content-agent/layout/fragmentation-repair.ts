@@ -5,6 +5,7 @@ import type { ReflowablePresentation } from "../../../generated/kernel.js";
 import type { FragmentationRepair } from "../state.js";
 import {
   captureBodyInsets,
+  columnInlineSize,
   cssPixels,
   paginationGeometry,
   recordTextAssessmentDiagnostics,
@@ -157,14 +158,6 @@ export async function assessLayoutRepairs(
   }
   recordTextAssessmentDiagnostics(state, counters, started);
   return { repairs, unresolvedElements, wideContentFitsOneColumn };
-}
-
-export function columnInlineSize(state: ContentAgentState, geometry: PaginationGeometry): number {
-  void state;
-  return (
-    (geometry.flowInlineSize - geometry.gap * (geometry.columnsPerView - 1)) /
-    geometry.columnsPerView
-  );
 }
 
 /**

@@ -38,6 +38,7 @@ export function paginationGeometry(
   gap: number;
   flowInlineSize: number;
   flowBlockSize: number;
+  inlineBorderAndPadding: number;
   inlineStart: number;
   inlineEnd: number;
   blockStart: number;
@@ -56,6 +57,7 @@ export function paginationGeometry(
       gap,
       flowInlineSize: inlineViewport,
       flowBlockSize: blockViewport,
+      inlineBorderAndPadding: 0,
       inlineStart: 0,
       inlineEnd: 0,
       blockStart: 0,
@@ -64,29 +66,51 @@ export function paginationGeometry(
       columnsPerView,
     };
   }
-  const authoredGap = insets.inlineStart + insets.inlineEnd + insets.inlineBorderAndPadding;
+  const authoredGap = insets.inlineBorderAndPadding;
   const minimumGap = Math.min(32, Math.max(16, inlineViewport * 0.04));
   const gap = Math.max(minimumGap, authoredGap);
   const columnsPerView = effectiveColumns(state, preference, inlineViewport, gap);
-  const extraInset = Math.max(0, gap - authoredGap) / 2;
-  const inlineStart = insets.inlineStart + extraInset;
-  const inlineEnd = insets.inlineEnd + extraInset;
-  const flowInlineSize = Math.max(1, inlineViewport - inlineStart - inlineEnd);
-  const flowBlockSize = Math.max(1, blockViewport - insets.blockStart - insets.blockEnd);
+  const inset = Math.max(0, gap - authoredGap) / 2;
+  const flowInlineSize = Math.max(1, inlineViewport - inset * 2);
+  const flowBlockSize = Math.max(1, blockViewport);
   return {
     gap,
     flowInlineSize,
     flowBlockSize,
-    inlineStart,
-    inlineEnd,
-    blockStart: insets.blockStart,
-    blockEnd: insets.blockEnd,
+    inlineBorderAndPadding: authoredGap,
+    inlineStart: inset,
+    inlineEnd: inset,
+    blockStart: 0,
+    blockEnd: 0,
     columnBlockSize: Math.max(1, flowBlockSize - insets.blockBorderAndPadding),
     columnsPerView,
   };
 }
 
 export const minimumAutoColumnInlineSize = 360;
+
+/**
+ * The browser's used column width. Columns live in the body's content box: the forced
+ * border-box sizing keeps authored border and padding inside `flowInlineSize`, so they come
+ * off before the gap split, or the modelled stride outruns the browser's fragmentation.
+ */
+export function columnInlineSize(
+  state: ContentAgentState,
+  geometry: {
+    readonly flowInlineSize: number;
+    readonly inlineBorderAndPadding: number;
+    readonly gap: number;
+    readonly columnsPerView: number;
+  },
+): number {
+  void state;
+  return (
+    (geometry.flowInlineSize -
+      geometry.inlineBorderAndPadding -
+      geometry.gap * (geometry.columnsPerView - 1)) /
+    geometry.columnsPerView
+  );
+}
 
 export function effectiveColumns(
   state: ContentAgentState,
@@ -194,10 +218,7 @@ export function capturePhysicalPaginationGeometry(
     presentation.paginationColumns,
   );
   const columnGap = layout.gap;
-  const columnWidth = Math.max(
-    1,
-    (layout.flowInlineSize - columnGap * (layout.columnsPerView - 1)) / layout.columnsPerView,
-  );
+  const columnWidth = Math.max(1, columnInlineSize(state, layout));
   const columnPitch = columnWidth + columnGap;
   const spreadStride = columnPitch * layout.columnsPerView;
   const columnOrigin = layout.inlineStart;
@@ -543,25 +564,21 @@ export function inlinePaginationExtent(): number {
     : scrolling.scrollHeight;
 }
 
+// Authored body margins are web-page framing, not page geometry, and are deliberately not
+// captured: honoured as insets and gutter they shift the whole spread when one-sided and
+// double into gutters the size of both margins. Border and padding still shape the flow
+// box under the forced border-box sizing, so they are the only authored extents kept.
 export function captureBodyInsets(state: ContentAgentState): BodyInsets {
   void state;
   const body = document.body;
   if (body === null) {
     return {
-      inlineStart: 0,
-      inlineEnd: 0,
-      blockStart: 0,
-      blockEnd: 0,
       inlineBorderAndPadding: 0,
       blockBorderAndPadding: 0,
     };
   }
   const style = getComputedStyle(body);
   return {
-    inlineStart: cssPixels(state, style.marginInlineStart),
-    inlineEnd: cssPixels(state, style.marginInlineEnd),
-    blockStart: cssPixels(state, style.marginBlockStart),
-    blockEnd: cssPixels(state, style.marginBlockEnd),
     inlineBorderAndPadding:
       cssPixels(state, style.borderInlineStartWidth) +
       cssPixels(state, style.borderInlineEndWidth) +

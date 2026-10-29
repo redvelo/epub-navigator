@@ -68,10 +68,6 @@ export interface FragmentationRepair {
 }
 
 export interface BodyInsets {
-  readonly inlineStart: number;
-  readonly inlineEnd: number;
-  readonly blockStart: number;
-  readonly blockEnd: number;
   readonly inlineBorderAndPadding: number;
   readonly blockBorderAndPadding: number;
 }

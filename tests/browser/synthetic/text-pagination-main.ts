@@ -37,6 +37,7 @@ type ContentEndScenario =
 interface TextPaginationFixture {
   setScenario(scenario: Scenario): Promise<KernelSnapshot>;
   setColumns(columns: "auto" | "single" | "double"): Promise<KernelSnapshot>;
+  setAuthoredBodyMargins(declarations: string): Promise<KernelSnapshot>;
   removeCandidate(id: string): Promise<KernelSnapshot>;
   measureStableGeometry(): Promise<GeometryDiagnostics>;
   setFlow(
@@ -107,6 +108,16 @@ window.__EPUB_TEXT_PAGINATION__ = {
     const before = committedLayoutGeneration(runtime.snapshot());
     preferences.paginationColumns = columns;
     runtime.setPresentationPreferences(preferences);
+    return waitForLayoutAfter(runtime, before);
+  },
+  async setAuthoredBodyMargins(declarations) {
+    const before = committedLayoutGeneration(runtime.snapshot());
+    const content = committedDocument();
+    content.getElementById("authored-body-margins")?.remove();
+    const style = content.createElement("style");
+    style.id = "authored-body-margins";
+    style.textContent = `body { ${declarations} }`;
+    content.head.append(style);
     return waitForLayoutAfter(runtime, before);
   },
   async removeCandidate(id) {

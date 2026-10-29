@@ -56,6 +56,61 @@ test("performs one authoritative content-end scan on a stable layout", async ({ 
   expect(JSON.stringify(diagnostics)).not.toContain("Alice");
 });
 
+// Project Gutenberg books frame scrolled web pages with percentage body margins, one-sided
+// in some. The paginated reader owns page geometry, so those margins must move neither the
+// spread nor the gutter.
+test("keeps page geometry symmetric under authored body margins", async ({ page }) => {
+  for (const declarations of ["margin-left: 8%", "margin-left: 15%; margin-right: 15%"]) {
+    const settled = await page.evaluate(
+      (value) => window.__EPUB_TEXT_PAGINATION__!.setAuthoredBodyMargins(value),
+      declarations,
+    );
+    const pages = currentPaginatedLayout(settled);
+    if (pages === null) throw new Error("paginated layout is unavailable");
+    expect(pages.columnGap).toBeLessThanOrEqual(32);
+    const margins = await contentFrame(page)
+      .locator("body")
+      .evaluate((body) => {
+        const style = getComputedStyle(body);
+        return {
+          start: Number.parseFloat(style.marginInlineStart),
+          end: Number.parseFloat(style.marginInlineEnd),
+        };
+      });
+    expect(margins.start).toBeCloseTo(margins.end, 1);
+    expect(margins.start).toBeLessThanOrEqual(pages.columnGap);
+  }
+});
+
+// Hindawi books pad the body. Under the forced border-box sizing that padding narrows the
+// multicol content box, so the browser fragments into narrower columns than the viewport
+// suggests. The measured geometry must follow the browser's fragmentation: a stride computed
+// without the authored insets overshoots every spread advance by the padding, and the next
+// page bleeds in at the spread's far edge.
+test("agrees with the browser's column geometry under authored body padding", async ({ page }) => {
+  await page.evaluate(() => window.__EPUB_TEXT_PAGINATION__!.setColumns("double"));
+  const settled = await page.evaluate(
+    (value) => window.__EPUB_TEXT_PAGINATION__!.setAuthoredBodyMargins(value),
+    "padding-left: 15px; padding-right: 15px",
+  );
+  const pages = currentPaginatedLayout(settled);
+  if (pages === null) throw new Error("paginated layout is unavailable");
+  const contentInlineSize = await contentFrame(page)
+    .locator("body")
+    .evaluate((body) => {
+      const style = getComputedStyle(body);
+      return (
+        body.clientWidth -
+        Number.parseFloat(style.paddingInlineStart) -
+        Number.parseFloat(style.paddingInlineEnd)
+      );
+    });
+  const columnWidth = (contentInlineSize - pages.columnGap) / 2;
+  expect(pages.columnWidth).toBeCloseTo(columnWidth, 0);
+  expect(pages.columnPitch).toBeCloseTo(columnWidth + pages.columnGap, 0);
+  expect(pages.spreadStride).toBeCloseTo((columnWidth + pages.columnGap) * 2, 0);
+});
+
 test("retains vertical RTL physical pagination geometry", async ({ page }) => {
   const settled = await page.evaluate(() =>
     window.__EPUB_TEXT_PAGINATION__!.setFlow("vertical-rl", "rtl"),
