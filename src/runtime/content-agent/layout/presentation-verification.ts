@@ -38,6 +38,7 @@ export function requiredPresentationIsEffective(
   const expectedColumns = effectiveColumns(
     state,
     presentation.paginationColumns,
+    flow.writingMode,
     horizontal ? window.innerWidth : window.innerHeight,
     geometry.gap,
   );

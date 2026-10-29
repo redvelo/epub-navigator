@@ -136,6 +136,17 @@ test("places the column origin at the content box under one-sided body padding",
   expect(pages.columnOrigin).toBeCloseTo(contentStart, 0);
 });
 
+test("keeps automatic columns single in vertical writing", async ({ page }) => {
+  await page.setViewportSize({ width: 1000, height: 900 });
+  await page.evaluate(() => window.__EPUB_TEXT_PAGINATION__!.setColumns("auto"));
+  const settled = await page.evaluate(() =>
+    window.__EPUB_TEXT_PAGINATION__!.setFlow("vertical-rl", "rtl"),
+  );
+  const pages = currentPaginatedLayout(settled);
+  if (pages === null) throw new Error("paginated layout is unavailable");
+  expect(pages.columnsPerView).toBe(1);
+});
+
 test("retains vertical RTL physical pagination geometry", async ({ page }) => {
   const settled = await page.evaluate(() =>
     window.__EPUB_TEXT_PAGINATION__!.setFlow("vertical-rl", "rtl"),

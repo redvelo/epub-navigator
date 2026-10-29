@@ -49,7 +49,7 @@ export function paginationGeometry(
   const blockViewport = horizontal ? window.innerHeight : window.innerWidth;
   if (document.body === null) {
     const gap = Math.min(32, Math.max(16, inlineViewport * 0.04));
-    const columnsPerView = effectiveColumns(state, preference, inlineViewport, gap);
+    const columnsPerView = effectiveColumns(state, preference, writingMode, inlineViewport, gap);
     return {
       gap,
       flowInlineSize: inlineViewport,
@@ -63,7 +63,7 @@ export function paginationGeometry(
   const authoredGap = insets.inlineBorderAndPadding;
   const minimumGap = Math.min(32, Math.max(16, inlineViewport * 0.04));
   const gap = Math.max(minimumGap, authoredGap);
-  const columnsPerView = effectiveColumns(state, preference, inlineViewport, gap);
+  const columnsPerView = effectiveColumns(state, preference, writingMode, inlineViewport, gap);
   const inset = Math.max(0, gap - authoredGap) / 2;
   const flowInlineSize = Math.max(1, inlineViewport - inset * 2);
   const flowBlockSize = Math.max(1, blockViewport);
@@ -107,12 +107,18 @@ export function columnInlineSize(
 export function effectiveColumns(
   state: ContentAgentState,
   preference: ReflowablePresentation["paginationColumns"],
+  writingMode: DocumentWritingMode,
   inlineViewport: number,
   gap: number,
 ): 1 | 2 {
   void state;
   if (preference === "single" || state.layout.wideContentSingleColumn) return 1;
   if (preference === "double") return 2;
+  // Automatic columns split a wide view into a side-by-side spread. In vertical writing the
+  // inline axis is vertical, so a second column is a stacked band — a magazine's two tiers,
+  // not a book's facing pages — and the minimum measure below is sized for horizontal lines.
+  // A book keeps one full-height column; the two-tier layout stays behind the explicit choice.
+  if (writingMode !== "horizontal-tb") return 1;
   return (inlineViewport - gap * 2) / 2 >= minimumAutoColumnInlineSize ? 2 : 1;
 }
 
