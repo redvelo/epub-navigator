@@ -31,6 +31,7 @@ export function normalizeDocumentObservation(value: unknown): DocumentObservatio
   const visibleStart = normalizeObservedBoundary(value.visibleStart);
   const visibleEnd = normalizeObservedBoundary(value.visibleEnd);
   const progression = value.renderedTextProgression;
+  const layoutProgression = value.layoutProgression;
   const pagination = normalizePaginationObservation(value.pagination);
   if (
     (writingMode !== "horizontal-tb" &&
@@ -46,7 +47,8 @@ export function normalizeDocumentObservation(value: unknown): DocumentObservatio
     visibleStart === null ||
     visibleEnd === null ||
     pagination === undefined ||
-    (progression !== null && !isProgression(progression))
+    (progression !== null && !isProgression(progression)) ||
+    (layoutProgression !== null && !isProgression(layoutProgression))
   )
     return null;
   return {
@@ -58,6 +60,7 @@ export function normalizeDocumentObservation(value: unknown): DocumentObservatio
     visibleStart,
     visibleEnd,
     renderedTextProgression: progression,
+    layoutProgression,
     pagination,
   };
 }

@@ -292,6 +292,17 @@ export function scrollByLogicalBlock(
   else view.scrollBy({ left: writingMode === "vertical-rl" ? -delta : delta, behavior: "auto" });
 }
 
+export function scrollToLogicalBlockPosition(
+  document: Document,
+  position: number,
+  writingMode = documentWritingMode(document),
+): void {
+  const view = document.defaultView;
+  if (view === null) return;
+  if (writingMode === "horizontal-tb") view.scrollTo({ top: position });
+  else view.scrollTo({ left: writingMode === "vertical-rl" ? -position : position });
+}
+
 export function scrollToDocumentBoundary(
   document: Document,
   boundary: "start" | "end",

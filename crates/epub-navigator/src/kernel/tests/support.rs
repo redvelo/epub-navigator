@@ -387,6 +387,7 @@ pub(super) fn document_observation() -> DocumentObservation {
             }],
         },
         rendered_text_progression: Some(0.25),
+        layout_progression: None,
         pagination: None,
     }
 }

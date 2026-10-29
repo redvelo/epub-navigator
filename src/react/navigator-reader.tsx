@@ -587,7 +587,9 @@ function NavigatorReaderInstance({
     localPagination,
     pendingForegroundLayout,
     readingOrderLength,
-    renderedProgress: renderedProgress ?? scrollProgression ?? 0,
+    // A document without rendered text reports no text progression; its scrolled layout
+    // still observes a scroll progression, which is the only continuous position it has.
+    renderedProgress: renderedProgress ?? scrollProgression ?? observation?.layoutProgression ?? 0,
     visibleOccurrenceRange,
     finalSpreadLeadingOccurrence,
     companionPagination,

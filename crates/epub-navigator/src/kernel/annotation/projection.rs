@@ -264,6 +264,7 @@ pub(in crate::kernel) fn validate_selection_locator_limits(
                             strings.extend([before.as_str(), after.as_str()]);
                         }
                         PointEvidence::BrowserTextPosition { offset } => strings.push(offset),
+                        PointEvidence::DocumentProgression { value } => strings.push(value),
                         PointEvidence::DocumentBoundary { .. } => {}
                     }
                 }

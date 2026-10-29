@@ -314,6 +314,7 @@ export abstract class AgentMessageRouterRuntime extends AgentResultRuntime {
                 visibleStart: observation.visibleStart,
                 visibleEnd: observation.visibleEnd,
                 renderedTextProgression: observation.renderedTextProgression,
+                layoutProgression: observation.layoutProgression,
                 pagination: observation.pagination,
               },
             }),

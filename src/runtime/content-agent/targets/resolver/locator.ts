@@ -31,9 +31,12 @@ import {
 } from "./text-index.js";
 import {
   documentFlow,
+  documentWritingMode,
+  logicalBlockMetrics,
   paginatedMetrics,
   paginatedRectangleOffset,
   scrollToDocumentBoundary,
+  scrollToLogicalBlockPosition,
   scrollToPaginatedPosition,
 } from "../../layout/document-scroll.js";
 import {
@@ -167,10 +170,56 @@ export function relocateLocatorInDocument(
   locator: DocumentLocatorTarget,
   presentation: RelocationPresentation = { mode: "document-scroll" },
 ): LocatorResolutionStatus {
+  const progression = locatorProgression(locator);
+  if (progression !== null) return relocateToProgression(document, progression, presentation);
   const resolution = resolveLocatorInDocument(document, locator);
   if (resolution.range === null) return resolution.status;
   const failure = relocateRangeInDocument(document, resolution.range, presentation);
   return failure === null ? resolution.status : { status: "failed", message: failure };
+}
+
+function locatorProgression(locator: DocumentLocatorTarget): number | null {
+  if (locator.kind !== "point") return null;
+  for (const evidence of locator.evidence) {
+    if (evidence.kind !== "document-progression") continue;
+    const value = Number.parseFloat(evidence.value);
+    if (Number.isFinite(value) && value >= 0 && value <= 1) return value;
+  }
+  return null;
+}
+
+/** Scrolls to a normalized progression, which names a position no DOM range can. */
+function relocateToProgression(
+  document: Document,
+  progression: number,
+  presentation: RelocationPresentation,
+): LocatorResolutionStatus {
+  const writingMode = documentWritingMode(document);
+  if (presentation.mode === "paginated") {
+    const metrics = paginatedMetrics(document, writingMode);
+    const spreadStride = presentation.spreadStride;
+    if (
+      metrics === null ||
+      spreadStride === undefined ||
+      !Number.isFinite(spreadStride) ||
+      spreadStride <= 0
+    ) {
+      return { status: "failed", message: "the paginated progression has no settled stride" };
+    }
+    const lastSpread = Math.max(0, Math.round(metrics.maximum / spreadStride));
+    scrollToPaginatedPosition(
+      document,
+      Math.round(progression * lastSpread) * spreadStride,
+      writingMode,
+    );
+    return { status: "resolved" };
+  }
+  const metrics = logicalBlockMetrics(document, writingMode);
+  if (metrics === null) {
+    return { status: "failed", message: "the scrolled document has no scroll metrics" };
+  }
+  scrollToLogicalBlockPosition(document, progression * metrics.maximum, writingMode);
+  return { status: "resolved" };
 }
 
 /** Executes an annotation plan and relocates to the logical start of its resolved segment. */

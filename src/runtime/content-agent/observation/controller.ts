@@ -22,6 +22,8 @@ import { fragmentationMarkerAttribute } from "../layout/constants.js";
 import { invalidateDocumentTextIndex } from "../targets/resolver/text-index.js";
 import { observeFixedDocument } from "../targets/resolver/observation.js";
 import {
+  logicalBlockMetrics,
+  normalizedScrollPosition,
   paginatedHoldMutationIsRuntimeOwned,
   paginatedMetrics,
 } from "../layout/document-scroll.js";
@@ -438,6 +440,7 @@ export function emitObservation(state: ContentAgentState, token: number): void {
         ? observeFixedDocument(document, adapter)
         : {
             ...observeContentDocument(state, currentObservationViewport(state)),
+            layoutProgression: observeDocumentScrollProgression(state),
             pagination: observePaginationPosition(state),
           };
     if (state.lifecycle.diagnosticsEnabled)
@@ -460,6 +463,24 @@ export function emitObservation(state: ContentAgentState, token: number): void {
   } catch {
     // A later invalidation retries observation; operational requests still remain available.
   }
+}
+
+/**
+ * Where a scrolled document currently sits, as its normalized block-scroll position.
+ *
+ * Reported only for a settled document-scroll layout: a paginated document reports its
+ * position through the pagination observation instead.
+ */
+export function observeDocumentScrollProgression(state: ContentAgentState): number | null {
+  void state;
+  const current = state.layout.settledLayout;
+  if (current === null || current.settlement.mode !== "document-scroll") return null;
+  const metrics = logicalBlockMetrics(
+    document,
+    current.settlement.measurement.observation.writingMode,
+  );
+  if (metrics === null) return null;
+  return normalizedScrollPosition(metrics.position, metrics.maximum);
 }
 
 export function observePaginationPosition(

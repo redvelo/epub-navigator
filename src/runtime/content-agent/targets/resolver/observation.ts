@@ -67,6 +67,7 @@ export function observeFixedDocument(
       evidence: [{ kind: "document-boundary", boundary: "end" }],
     },
     renderedTextProgression: null,
+    layoutProgression: null,
     pagination: null,
   };
 }
@@ -148,6 +149,7 @@ export function observeDocumentWithRanges(
         !hasRenderedText || visibleStart.textOffset === null
           ? null
           : Math.min(1, Math.max(0, visibleStart.textOffset / textMap.text.length)),
+      layoutProgression: null,
       pagination: null,
     },
     visibleStartRange: visibleStart.range,

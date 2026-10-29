@@ -144,6 +144,59 @@ describe("reading position restoration", () => {
     },
   );
 
+  it("applies the captured progression when a whole-resource target restores", async () => {
+    const harness = createHarness();
+    harness.settle();
+    const mock = harness.runtime as unknown as {
+      _kernel: { projectAnnotationTarget: () => unknown };
+      _runLocatorOperation: ReturnType<typeof vi.fn>;
+    };
+    mock._kernel.projectAnnotationTarget = () => ({
+      resource,
+      selectors: [{ kind: "resource", path: [], values: {}, refinements: [] }],
+    });
+    mock._runLocatorOperation.mockResolvedValueOnce({
+      operation: 2,
+      generation: 3,
+      occurrence,
+      resource,
+      outcome: "completed",
+      status: { status: "resolved" },
+    });
+    await expect(
+      harness.runtime.restoreAnnotationTarget({ ...position, rollProgression: 0.6 }),
+    ).resolves.toMatchObject({ status: "restored" });
+    expect(mock._runLocatorOperation).toHaveBeenCalledExactlyOnceWith({
+      type: "relocate",
+      locator: {
+        kind: "point",
+        occurrence,
+        resource,
+        evidence: [{ kind: "document-progression", value: "0.600000" }],
+        observation: { layoutProgression: 0.6, renderedTextProgression: null },
+      },
+    });
+    expect(harness.relocate).not.toHaveBeenCalled();
+  });
+
+  it("restores a whole-resource target without a progression at the document start", async () => {
+    const harness = createHarness();
+    harness.settle();
+    const mock = harness.runtime as unknown as {
+      _kernel: { projectAnnotationTarget: () => unknown };
+      _runLocatorOperation: ReturnType<typeof vi.fn>;
+    };
+    mock._kernel.projectAnnotationTarget = () => ({
+      resource,
+      selectors: [{ kind: "resource", path: [], values: {}, refinements: [] }],
+    });
+    await expect(harness.runtime.restoreAnnotationTarget(position)).resolves.toMatchObject({
+      status: "restored",
+    });
+    expect(mock._runLocatorOperation).not.toHaveBeenCalled();
+    expect(harness.relocate).not.toHaveBeenCalled();
+  });
+
   it("waits for a dirty current document without reopening it", async () => {
     const harness = createHarness();
     harness.commitDirty();

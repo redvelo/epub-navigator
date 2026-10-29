@@ -41,6 +41,7 @@ const observation = {
   visibleStart: { state: "unavailable" },
   visibleEnd: { state: "unavailable" },
   renderedTextProgression: 0.25,
+  layoutProgression: null,
   pagination: null,
 } as const;
 

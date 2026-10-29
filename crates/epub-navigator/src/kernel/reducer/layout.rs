@@ -336,6 +336,7 @@ impl NavigatorKernel {
         let fallback = observation
             .rendered_text_progression
             .or(pagination_progression)
+            .or(observation.layout_progression)
             .unwrap_or_else(|| {
                 committed
                     .layout
@@ -358,8 +359,24 @@ impl NavigatorKernel {
                         }
                     ))
             );
+        // A document without rendered text reports its start boundary as visible at every
+        // scroll position, so a reported scroll progression is the truer position.
+        let explicit_start_in_scrolled_document = observation
+            .layout_progression
+            .is_some_and(|progression| progression > 0.0)
+            && matches!(
+                &observation.visible_start,
+                ObservedBoundary::Located { evidence }
+                    if evidence.iter().any(|item| matches!(
+                        item,
+                        PointEvidence::DocumentBoundary {
+                            boundary: DocumentBoundary::Start
+                        }
+                    ))
+            );
         if let ObservedBoundary::Located { evidence } = &observation.visible_start
             && !explicit_start_after_first_page
+            && !explicit_start_in_scrolled_document
         {
             return ReflowPositionRequest::Exact {
                 evidence: evidence.clone(),
@@ -369,7 +386,8 @@ impl NavigatorKernel {
         match &committed.layout.layout().settlement {
             AdapterLayoutSettlement::ReflowableXhtml { position, .. }
                 if observation.rendered_text_progression.is_none()
-                    && observation.pagination.is_none() =>
+                    && observation.pagination.is_none()
+                    && observation.layout_progression.is_none() =>
             {
                 position.clone()
             }

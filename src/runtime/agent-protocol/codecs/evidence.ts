@@ -5,7 +5,12 @@ import type {
 } from "../../../generated/kernel.js";
 import type { DocumentLocatorTarget } from "../types.js";
 import { MAX_EVIDENCE_ITEMS } from "../limits.js";
-import { isCanonicalBrowserTextOffset, isRecord, isBoundedString } from "./primitives.js";
+import {
+  isCanonicalBrowserTextOffset,
+  isCanonicalDocumentProgression,
+  isRecord,
+  isBoundedString,
+} from "./primitives.js";
 
 export function normalizeResolutionStatus(value: unknown): LocatorResolutionStatus | null {
   if (!isRecord(value) || typeof value.status !== "string") return null;
@@ -43,6 +48,8 @@ export function normalizePointEvidenceList(value: unknown): PointEvidence[] | nu
       (item.boundary === "start" || item.boundary === "end")
     ) {
       normalized.push({ kind: item.kind, boundary: item.boundary });
+    } else if (item.kind === "document-progression" && isCanonicalDocumentProgression(item.value)) {
+      normalized.push({ kind: item.kind, value: item.value });
     } else return null;
   }
   return normalized;

@@ -92,7 +92,12 @@ export async function captureReadingPosition(
       if (await retry()) continue;
       return { status: "stale" };
     }
-    const rollProgression = requestedRuntime.fixedRollProgression?.();
+    // A scrolled document without rendered text generates a whole-resource target, so the
+    // captured point's observed scroll progression is the position that must survive.
+    const rollProgression =
+      requestedRuntime.fixedRollProgression?.() ??
+      location.location.observation.layoutProgression ??
+      undefined;
     return {
       status: "generated",
       targetJson: generated.result.targetJson,

@@ -109,7 +109,10 @@ export interface AnnotationTargetGenerationOptions {
 export interface NavigatorReadingPosition {
   readonly targetJson: string;
   readonly occurrenceHint: { readonly occurrence: number; readonly resource: string } | null;
-  /** Width-independent vertical offset within a fixed roll document. */
+  /**
+   * Width-independent progression within the captured document: the vertical offset of a
+   * fixed roll, or the scroll progression of a scrolled reflowable document.
+   */
   readonly rollProgression?: number | undefined;
 }
 

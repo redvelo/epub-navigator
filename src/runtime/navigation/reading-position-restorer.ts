@@ -246,6 +246,30 @@ export abstract class ReadingPositionRestorerRuntime extends LocatorOperationsRu
         plan.selectors[0]?.kind === "resource" &&
         plan.selectors[0].refinements.length === 0
       ) {
+        // A whole-resource target names no position of its own: a scrolled document
+        // without rendered text can only carry its place as the captured progression,
+        // so that progression is the relocation.
+        const progression = position.rollProgression;
+        if (
+          progression !== undefined &&
+          Number.isFinite(progression) &&
+          progression > 0 &&
+          progression <= 1 &&
+          currentDocument(this._kernel.snapshot())?.layout.layout.settlement.adapter ===
+            "reflowable-xhtml"
+        ) {
+          await this._runLocatorOperation({
+            type: "relocate",
+            locator: {
+              kind: "point",
+              occurrence,
+              resource: plan.resource,
+              evidence: [{ kind: "document-progression", value: progression.toFixed(6) }],
+              observation: { layoutProgression: progression, renderedTextProgression: null },
+            },
+          }).catch(() => undefined);
+          if (controller.signal.aborted) return { status: "cancelled", reason: cancellation };
+        }
         return { status: "restored", occurrence, resource: plan.resource, relocation: null };
       }
       for (;;) {

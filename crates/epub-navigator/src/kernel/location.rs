@@ -60,6 +60,14 @@ pub enum PointEvidence {
         /// Selected document boundary.
         boundary: DocumentBoundary,
     },
+    /// Normalized `[0, 1]` scroll progression through the document's block flow.
+    ///
+    /// The only continuous point a document without rendered text can name, such as a
+    /// scrolled image document.
+    DocumentProgression {
+        /// Canonical decimal progression in the unit range.
+        value: String,
+    },
 }
 
 impl PointEvidence {
@@ -75,6 +83,19 @@ impl PointEvidence {
             }
             Self::BrowserTextPosition { offset } => {
                 validate_decimal_offset(offset)?;
+            }
+            Self::DocumentProgression { value } => {
+                if value.is_empty()
+                    || value.len() > 32
+                    || !value
+                        .bytes()
+                        .all(|byte| byte.is_ascii_digit() || byte == b'.')
+                    || !value
+                        .parse::<f64>()
+                        .is_ok_and(|parsed| parsed.is_finite() && (0.0..=1.0).contains(&parsed))
+                {
+                    return Err(KernelError::InvalidLocator);
+                }
             }
             Self::HtmlFragment { .. }
             | Self::RenderedTextContext { .. }

@@ -103,7 +103,7 @@ export function committedCurrentLocation(
       resource: document.frame.resource,
       evidence: [...boundary.evidence],
       observation: {
-        layoutProgression: null,
+        layoutProgression: document.layout.observation.layoutProgression,
         renderedTextProgression: document.layout.observation.renderedTextProgression,
       },
     },

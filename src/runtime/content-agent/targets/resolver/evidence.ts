@@ -73,6 +73,10 @@ export function resolvePointEvidence(
       ranges: offset === null ? [] : [rangeFromOffsets(document, textMap, offset, offset)],
     };
   }
+  if (evidence.kind === "document-progression") {
+    // A progression names no DOM position; relocation applies it as a scroll instead.
+    return { kind: "unsupported" };
+  }
   const { before, after } = evidence;
   const textMap = getTextMap();
   const ranges: Range[] = [];

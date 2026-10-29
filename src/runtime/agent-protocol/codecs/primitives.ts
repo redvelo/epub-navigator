@@ -96,6 +96,16 @@ export function isProgression(value: unknown): value is number {
   return isNonnegativeFinite(value) && value <= 1;
 }
 
+/** The kernel's canonical decimal form of a `[0, 1]` document progression. */
+export function isCanonicalDocumentProgression(value: unknown): value is string {
+  return (
+    typeof value === "string" &&
+    value.length <= 32 &&
+    /^(?:0|1|0\.[0-9]+|1\.0+)$/.test(value) &&
+    Number.parseFloat(value) <= 1
+  );
+}
+
 export function safely<T>(normalize: () => T | null): T | null {
   try {
     return normalize();

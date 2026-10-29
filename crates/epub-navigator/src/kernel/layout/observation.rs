@@ -129,6 +129,10 @@ pub struct DocumentObservation {
     pub visible_start: ObservedBoundary,
     pub visible_end: ObservedBoundary,
     pub rendered_text_progression: Option<f64>,
+    /// Finite `[0, 1]` scroll progression through a scrolled document layout. A document
+    /// without rendered text has no text progression, so this is the only continuous
+    /// position a scrolled image document reports.
+    pub layout_progression: Option<f64>,
     pub pagination: Option<PaginationObservation>,
 }
 
@@ -139,6 +143,9 @@ impl DocumentObservation {
             || !self.viewport.height.is_finite()
             || self.viewport.height < 0.0
             || self.rendered_text_progression.is_some_and(|progression| {
+                !progression.is_finite() || !(0.0..=1.0).contains(&progression)
+            })
+            || self.layout_progression.is_some_and(|progression| {
                 !progression.is_finite() || !(0.0..=1.0).contains(&progression)
             })
         {

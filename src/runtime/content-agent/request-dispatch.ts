@@ -83,6 +83,7 @@ import {
 import {
   flushPendingLayoutInvalidation,
   installDocumentObservers,
+  observeDocumentScrollProgression,
   scheduleObservation,
 } from "./observation/controller.js";
 import {
@@ -634,7 +635,7 @@ export function installRequestDispatch(state: ContentAgentState): void {
                   status: "captured",
                   evidence: boundary.evidence,
                   observation: {
-                    layoutProgression: null,
+                    layoutProgression: observeDocumentScrollProgression(state),
                     renderedTextProgression: observation.renderedTextProgression,
                   },
                   basis,

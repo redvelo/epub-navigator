@@ -408,6 +408,53 @@ fn preference_change_uses_the_latest_observed_position_as_its_reflow_anchor() {
     );
 }
 #[test]
+fn preference_change_uses_live_scroll_progression_in_a_scrolled_document_without_text() {
+    let mut kernel = opened(&initialization(), 0);
+    let mut observation = document_observation();
+    observation.rendered_text_progression = None;
+    observation.layout_progression = Some(0.6);
+    let observed = observe(&mut kernel, observation);
+    assert!(observed.accepted, "{:?}", observed.failure);
+    let expected = ReflowPositionRequest::Progression {
+        normalized_progression: 0.6,
+    };
+    assert_eq!(kernel.reflow_position(1), expected);
+    assert_eq!(
+        requested_position(&kernel.dispatch(larger_font())),
+        Some(&expected)
+    );
+}
+#[test]
+fn scroll_progression_does_not_displace_located_evidence_away_from_the_start() {
+    let mut kernel = opened(&initialization(), 0);
+    let mut observation = document_observation();
+    observation.layout_progression = Some(0.6);
+    observation.visible_start = ObservedBoundary::Located {
+        evidence: vec![PointEvidence::BrowserTextPosition {
+            offset: "12".to_string(),
+        }],
+    };
+    let observed = observe(&mut kernel, observation);
+    assert!(observed.accepted, "{:?}", observed.failure);
+    assert_eq!(
+        kernel.reflow_position(1),
+        ReflowPositionRequest::Exact {
+            evidence: vec![PointEvidence::BrowserTextPosition {
+                offset: "12".to_string(),
+            }],
+            fallback_progression: 0.25,
+        }
+    );
+}
+#[test]
+fn an_observation_with_an_out_of_range_scroll_progression_is_rejected() {
+    let mut kernel = opened(&initialization(), 0);
+    let mut observation = document_observation();
+    observation.layout_progression = Some(1.5);
+    let observed = observe(&mut kernel, observation);
+    assert!(!observed.accepted);
+}
+#[test]
 fn preference_change_uses_live_pagination_when_boundary_evidence_is_contradictory() {
     let mut kernel = opened(&initialization(), 0);
     let mut observation = document_observation();

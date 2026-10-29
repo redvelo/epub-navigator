@@ -221,6 +221,7 @@ describe("NavigatorReader runtime lifecycle and reading positions", () => {
         status: "generated",
         targetJson: '{"target":"chapter-2"}',
         occurrenceHint: { occurrence: 1, resource: "EPUB/chapter-2.xhtml" },
+        rollProgression: 0.25,
       });
       expect(runtime.captureCurrentLocation).toHaveBeenCalledTimes(captures.length);
       expect(runtime.generateCurrentLocationAnnotationTarget).toHaveBeenCalledWith(12);

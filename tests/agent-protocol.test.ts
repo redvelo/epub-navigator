@@ -1415,6 +1415,7 @@ describe("agent layout results", () => {
     },
     visibleEnd: { state: "unavailable" },
     renderedTextProgression: 0,
+    layoutProgression: null,
     pagination: null,
   };
   const measurement = {
@@ -1585,6 +1586,7 @@ describe("agent observations and navigation", () => {
     visibleStart: { state: "located", evidence: [{ kind: "html-fragment", value: "p1" }] },
     visibleEnd: { state: "located", evidence: [{ kind: "document-boundary", boundary: "end" }] },
     renderedTextProgression: 0.5,
+    layoutProgression: null,
     pagination: null,
   });
   const normalize = (data: unknown) => normalizeAgentObservation(event(data), source);
@@ -1592,6 +1594,25 @@ describe("agent observations and navigation", () => {
 
   it("normalizes observations", () => {
     expect(normalize(observation)).toEqual(observation);
+    expect(normalize({ ...observation, layoutProgression: 0.75 })).toEqual({
+      ...observation,
+      layoutProgression: 0.75,
+    });
+    expect(
+      normalize({
+        ...observation,
+        visibleStart: {
+          state: "located",
+          evidence: [{ kind: "document-progression", value: "0.600000" }],
+        },
+      }),
+    ).toEqual({
+      ...observation,
+      visibleStart: {
+        state: "located",
+        evidence: [{ kind: "document-progression", value: "0.600000" }],
+      },
+    });
     expect(normalize({ ...observation, pagination })).toEqual({ ...observation, pagination });
     expect(
       normalize({ ...observation, visibleEnd: { state: "unavailable", evidence: [] } }),
@@ -1601,6 +1622,17 @@ describe("agent observations and navigation", () => {
   it("rejects invalid observations", () => {
     const cases: Array<[string, object]> = [
       ["non-finite progression", { renderedTextProgression: Number.NaN }],
+      ["an out-of-range layout progression", { layoutProgression: 1.5 }],
+      ["a missing layout progression", { layoutProgression: undefined }],
+      [
+        "a non-canonical progression evidence value",
+        {
+          visibleStart: {
+            state: "located",
+            evidence: [{ kind: "document-progression", value: "1.5" }],
+          },
+        },
+      ],
       [
         "an oversized canvas color",
         { canvas: { state: "solid-color", cssColor: "x".repeat(257) } },

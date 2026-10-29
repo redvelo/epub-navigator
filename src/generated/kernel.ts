@@ -548,6 +548,12 @@ export type DocumentObservation = {
   visibleStart: ObservedBoundary;
   visibleEnd: ObservedBoundary;
   renderedTextProgression: number | null;
+  /**
+   *  Finite `[0, 1]` scroll progression through a scrolled document layout. A document
+   *  without rendered text has no text progression, so this is the only continuous
+   *  position a scrolled image document reports.
+   */
+  layoutProgression: number | null;
   pagination: PaginationObservation | null;
 };
 
@@ -1441,6 +1447,17 @@ export type PointEvidence =
       kind: "document-boundary";
       /**  Selected document boundary. */
       boundary: DocumentBoundary;
+    }
+  /**
+   *  Normalized `[0, 1]` scroll progression through the document's block flow.
+   *
+   *  The only continuous point a document without rendered text can name, such as a
+   *  scrolled image document.
+   */
+  | {
+      kind: "document-progression";
+      /**  Canonical decimal progression in the unit range. */
+      value: string;
     };
 
 export type PreparedFrame = {
