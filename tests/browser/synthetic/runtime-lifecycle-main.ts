@@ -651,6 +651,69 @@ const harness = {
     return { cancellationReplacement, lifecycleCancellation: await pendingOperation };
   },
 
+  async lostDecorationReconciliation() {
+    const frame = committedFrame();
+    const frameWindow = frame.contentWindow as unknown as {
+      postMessage(message: unknown, targetOrigin: string): void;
+    };
+    const originalPost = frameWindow.postMessage.bind(frameWindow);
+    let failedDeliveries = 0;
+    frameWindow.postMessage = (message, targetOrigin) => {
+      if (
+        isRecord(message) &&
+        isRecord(message.request) &&
+        message.request.type === "reconcile-decorations" &&
+        failedDeliveries === 0
+      ) {
+        failedDeliveries += 1;
+        throw new Error("fixture decoration delivery failure");
+      }
+      originalPost(message, targetOrigin);
+    };
+    runtime().setDecorationProjection({
+      revision: 1,
+      records: [
+        {
+          id: "lifecycle-decoration",
+          targetJson: JSON.stringify({
+            source: probeResource.slice("epub/".length),
+            selector: [
+              {
+                type: "FragmentSelector",
+                conformsTo: "https://wicg.github.io/scroll-to-text-fragment/",
+                value: `text=${encodeURIComponent("Alice opened the tiny door")}`,
+              },
+            ],
+          }),
+          occurrence: overlay.probeOccurrence,
+          appearance: "annotation-highlight",
+        },
+      ],
+    });
+    const afterLoss = {
+      failedDeliveries,
+      pendingReconciliations: runtime()
+        .snapshot()
+        .pendingAgentOperations.filter(
+          (operation) => operation.operationKind === "reconcile-decorations",
+        ).length,
+    };
+    const rendered = () =>
+      runtime()
+        .decorationSnapshot()
+        .participantOutcomes.some(
+          (participant) =>
+            participant.projectionRevision === 1 &&
+            participant.outcomes.some(
+              (outcome) =>
+                outcome.id === "lifecycle-decoration" && outcome.outcome.status === "rendered",
+            ),
+        );
+    await waitFor(rendered, "the lost decoration reconciliation was not re-requested");
+    frameWindow.postMessage = originalPost;
+    return { afterLoss, rendered: rendered() };
+  },
+
   async pendingNavigation() {
     const before = currentDocument(runtime().snapshot())?.generation;
     const snapshot = await settled(

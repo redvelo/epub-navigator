@@ -5,7 +5,7 @@ import {
   type AgentOperationOutcome,
 } from "../navigator/runtime-types.js";
 import { annotationSelectorMap } from "../navigator/runtime-support.js";
-import { AGENT_OPERATION_TIMEOUT_MS } from "./configuration.js";
+import { AGENT_OPERATION_TIMEOUT_MS, RECONCILE_DECORATIONS_TIMEOUT_MS } from "./configuration.js";
 import type { KernelEffect } from "../../generated/kernel.js";
 import type { PaginationCancellationReason } from "../pagination/index.js";
 import { postFrameMessage } from "./transport.js";
@@ -42,7 +42,9 @@ export abstract class AgentOperationRuntime extends FramePromotionRuntime {
     });
     const timer = setTimeout(
       () => this._operationTimedOut(effect.operation, effect.frameGeneration),
-      AGENT_OPERATION_TIMEOUT_MS,
+      effect.request.type === "reconcile-decorations"
+        ? RECONCILE_DECORATIONS_TIMEOUT_MS
+        : AGENT_OPERATION_TIMEOUT_MS,
     );
     this._locatorOperations.set(effect.operation, {
       participant: effect.participant,

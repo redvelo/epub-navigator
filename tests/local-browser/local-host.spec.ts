@@ -624,6 +624,43 @@ test("persists reading position and point bookmarks across library reopen", asyn
   await expect(frame).toHaveAttribute("src", /imprint\.xhtml$/);
 });
 
+test("opens panel pages on the boundary of the page holding the current entry", async ({
+  page,
+  openPublication,
+}) => {
+  // Short enough that the contents list spans several panel pages.
+  await page.setViewportSize({ width: 1280, height: 500 });
+  await openPublication(alice);
+  await page.getByRole("button", { name: "Navigation", exact: true }).click();
+  const navigation = page.getByRole("dialog", { name: "Navigation" });
+  await navigation.getByRole("button", { name: /Toggle Alice.s Adventures/u }).click();
+  await navigation.getByRole("button", { name: /Queen.s Croquet-Ground/u }).click();
+  await expect(readerFrame(page)).toHaveAttribute("src", /chapter-8\.xhtml$/);
+
+  await page.getByRole("button", { name: "Navigation", exact: true }).click();
+  const reopened = page.getByRole("dialog", { name: "Navigation" });
+  const current = reopened.locator('[aria-current="location"]');
+  await expect(current).toBeVisible();
+  const pages = reopened.locator(".epub-navigator-reader__pages");
+  await expect
+    .poll(async () => Number(await pages.getAttribute("data-page-count")))
+    .toBeGreaterThan(1);
+  const viewport = reopened.locator(".epub-navigator-reader__page-viewport");
+  await expect
+    .poll(() =>
+      viewport.evaluate((element) =>
+        element.clientHeight === 0 ? null : element.scrollTop % element.clientHeight,
+      ),
+    )
+    .toBeLessThan(1);
+  expect(await viewport.evaluate((element) => element.scrollTop)).toBeGreaterThan(0);
+  const currentBox = await current.boundingBox();
+  const viewportBox = await viewport.boundingBox();
+  if (currentBox === null || viewportBox === null) throw new Error("boxes are unavailable");
+  expect(currentBox.y).toBeGreaterThanOrEqual(viewportBox.y - 1);
+  expect(currentBox.y).toBeLessThan(viewportBox.y + viewportBox.height);
+});
+
 async function watchForSelector(page: Page, selector: string): Promise<() => Promise<boolean>> {
   await page.evaluate((target) => {
     const observed = window as unknown as Record<string, boolean>;

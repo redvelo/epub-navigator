@@ -605,6 +605,16 @@ test.describe("before the first document", () => {
     );
   });
 
+  test("re-requests a decoration reconciliation lost in flight", async ({ run }) => {
+    await run("start");
+    await run("openFirst");
+    const value = await run("lostDecorationReconciliation");
+    expect(value.afterLoss.failedDeliveries).toBe(1);
+    // The failed delivery leaves no reconciliation pending; the retry re-requests it.
+    expect(value.afterLoss.pendingReconciliations).toBe(0);
+    expect(value.rendered).toBe(true);
+  });
+
   test("cancels operations superseded by document replacement", async ({ run }) => {
     await run("start");
     const value = await run("supersededOperation");

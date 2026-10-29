@@ -79,6 +79,21 @@ function scrollToOffset(element: HTMLDivElement, offset: number, inline: boolean
   element.scrollLeft = getComputedStyle(element).direction === "rtl" ? -offset : offset;
 }
 
+/** The scroll offset of an element's leading edge, on the axis the pages advance along. */
+function locationOffset(
+  viewport: HTMLDivElement,
+  target: HTMLElement,
+  inline: boolean,
+  scrolled: number,
+): number {
+  const viewportRect = viewport.getBoundingClientRect();
+  const targetRect = target.getBoundingClientRect();
+  if (!inline) return scrolled + (targetRect.top - viewportRect.top);
+  return getComputedStyle(viewport).direction === "rtl"
+    ? scrolled + (viewportRect.right - targetRect.right)
+    : scrolled + (targetRect.left - viewportRect.left);
+}
+
 export function PaginatedOverflow({
   children,
   className,
@@ -103,6 +118,7 @@ export function PaginatedOverflow({
   const logicalPage = useRef(0);
   const logicalPageCount = useRef(1);
   const selectedInitialLocation = useRef(false);
+  const initialLocation = useRef<{ remainingObservations: number } | null>(null);
   const [page, setPage] = useState(0);
   const [pageCount, setPageCount] = useState(1);
   const [inlinePages, setInlinePages] = useState(false);
@@ -118,6 +134,32 @@ export function PaginatedOverflow({
     } = pageAxis(element, content.current, flow.current);
     if (height === 0) return;
     setInlinePages(inline);
+    // The page holding the current entry is a moving target while the surface opens: the
+    // footer appears once a page count is known and the drawer settles its height, each
+    // changing the page size. Steer to the boundary from the entry's own offset on every
+    // observation until the two agree, so the list never opens between pages.
+    const initial = initialLocation.current;
+    if (initial !== null && pendingPage.current === null) {
+      const current = element.querySelector<HTMLElement>('[aria-current="location"]');
+      if (current === null) {
+        initialLocation.current = null;
+      } else {
+        const location = locationOffset(element, current, inline, top);
+        const targetTop = Math.max(0, Math.min(maximum, Math.floor(location / height) * height));
+        initial.remainingObservations -= 1;
+        if (initial.remainingObservations <= 0) initialLocation.current = null;
+        if (Math.abs(top - targetTop) >= 1) {
+          scrollToOffset(element, targetTop, inline);
+          const targetPage = Math.min(observedCount - 1, Math.floor(targetTop / height));
+          logicalPage.current = targetPage;
+          logicalPageCount.current = observedCount;
+          setPageCount(observedCount);
+          setPage(targetPage);
+          scheduleUpdate();
+          return;
+        }
+      }
+    }
     const observedPage =
       maximum > 0 && maximum - top < 1
         ? observedCount - 1
@@ -161,8 +203,9 @@ export function PaginatedOverflow({
     if (element === null || contentElement === null) return;
     if (!selectedInitialLocation.current) {
       selectedInitialLocation.current = true;
-      const current = element.querySelector<HTMLElement>('[aria-current="location"]');
-      if (typeof current?.scrollIntoView === "function") current.scrollIntoView({ block: "start" });
+      if (element.querySelector('[aria-current="location"]') !== null) {
+        initialLocation.current = { remainingObservations: 12 };
+      }
     }
     scheduleUpdate();
     const resize =
@@ -188,6 +231,7 @@ export function PaginatedOverflow({
         (pendingPage.current?.page ?? logicalPage.current) + delta,
       ),
     );
+    initialLocation.current = null;
     if (targetPage === logicalPage.current && pendingPage.current === null) return;
     pendingPage.current = {
       page: targetPage,

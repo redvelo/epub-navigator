@@ -141,20 +141,34 @@ export abstract class KernelDriverRuntime extends PublicRuntime {
     return transition;
   }
 
-  // A reconciliation the agent abandons reports every unresolved record as stale, and nothing
-  // else re-requests one until the next commit, layout report, or projection. Retry with backoff
-  // so decorations survive the style and text churn of a document that is still settling.
+  // A reconciliation the agent abandons reports every unresolved record as stale, and one that
+  // times out, fails delivery, or is superseded without its replacement surviving reports no
+  // outcomes at all; nothing else re-requests either until the next commit, layout report, or
+  // projection. Retry with backoff so decorations survive the style and text churn of a document
+  // that is still settling, and so a lost reconciliation is re-requested on an otherwise idle
+  // document. A fired retry first checks for a reconciliation already in flight: a healthy
+  // supersession carries its own replacement, and restarting it would only lose its progress.
   protected _retryStrandedDecorations(events: readonly KernelEvent[]): void {
     if (this._closed) return;
     for (const event of events) {
+      let projectionRevision: number;
+      let generation: number;
       if (
-        event.type !== "agent-operation-reported" ||
-        event.result.type !== "reconcile-decorations"
-      )
+        event.type === "agent-operation-reported" &&
+        event.result.type === "reconcile-decorations" &&
+        event.result.outcomes.some((record) => record.outcome.status === "stale")
+      ) {
+        projectionRevision = event.result.projectionRevision;
+        generation = event.generation;
+      } else if (
+        event.type === "agent-operation-failed" &&
+        event.operationKind === "reconcile-decorations"
+      ) {
+        projectionRevision = this._kernel.snapshot().decorations.projection.revision;
+        generation = event.generation;
+      } else {
         continue;
-      if (!event.result.outcomes.some((record) => record.outcome.status === "stale")) continue;
-      const projectionRevision = event.result.projectionRevision;
-      const generation = event.generation;
+      }
       const pending = this._decorationRetry;
       const attempts =
         pending?.generation === generation && pending.projectionRevision === projectionRevision
@@ -162,26 +176,35 @@ export abstract class KernelDriverRuntime extends PublicRuntime {
           : 0;
       if (attempts >= maximumDecorationRetries) return;
       if (pending !== null) clearTimeout(pending.timer);
-      this._decorationRetry = {
+      const scheduled = {
         generation,
         projectionRevision,
-        attempts: attempts + 1,
+        attempts,
         timer: setTimeout(
           () => {
-            const scheduled = this._decorationRetry;
             if (
-              scheduled?.generation !== generation ||
-              scheduled.projectionRevision !== projectionRevision ||
+              this._decorationRetry !== scheduled ||
               this._closed ||
               this._terminalError !== undefined
             ) {
               return;
             }
+            if (
+              this._kernel
+                .snapshot()
+                .pendingAgentOperations.some(
+                  (operation) => operation.operationKind === "reconcile-decorations",
+                )
+            ) {
+              return;
+            }
+            this._decorationRetry = { ...scheduled, attempts: scheduled.attempts + 1 };
             this._accepted(this._dispatchAndApply(commandInput({ type: "reconcile-decorations" })));
           },
           decorationRetryDelayMs * 2 ** attempts,
         ),
       };
+      this._decorationRetry = scheduled;
       return;
     }
   }
