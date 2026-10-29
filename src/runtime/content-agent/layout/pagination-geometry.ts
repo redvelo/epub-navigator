@@ -39,10 +39,7 @@ export function paginationGeometry(
   flowInlineSize: number;
   flowBlockSize: number;
   inlineBorderAndPadding: number;
-  inlineStart: number;
-  inlineEnd: number;
-  blockStart: number;
-  blockEnd: number;
+  inset: number;
   columnBlockSize: number;
   columnsPerView: 1 | 2;
 } {
@@ -58,10 +55,7 @@ export function paginationGeometry(
       flowInlineSize: inlineViewport,
       flowBlockSize: blockViewport,
       inlineBorderAndPadding: 0,
-      inlineStart: 0,
-      inlineEnd: 0,
-      blockStart: 0,
-      blockEnd: 0,
+      inset: 0,
       columnBlockSize: blockViewport,
       columnsPerView,
     };
@@ -78,10 +72,7 @@ export function paginationGeometry(
     flowInlineSize,
     flowBlockSize,
     inlineBorderAndPadding: authoredGap,
-    inlineStart: inset,
-    inlineEnd: inset,
-    blockStart: 0,
-    blockEnd: 0,
+    inset,
     columnBlockSize: Math.max(1, flowBlockSize - insets.blockBorderAndPadding),
     columnsPerView,
   };
@@ -104,11 +95,12 @@ export function columnInlineSize(
   },
 ): number {
   void state;
-  return (
+  return Math.max(
+    1,
     (geometry.flowInlineSize -
       geometry.inlineBorderAndPadding -
       geometry.gap * (geometry.columnsPerView - 1)) /
-    geometry.columnsPerView
+      geometry.columnsPerView,
   );
 }
 
@@ -126,7 +118,6 @@ export function effectiveColumns(
 
 export interface PhysicalPaginationGeometry {
   readonly flow: DocumentFlow;
-  readonly insets: BodyInsets;
   readonly spreadStride: number;
   readonly columnOrigin: number;
   readonly columnWidth: number;
@@ -218,14 +209,14 @@ export function capturePhysicalPaginationGeometry(
     presentation.paginationColumns,
   );
   const columnGap = layout.gap;
-  const columnWidth = Math.max(1, columnInlineSize(state, layout));
+  const columnWidth = columnInlineSize(state, layout);
   const columnPitch = columnWidth + columnGap;
   const spreadStride = columnPitch * layout.columnsPerView;
-  const columnOrigin = layout.inlineStart;
+  // Column content starts inside the body's border and padding, not at its margin edge.
+  const columnOrigin = layout.inset + insets.inlineBorderAndPaddingStart;
   recordPaginationGeometryPhase(state, "capture", started);
   return {
     flow,
-    insets,
     spreadStride,
     columnOrigin,
     columnWidth,
@@ -275,10 +266,7 @@ export async function scanPhysicalPaginationContentEnd(
   for (const rectangle of range.getClientRects()) {
     sliceWorkUnits += 1;
     includeRectangle(rectangle);
-    if (geometry.flow.writingMode === "horizontal-tb") {
-      if (rectangle.top < -1 || rectangle.bottom > window.innerHeight + 1)
-        hasUnpaginatedTextBlockOverflow = true;
-    } else if (rectangle.left < -1 || rectangle.right > window.innerWidth + 1) {
+    if (lineOutsideBlockViewport(state, rectangle, geometry.flow.writingMode)) {
       hasUnpaginatedTextBlockOverflow = true;
     }
     if (
@@ -510,22 +498,14 @@ export function requiredPaginationExtent(
  */
 export function centredBlockGeometry(
   state: ContentAgentState,
-  geometry: { flowBlockSize: number; blockStart: number; blockEnd: number },
+  geometry: { flowBlockSize: number },
 ): { blockSize: number; blockStart: number; blockEnd: number } {
   const centred = state.layout.alignXCenterBlockExtent;
   if (centred === null) {
-    return {
-      blockSize: geometry.flowBlockSize,
-      blockStart: geometry.blockStart,
-      blockEnd: geometry.blockEnd,
-    };
+    return { blockSize: geometry.flowBlockSize, blockStart: 0, blockEnd: 0 };
   }
   const inset = (geometry.flowBlockSize - centred) / 2;
-  return {
-    blockSize: centred,
-    blockStart: geometry.blockStart + inset,
-    blockEnd: geometry.blockEnd + inset,
-  };
+  return { blockSize: centred, blockStart: inset, blockEnd: inset };
 }
 
 export function alignXCenterBlockExtent(
@@ -555,6 +535,25 @@ export function alignXCenterBlockExtent(
   return extent > 0 && extent < geometry.flowBlockSize ? extent : null;
 }
 
+/**
+ * Whether a text rectangle lies outside the viewport along the block axis. The line is judged
+ * by its midpoint: a line the columns lost sits wholly or mostly outside, while a line set at
+ * a column edge may ink a few pixels past it, since a glyph's ascent and descent are the
+ * font's, not the fragmentainer's.
+ */
+export function lineOutsideBlockViewport(
+  state: ContentAgentState,
+  rectangle: DOMRect,
+  writingMode: DocumentWritingMode,
+): boolean {
+  void state;
+  const horizontal = writingMode === "horizontal-tb";
+  const middle = horizontal
+    ? (rectangle.top + rectangle.bottom) / 2
+    : (rectangle.left + rectangle.right) / 2;
+  return middle < 0 || middle > (horizontal ? window.innerHeight : window.innerWidth);
+}
+
 /** How far the paginated flow reaches along the axis pages advance on. */
 export function inlinePaginationExtent(): number {
   const scrolling = document.scrollingElement;
@@ -574,16 +573,19 @@ export function captureBodyInsets(state: ContentAgentState): BodyInsets {
   if (body === null) {
     return {
       inlineBorderAndPadding: 0,
+      inlineBorderAndPaddingStart: 0,
       blockBorderAndPadding: 0,
     };
   }
   const style = getComputedStyle(body);
+  const inlineBorderAndPaddingStart =
+    cssPixels(state, style.borderInlineStartWidth) + cssPixels(state, style.paddingInlineStart);
   return {
     inlineBorderAndPadding:
-      cssPixels(state, style.borderInlineStartWidth) +
+      inlineBorderAndPaddingStart +
       cssPixels(state, style.borderInlineEndWidth) +
-      cssPixels(state, style.paddingInlineStart) +
       cssPixels(state, style.paddingInlineEnd),
+    inlineBorderAndPaddingStart,
     blockBorderAndPadding:
       cssPixels(state, style.borderBlockStartWidth) +
       cssPixels(state, style.borderBlockEndWidth) +

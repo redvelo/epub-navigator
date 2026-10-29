@@ -401,8 +401,9 @@ test("imports and reads the complete Haruko authored RTL workflow", async ({
   await page.keyboard.press("0");
   await expect.poll(() => harukoTransforms(page)).toEqual(fitTransforms);
 
+  // The colophon's single column is viewport-tall, so portrait holds it in one page: thirteen.
   await page.setViewportSize({ width: 700, height: 1000 });
-  await expectHarukoView(page, root, 3, null, "Exact progress, page 4 of 14");
+  await expectHarukoView(page, root, 3, null, "Exact progress, page 4 of 13");
   expect(
     await harukoFrame(page, 3, "primary").evaluate((element) => element.style.transform),
   ).not.toBe(afterNavigation.primary);

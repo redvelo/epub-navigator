@@ -200,7 +200,7 @@ export function presentationRules(
           : `column-count: ${geometry.columnsPerView} !important; column-width: auto !important;`;
       const block = centredBlockGeometry(state, geometry);
       rules.push(
-        `body { display: block !important; margin-inline-start: ${geometry.inlineStart}px !important; margin-inline-end: ${geometry.inlineEnd}px !important; inline-size: ${geometry.flowInlineSize}px !important; min-inline-size: 0 !important; max-inline-size: none !important; margin-block-start: ${block.blockStart}px !important; margin-block-end: ${block.blockEnd}px !important; block-size: ${block.blockSize}px !important; min-block-size: 0 !important; max-block-size: none !important; box-sizing: border-box !important; ${columnSizing} column-gap: ${geometry.gap}px !important; column-fill: auto !important; overflow: visible !important; }`,
+        `body { display: block !important; margin-inline-start: ${geometry.inset}px !important; margin-inline-end: ${geometry.inset}px !important; inline-size: ${geometry.flowInlineSize}px !important; min-inline-size: 0 !important; max-inline-size: none !important; margin-block-start: ${block.blockStart}px !important; margin-block-end: ${block.blockEnd}px !important; block-size: ${block.blockSize}px !important; min-block-size: 0 !important; max-block-size: none !important; box-sizing: border-box !important; ${columnSizing} column-gap: ${geometry.gap}px !important; column-fill: auto !important; overflow: visible !important; }`,
       );
     } else {
       rules.push(

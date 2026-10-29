@@ -74,8 +74,8 @@ export function requiredPresentationIsEffective(
       columns.overflow === "visible" &&
       closeCssPixels(state, columns.width, horizontal ? expectedWidth : block.blockSize) &&
       closeCssPixels(state, columns.height, horizontal ? block.blockSize : expectedHeight) &&
-      closeCssPixels(state, columns.marginInlineStart, geometry.inlineStart) &&
-      closeCssPixels(state, columns.marginInlineEnd, geometry.inlineEnd) &&
+      closeCssPixels(state, columns.marginInlineStart, geometry.inset) &&
+      closeCssPixels(state, columns.marginInlineEnd, geometry.inset) &&
       closeCssPixels(state, columns.marginBlockStart, block.blockStart) &&
       closeCssPixels(state, columns.marginBlockEnd, block.blockEnd) &&
       closeCssPixels(state, columns.minWidth, 0) &&

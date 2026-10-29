@@ -7,6 +7,7 @@ import {
   captureBodyInsets,
   columnInlineSize,
   cssPixels,
+  lineOutsideBlockViewport,
   paginationGeometry,
   recordTextAssessmentDiagnostics,
 } from "./pagination-geometry.js";
@@ -297,7 +298,8 @@ export function inlineFitRemedy(
     return { kind: "inline-fit", zoom, inlineSize: column };
   }
   if (preformatted) return { kind: "wrap", inlineSize: column };
-  return { kind: "unresolved", fitsOneColumn: geometry.flowInlineSize / inlineSize >= floor };
+  const oneColumn = geometry.flowInlineSize - geometry.inlineBorderAndPadding;
+  return { kind: "unresolved", fitsOneColumn: oneColumn / inlineSize >= floor };
 }
 
 export function layoutRepairAssessmentRequired(
@@ -591,11 +593,7 @@ export function fragmentedTextFitsBlockViewport(
     if (node.nodeValue?.trim().length === 0) continue;
     range.selectNodeContents(node);
     for (const rectangle of range.getClientRects()) {
-      if (writingMode === "horizontal-tb") {
-        if (rectangle.top < -1 || rectangle.bottom > window.innerHeight + 1) return false;
-      } else if (rectangle.left < -1 || rectangle.right > window.innerWidth + 1) {
-        return false;
-      }
+      if (lineOutsideBlockViewport(state, rectangle, writingMode)) return false;
     }
   }
   return true;

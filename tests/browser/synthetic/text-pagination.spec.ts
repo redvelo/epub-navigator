@@ -111,6 +111,31 @@ test("agrees with the browser's column geometry under authored body padding", as
   expect(pages.spreadStride).toBeCloseTo((columnWidth + pages.columnGap) * 2, 0);
 });
 
+test("places the column origin at the content box under one-sided body padding", async ({
+  page,
+}) => {
+  await page.evaluate(() => window.__EPUB_TEXT_PAGINATION__!.setColumns("double"));
+  const settled = await page.evaluate(
+    (value) => window.__EPUB_TEXT_PAGINATION__!.setAuthoredBodyMargins(value),
+    "padding-left: 24px; padding-right: 4px",
+  );
+  const pages = currentPaginatedLayout(settled);
+  if (pages === null) throw new Error("paginated layout is unavailable");
+  const contentStart = await contentFrame(page)
+    .locator("body")
+    .evaluate((body) => {
+      const scrolling = body.ownerDocument.scrollingElement!;
+      const style = getComputedStyle(body);
+      return (
+        body.getBoundingClientRect().left +
+        scrolling.scrollLeft +
+        Number.parseFloat(style.borderInlineStartWidth) +
+        Number.parseFloat(style.paddingInlineStart)
+      );
+    });
+  expect(pages.columnOrigin).toBeCloseTo(contentStart, 0);
+});
+
 test("retains vertical RTL physical pagination geometry", async ({ page }) => {
   const settled = await page.evaluate(() =>
     window.__EPUB_TEXT_PAGINATION__!.setFlow("vertical-rl", "rtl"),
