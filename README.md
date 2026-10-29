@@ -26,6 +26,16 @@ policy. Elephant Ladder is that host, on Linux and Android.
 - Offers dictionary lookup on a selection when the host supplies dictionaries.
 - Ships a complete React reader with an interaction profile for e-ink devices.
 
+<table>
+  <tr>
+    <td><img src="art/fxl-spread.webp" alt="A fixed-layout manga spread, paired right-to-left"></td>
+    <td><img src="art/vertical-writing.webp" alt="Kusamakura in vertical Japanese with ruby, English verse embedded sideways"></td>
+  </tr>
+  <tr>
+    <td colspan="2"><img src="art/rtl-illustrated.webp" alt="An Arabic publication paginated right-to-left, an illustration facing justified text"></td>
+  </tr>
+</table>
+
 ## What it is not
 
 - Not a standalone product. The browser-local reader in this repository runs trusted
